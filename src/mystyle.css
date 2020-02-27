@@ -1,0 +1,65 @@
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+
+}
+
+#menu{
+    color: #525659;
+}
+
+#first{
+    background-color: lightblue;
+    width: 100%;
+    padding: 0px;
+    margin: 0%;
+    text-align: center;
+}
+
+#first_h1{
+    padding:20px;
+}
+
+#first_p{
+
+    height: auto;
+}
+
+#form{
+    padding:20px;
+    
+}
+
+input{
+    padding:10px;
+    margin: 2px;
+    width: 80%;
+}
+
+#first_button{
+    margin: 20px;
+    width: 30%;
+    height: 40px;
+    background-color: navy;
+    color: white;
+    
+}
+
+#second{
+    text-align: center;
+}
+
+li{
+    margin: 2% 8%;
+    padding:30px 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    list-style-position: inside;
+    font-size: 20px;
+    font-weight: 800;
+    color: grey;
+    text-align: left;
+}
