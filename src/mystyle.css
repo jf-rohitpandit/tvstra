@@ -1,65 +1,1000 @@
-nav{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 10px;
 
+@font-face{
+    font-family: Nexa-Bold;
+    src: url(Nexa-Bold.otf);
+}
+@font-face{
+    font-family: Nexa-Light;
+    src: url(Nexa-Light.otf)
 }
 
-#menu{
-    color: #525659;
-}
+@media (min-width: 769px){
 
-#first{
-    background-color: lightblue;
-    width: 100%;
-    padding: 0px;
-    margin: 0%;
-    text-align: center;
-}
+    #headder{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
 
-#first_h1{
-    padding:20px;
-}
+    #logo{
+        width: 150px;
+        padding-left: 50px;
+    }
 
-#first_p{
 
-    height: auto;
-}
+    #menu{
+        display:none;
+    }
 
-#form{
-    padding:20px;
+    #service{
+        padding: 10px 10px;
+    }
+
+    .space{
+        font-family: Nexa-Light;
+        color: rgb(0, 10, 60);
+        margin:0px 8px; 
+    }
+
+    button{
+        font-family: Nexa-Light;
+        font-size: small;
+        padding: 10px;
+        width: 120px;
+        border: 1px solid rgb(0, 10, 60);
+        border-radius: 2px;
+        background-color: white;
+    }
+
+    .blue{
+        background-color: rgb(0, 10, 60);
+        color: white;
+    }
+
+    #first{
+        background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+        background-size: cover;
+        height: 100%;
+        max-width: 100%;
+        padding:120px 70px;
+        
+    }
+
+    .heading{
+        font-family: Nexa-Bold;
+        font-size: 2.5rem;
+        color: rgb(0, 10, 60);
+        text-align: left;
+        padding-bottom: 20px;
+    }
+
+    .para{
+        font-family: Nexa-light;
+        font-size: 1rem;
+        text-align: left;
+        line-height: 20px;
+        color: rgb(0, 10, 60);
+        padding-bottom: 50px;
+    }
+
+    .half{
+        width: 600px;
+    }
+
+    #inp{
+        display: flex;
+        margin: 0px;
+        margin-top: 30px;
+        border: 1px solid black;
+        width: 711px;
+    }
+
+    #loc{
+        padding: 10px;
+        background-color: white;
+    }
+
+    input{
+        padding: 15px;
+        font-family: Nexa-Light;
+        font-size:small;
+        width:200px;
+    }
+
+    #gps{
+        width: 15px;
+        height: 16px;
+        padding: 15px;
+        background-color: white;
+    }
+
+    #in1{
+        width: 150px;
+        border: none;
+    }
     
-}
+    #in2{
+        width: 300px;
+        border-top: none;
+        border-bottom: none;
+    }
 
-input{
-    padding:10px;
-    margin: 2px;
-    width: 80%;
-}
+    #butt{
+        background-color: rgb(0, 10, 60);
+        color: white;
+    }
 
-#first_button{
-    margin: 20px;
-    width: 30%;
-    height: 40px;
-    background-color: navy;
-    color: white;
+    #second{
+        padding: 70px;
+    }
+
+    li{
+        padding:40px;
+        border: 1px solid black;
+        border-color: rgb(6, 32, 163);
+        border-radius: 10px;
+        font-family: Nexa-Bold;
+        font-size: 1.5rem;
+        width: 400px;
+        margin: 5px;  
+    }
+
+    .inactive{
+        color: lightgrey;
+        border-color: lightgrey;
+        border-color: lightgrey;
+    }
+
+    #leftSide{
+        float: right;
+        position: relative;
+        bottom: 50px;
+        width: 50%;
+    }
+
+    .pa{
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .center{
+        text-align: center;
+        padding: 0px 100px;
+    }
+
+    #third{
+        background-color: rgb(0, 10, 60);
+        color: white;
+        padding: 70px;  
+    }
+
+    .three{
+        color: white;
+    }
+
+    .white{
+        color: white;
+    }
+/* 
+    .flex-one{
+        display: flex;
+
+    } */
+
+    .cards{
+        max-width: 250px;
+        background-color: white;
+        margin: 20px;
+    }
+
+    .cards-img{
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .cards-name{
+        padding-top: 25px;
+        padding-left: 20px;
+        font-family: Nexa-Bold;
+        color: rgb(12, 136, 185);
+    }
+
+    .cards-desc{
+        padding-left: 20px;
+        padding-top: 10px;
+        font-family: Nexa-Light;
+        color: black;
+        font-size: small;
+    }
+
+    #fourth{
+        padding: 70px;
+    }
+
+    #fifth{
+        padding: 70px;
+        background-color: lightgrey;
+    }
+
+    #flex-type{
+        display: flex;
+    }
+
+    .card3{
+        padding: 45px;
+        background-color: white;
+        margin:2px;
+        text-align: center;
+        font-family: Nexa-Bold;
+        color: grey;
+    }
+
+    #sixth{
+        padding: 70px;
+        background-color: rgb(103, 167, 226);
+        height: 100%;
+    }
+
+    #help{
+        color: white;
+    }
+
+    .no-padding-bottom{
+        padding-bottom: 0px;
+    }
+
+    #helpButton{
+        float: right;
+        position: relative;
+        bottom: 100px;
+        background-color: rgb(25, 136, 201);
+        width: 250px;
+        padding: 20px 0px;
+        font-family: Nexa-Bold;
+        font-size: large;
+        border: none;
+        color: white;
+    }
+
+    #seventh{
+        padding: 30px 70px 10px 70px;
+    }
+
+    #footerLogo{
+        width: 180px;
+        float: right;
+    }
+
+    #footerServ{
+        display: flex;
+    }
+
+    .footerCont{
+        padding: 20px;
+    }
+
+    #links{
+        float: right;
+        display: flex;
+    }
+
+    .space{
+        padding-left: 8px;
+    }
     
+    .bold{
+        font-family: Nexa-Bold;
+    }
+
+    .medium{
+        font-family: Nexa-Light;
+        font-size: 1.5rem;
+    }
+
+    .left-text{
+        text-align: left;
+    }
+
+
+    .right-float{
+        float: right;
+    }
+
+    .padding{
+        padding: 70px;
+    }
 }
 
-#second{
-    text-align: center;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) and (min-width: 601px){
+
+    #headder{
+        height: 100%;
+        margin: 1rem;
+        max-width: 100%;
+    }
+
+    #logo{
+        width: 150px;
+        
+    }
+
+    #service{
+        display: none;
+    }
+
+    #login{
+        display: none;
+    }
+
+    #menu{
+        position: absolute;
+        right: 50px;
+        top: 20px;
+    }
+
+    #first{
+        background-color: rgb(106, 185, 209);
+        padding: 20px;
+    }
+
+    .heading{
+        font-family: Nexa-Bold;
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px;
+        color: rgb(0, 10, 60)
+    }
+
+    .para{
+        font-family: Nexa-Light;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    #inp{
+        display: flex;
+        padding:0%;
+        max-width: 100%;
+        border: 1px solid black;
+        background-color: white;
+
+    }
+
+    #loc{
+        padding: .6rem;
+        background-color: white;
+        margin-right: 0px;
+    }
+
+    input{
+        height: 2rem;
+        font-family: Nexa-Light;
+        font-size: small;
+        margin-left: 0px;
+        border: none;        
+    }
+
+    #in2{
+        width: 60%;
+        border-left: 1px solid lightgrey;
+        padding-left: 5px;
+    }
+
+    #gps{
+        padding: .69rem;
+        background-color: white;
+        width: 15px;
+        height: 15px;
+    }
+
+    #butt{
+        width: 130px;
+        background-color: rgb(0, 10, 60);
+        font-family: Nexa-Light;
+        font-size: small;
+        color: white;
+        border: 1px solid rgb(0, 10, 60);
+    }
+
+    #second{
+        padding: 20px;
+    }
+
+    li{
+        font-family: Nexa-Bold;
+        font-size: 1.2rem;
+        color: rgb(0, 10, 60);
+        border: 1px solid black;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 10px;
+        width: 40%;
+    }
+
+    .image{
+        width: 300px;
+    }
+
+    #leftSide{
+        float: right;
+        width: 300px;
+        position: relative;
+        bottom: 60px;
+    }
+
+    .pa{
+        font-size: 1.2rem;
+    }
+
+    .inactive{
+        color: lightgrey;
+    }
+
+    #third{
+        background-color: rgb(0, 10, 60);
+        font-family: Nexa-Light;
+        color: white;
+        max-width: 100%;
+        height: 100%;
+        padding:20px;
+    }
+
+    .three{
+        color: white;
+    }
+
+    .flex-one{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .cards{
+        background-color: white;
+        padding: 0px;
+        margin: 20px;
+        width: 300px;
+    }
+
+    .cards-img{
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+    .cards-name{
+        font-family: Nexa-Bold;
+        color: rgb(12, 136, 185);
+        padding:15px 30px;
+        width: 270px;
+        padding-right: 0px;
+    }
+
+    .cards-desc{
+        font-family: Nexa-Light;
+        color:black;
+        font-size: small;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        width: 270px;
+    }
+
+    #fourth{
+        padding: 20px;
+    }
+
+    .card2{
+        position: relative;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .card2-img{
+        width: 300px;
+    }
+
+    .card2-content{
+        font-family: Nexa-Light;
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        width: 260px;
+        padding: 20px;
+        background-image: linear-gradient(to top, rgb(0,10,60,1), rgb(0,10,60,0));
+    }
+
+    .card2-heading{
+        font-family: Nexa-Bold;
+        padding-bottom: 5px;
+    }
+
+    #fifth{
+        background-color: lightgrey;
+        padding: 20px;
+    }
+
+    #flex-type{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card3{
+        margin: 5px;
+        padding: 10px 20px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: white;
+        width: 25%;
+        text-align: center;
+        font-family: Nexa-Bold;
+        font-size: small;
+        color: lightblack;
+    }
+
+    #sixth{
+        background-color: rgb(106, 185, 209);
+    }
+
+    #help{
+        color: white;
+    }
+
+    #helpButton{
+        font-family: Nexa-Bold;
+        margin-left: 35%;
+        padding: 10px 30px;
+        background-color: rgb(25, 136, 201);
+        color: white;
+        border: 1px solid rgb(25, 136, 201);
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    #seventh{
+        padding: 20px;
+    }
+
+    #footerLogo{
+        width: 150px;
+        float: right;
+    }
+
+    #footerServ{
+        font-family: Nexa-Light;
+        
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .footerCont{
+        padding: 10px;
+    }
+
+    #links{
+        float: right;
+        display: flex;
+    }
+
+    .space{
+        padding: 8px;
+    }
+
+    .medium{
+        font-family: Nexa-Light;
+        font-size: 1.5rem;
+    }
+
+    .left-text{
+        text-align: left;
+    }
+
+
+    .right-float{
+        float: right;
+    }
+
+    .bottom-0{
+        position: relative;
+        bottom: 50px;
+    }
+
+    .padding{
+        padding: 20px;
+    }
+    select{
+        padding: 10px;
+        border:none;
+        font-family: Nexa-Light;
+        font-size: medium;
+
+    }
+    i{
+        color: rgb(103, 167, 226)
+    }
+    
+
+
 }
 
-li{
-    margin: 2% 8%;
-    padding:30px 10px;
-    border: 2px solid grey;
-    border-radius: 5px;
-    list-style-position: inside;
-    font-size: 20px;
-    font-weight: 800;
-    color: grey;
-    text-align: left;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 600px) {
+    body{
+        font-family: Nexa-Light;
+    }
+
+    #headder{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 1rem;
+    }
+
+    #logo{
+        width: 150px;
+    }
+
+
+    #service{
+        display: none;
+    }
+
+    #login{
+        display: none;
+    }
+
+    #first{
+        background-color: rgb(106, 185, 209);
+        margin: 0%;
+        padding: 4%;
+        height: 100%;
+    }
+
+    .heading{
+        color: rgb(0, 10, 60);
+        font-family: Nexa-Bold;
+        margin:auto ;
+        padding: auto;
+        text-align: center;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .para{
+        font-family: Nexa-Light;
+        margin: 5%;
+        padding: auto;
+        text-align: center;
+        line-height: 20px ;
+    }
+
+    #inp{
+        font-family: Nexa-Light;
+        margin-top: 5%;
+        margin-bottom:0%;
+        text-align: center;
+    }
+
+    #loc{
+        position: absolute; 
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    input{
+        font-family: Nexa-Light;
+        font-size: small;
+        height: 2rem;
+        width: 100%;
+        text-align: center;
+        margin: 1%;  
+        color: grey; 
+    }
+
+    button{
+        font-family: Nexa-Light; 
+        margin: 5%;
+        height: 2.5rem;
+        width: 8rem;
+        background-color: rgb(0, 10, 60);
+        border: rgb(0, 10, 60);
+        color: white;
+    }
+
+    #second{
+        margin: 5%;
+    }
+
+
+    li{
+        text-align: left;
+        font-family: Nexa-Bold;
+        font-size: 1.2rem; 
+        color:rgb(0, 10, 60);
+        margin: 2%;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5%;
+
+    }
+
+    .inactive{
+        color: grey;
+    }
+
+    .image{
+        margin: 5% 0% 5% 5%;
+        width: 90%;
+    }
+
+    .pa{
+        font-size:1.5rem ;
+    }
+
+    #third{
+        background-color: rgb(0, 10, 60);
+        height: 100%;
+        padding: 5%;
+    }
+
+    .three{
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .white{
+        font-family: Nexa-Light;
+        color: white;
+    }
+
+    .cards{
+        width: 100%;
+        background-color: white;
+        margin: 4% 0%;
+    }
+
+    .cards-img{
+        width: 100%;
+    }
+
+    .cards-name{
+        color: rgb(52, 184, 224);
+        font-family: Nexa-Bold;
+        padding-left: 7%;
+        padding-top:3%;
+        padding-bottom: 1%
+    }
+
+    .cards-desc{
+        font-family: Nexa-Light;
+        font-size: small;
+        padding-left: 7%;
+        padding-top: 2%;
+    }
+
+    #fourth{
+        background-color: white;
+        height: 100%;
+        padding: 5%;
+    }
+
+    .card2{
+        position: relative;
+        width: 100%;
+        margin: 4% 0%;
+        max-width: 100%;
+    }
+
+    .card2-img{
+        width: 100%;
+    }
+
+    .card2-content{
+        position: absolute;
+        bottom:0;
+        font-family: Nexa-Light;
+        width: 80%;
+        color: white;
+        background-image:linear-gradient(to bottom, rgba(0, 10, 60, 0), rgba(0,10,60,1));
+        padding: 10%;
+    }
+
+    .card2-heading{
+        font-family: Nexa-Bold;
+        padding-bottom: 1%;
+    }
+
+    #fifth{
+        background-color: lightgrey;
+        padding: 5%;
+        height: 100%;
+    }
+
+    #flex-type{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card3{
+        padding: 25px;
+        margin: 5px;
+        font-family: Nexa-Bold;
+        color: grey;
+        text-align: center;
+        font-size: small;
+        background-color: white;
+        border: 1px soldi lightgrey;
+        border-radius: 10px;
+
+        
+    }
+
+    #sixth{
+        background-color: lightskyblue;
+        height: 100%;
+        padding: 5%;
+    }
+
+    #help{
+        color: white;
+    }
+
+    #helpButton{
+        width: 50%;
+        margin: 0% 25%;
+        font-family: Nexa-Bold;
+        background-color: rgb(12,136, 185);
+        border: 1px solid rgb(12, 136, 185);
+        border-radius:5px;
+    }
+
+    #seventh{
+        background-color: rgb(0, 10, 60);
+        height: 100%;
+        padding: 5%;
+        max-width:100%;
+    }
+
+    #footerLogo{
+        width: 35%;
+        padding-left: 30%;
+        padding-bottom: 5%;
+    }
+
+    .footerCont{
+        font-family: Nexa-Light;
+        line-height: 35px;
+        color: white;
+        text-align: center;
+    }
+
+    .bold{
+        font-family: Nexa-Bold;
+    }
+
+    #links{
+        padding:3% 20%;
+    }
+
+    .linksIcon{
+        margin-left: 10%;
+        color: white;
+    }
+
+    .medium{
+        font-family: Nexa-Light;
+        font-size: 1.5rem;
+    }
+
+    .left-text{
+        text-align: left;
+    }
+
+    .right-float{
+        float: right;
+    }
+
+    .padding{
+        padding: 20px;
+    }
+
+    .bottom-0{
+        position: relative;
+        bottom:25px;
+    }
+
+    select{
+            padding: 10px;
+            border:none;
+            font-family: Nexa-Light;
+            font-size: medium;
+    }
+
+    .width-100{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .border{
+        border: 1px solid black;
+        margin: 20px;
+    }
+    .space-30{
+        padding-left: 30px;
+    }
+
+    .v-space{
+        line-height: 25px;
+    }
+    
+    .padding-left{
+        padding-left: 10px;
+    }
+
+    .blue-b{
+        color: rgb(25, 136, 201);
+    }
+
+    .book{
+        width: 200px;
+        font-family: Nexa-Bold;
+        font-size: small;
+        margin: 10px 46px;
+    }
+
+    #foot{
+        padding-top: 70px;
+        background-color: rgb(7, 11, 32);
+        font-family: Nexa-Light;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+    }
+
+    .foo{
+        font-family: Nexa-Bold;
+        font-size: 1.5rem;
+        padding: 25px;
+    }
+
+    #footerLo{
+        width: 150px;
+    }
+
+    .small{
+        font-size: .8rem;
+        color: grey;
+        margin-top: 25px;
+    }
 }
