@@ -81,7 +81,11 @@
         width: 600px;
     }
 
-    #inp{
+    #inp-1{
+        display:none;
+    }
+
+    #inp-2{
         display: flex;
         margin: 0px;
         margin-top: 30px;
@@ -176,26 +180,29 @@
     .white{
         color: white;
     }
-/* 
+ 
     .flex-one{
         display: flex;
 
-    } */
+    } 
 
     .cards{
-        max-width: 250px;
+        width: 290px;
         background-color: white;
-        margin: 20px;
+        margin: 5px;
+        padding-bottom: 8px;
+        border-bottom: 4px solid rgb(103, 167, 226);
     }
 
     .cards-img{
-        width: 250px;
-        height: 300px;
+        width: 290px;
+        height: 350px;
         object-fit: cover;
     }
 
     .cards-name{
         padding-top: 25px;
+        padding-bottom: 20px;
         padding-left: 20px;
         font-family: Nexa-Bold;
         color: rgb(12, 136, 185);
@@ -203,7 +210,7 @@
 
     .cards-desc{
         padding-left: 20px;
-        padding-top: 10px;
+        
         font-family: Nexa-Light;
         color: black;
         font-size: small;
@@ -211,6 +218,66 @@
 
     #fourth{
         padding: 70px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px; 
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+    
+    }
+
+    .item1{
+        grid-row-start: 1;
+        grid-row-end: 4;        
+    }
+
+    .item2{
+        grid-row-start: 1;
+        grid-row-end: 6; 
+    }
+
+    .item3{
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    .item4{
+        grid-row-start: 4;
+        grid-row-end: 12;
+    }
+
+    .item5{
+        grid-row-start: 6;
+        grid-row-end: 12;
+    }
+
+    .item6{
+        grid-row-start: 5;
+        grid-row-end: 12;;
+    }
+    
+    .card2{
+        font-family: Nexa-bold;
+    }
+
+    .card2-img{
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+    
+    .card2-content{
+        font-family: Nexa-Light;
+        color: white;
+        position: relative;
+        bottom: 70px;
+        width: 360px;
+        padding: 20px;
+        background-image: linear-gradient(to top, rgb(0,10,60,1), rgb(0,10,60,0));
     }
 
     #fifth{
@@ -368,7 +435,11 @@
         padding-bottom: 15px;
     }
 
-    #inp{
+    #inp-1{
+        display:none;
+    }
+
+    #inp-2{
         display: flex;
         padding:0%;
         max-width: 100%;
@@ -445,6 +516,7 @@
 
     .inactive{
         color: lightgrey;
+        border-color: lightgrey;
     }
 
     #third{
@@ -463,27 +535,27 @@
     .flex-one{
         display: flex;
         flex-wrap: wrap;
-        max-width: 100%;
     }
 
     .cards{
         background-color: white;
         padding: 0px;
-        margin: 20px;
-        width: 300px;
+        margin: 10px;
+        width: 290px;
+        border-bottom: 4px solid rgb(103, 167, 226);
     }
 
     .cards-img{
         object-fit: cover;
-        width: 300px;
-        height: 300px;
+        width: 290px;
+        height: 290px;
     }
 
     .cards-name{
         font-family: Nexa-Bold;
         color: rgb(12, 136, 185);
         padding:15px 30px;
-        width: 270px;
+        width: 260px;
         padding-right: 0px;
     }
 
@@ -493,7 +565,7 @@
         font-size: small;
         padding-left: 30px;
         padding-bottom: 10px;
-        width: 270px;
+        width: 260px;
     }
 
     #fourth{
@@ -502,11 +574,13 @@
 
     .card2{
         position: relative;
-        width: 100%;
-        margin: 20px;
+        width: 300px;
+        margin: 8px;
     }
 
     .card2-img{
+        height: 300px;
+        object-fit: cover;
         width: 300px;
     }
 
@@ -698,27 +772,58 @@
         line-height: 20px ;
     }
 
-    #inp{
+    #inp-1{
         font-family: Nexa-Light;
         margin-top: 5%;
         margin-bottom:0%;
         text-align: center;
     }
 
+    #inp-2{
+        display:none;
+    }
+
+    #loc-gps{
+        display: flex;
+        border: 1px solid rgb(103, 167, 226);
+    }
+
     #loc{
-        position: absolute; 
-        margin-top: 5px;
         padding: 10px;
+        background-color: white;
+        border: none;
+        
+    }
+
+    #in1{
+        width:280px;
+        margin: 0px;
+        border:none;
+        width: 88%;
+        text-align: left;
+    }
+
+    #gps{
+        width: 15px;
+        padding: 10px;
+        background-color: white;
+        border: none;
+    }
+
+    #in2{
+        max-width: 100%;
+        border: none;
     }
 
     input{
         font-family: Nexa-Light;
         font-size: small;
-        height: 2rem;
+        height: 2.13rem;
         width: 100%;
         text-align: center;
-        margin: 1%;  
+        margin-top: 1%;  
         color: grey; 
+    
     }
 
     button{
@@ -846,17 +951,16 @@
     }
 
     .card3{
-        padding: 25px;
+        padding:15px 40px;
         margin: 5px;
         font-family: Nexa-Bold;
         color: grey;
         text-align: center;
         font-size: small;
         background-color: white;
-        border: 1px soldi lightgrey;
-        border-radius: 10px;
-
-        
+        border-radius: 15px;   
+        max-width: 100px;  
+              
     }
 
     #sixth{
