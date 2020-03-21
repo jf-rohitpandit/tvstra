@@ -372,8 +372,21 @@
     .padding{
         padding: 70px;
     }
+
+    #filter{
+        width: 30%;
+    }
+
+    .check-box{
+        height: 1rem;
+    }
 }
 
+
+
+/* second starts here */
+/* second starts here  */
+/* second starts header */
 
 
 
@@ -391,6 +404,9 @@
 
 @media (max-width: 768px) and (min-width: 601px){
 
+    #body{
+        font-family: Nexa-Light;
+    }
     #headder{
         height: 100%;
         margin: 1rem;
@@ -703,11 +719,144 @@
         color: rgb(103, 167, 226)
     }
     
+    #flex{
+        display: flex;
+        padding: 40px;
+        max-width: 90%;
+        width: 88%;
+    }
 
+    #filter{
+        width: 150px;
+        font-size: 1.1rem;
 
+    }
+
+    .border{
+        border: 1px solid lightgrey;
+        height: 240px;
+        width: 490px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .big{
+        font-size: 1.5rem;
+        font-family: Nexa-Light;
+    }
+
+    .width-100{
+        width: 180px;
+        float: right;
+        height: 180px;
+        object-fit: cover;;
+        
+    }
+
+    .space-30{
+        padding-left: 10px;
+    }
+
+    .padding-left{
+        padding-left: 20px;;
+    }
+
+    #flex-small{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flex-small-item{
+        margin: 10px 10px;
+    }
+
+    .book{
+        font-family: Nexa-Bold;
+        color: white;
+        padding: 10px;
+        background-color: rgb(7, 11, 32);
+        border:none;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .check-box{
+        height: .8rem;
+        box-shadow: none;
+    }
+
+    .h3-space{
+        margin: 20px 5px;
+        font-size: 1.5rem;
+    }
+
+    .small-icon{
+        border-bottom: 2px solid grey;
+        font-size: .8rem;
+        padding-bottom: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .blue-more{
+        color:rgb(64, 141, 212);
+        font-size: 1.3rem;
+        margin: 10px 0px;
+    }
+
+    #foot{
+        padding: 30px;
+        border-bottom: 8px solid rgb(39, 71, 228);
+    }
+    #footerLo{
+        width: 150px;
+        float: right;
+        padding-left: 10px;
+    }
+
+    .foo{
+        display: none;
+
+    }
+
+    #follow{
+        display: none;
+    }
+
+    #footer-info{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        color: rgb(0, 10, 60)
+    }
+/* 
+    .small{
+        padding-top: 30px;
+    }  */
+
+    #footer-reserve{
+        display: flex;
+        padding-top: 30px;
+        padding-right: 0px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .blu{
+        color:rgb(0, 10, 60);
+    }
 }
 
 
+
+
+
+/* third starts header
+third starts header
+third starts header
+third starts header
+third starts
+ here */
 
 
 
@@ -1100,5 +1249,13 @@
         font-size: .8rem;
         color: grey;
         margin-top: 25px;
+    }
+
+    #filter{
+        display: none;
+    }
+
+    #links{
+        display:none;
     }
 }
