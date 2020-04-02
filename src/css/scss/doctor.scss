@@ -10,7 +10,7 @@
         background-size: cover;
         h2{
             font-family: Nexa-Light;
-            padding: 6rem 2rem;
+            padding: 6rem 0rem;
             height: 100%;
             width: 100%;
             text-align: left;
@@ -38,14 +38,45 @@
 }
 
 .cards{
+    padding-top:0;
+    .filters{
+        display: none;
+    }
     .card{
-        .card-desc{
-            i{
-                padding:2rem;
-                margin:2rem;
-                &::before{
-                    padding: 2rem;
+        margin-bottom: 1rem ;
+        border: 1px solid $grey;
+        padding-top: 1rem;
+        h4{
+            text-align: left;
+            padding:1rem; 
+            padding-left:2rem;;
+            color: $blue;
+        }
+
+        .card-all{
+            .card-desc{
+                display: flex;
+                flex-direction: column;
+                .card-desc-item{
+                    text-align: left;
+                    i{
+                        color: $blue;
+                        padding: .5rem 0.5rem .5rem 0.3rem;
+                    }
+                    label{
+                        font-size:1rem;
+                    }
                 }
+                
+            }
+        }
+        
+        .card-img{
+            width: 100%;
+
+            img{
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -59,7 +90,7 @@
             display: block;
 
             h2{
-                padding:6rem 5rem; 
+                padding:6rem 2rem; 
             }
             
             span{
@@ -68,18 +99,143 @@
         }
 
     }
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 1rem;
+
+        .filters{
+            display: block;
+            
+            .filter-heading{
+                height: 3rem;
+                background-color: $lightgrey;
+                padding: 1rem;
+            
+                h6{
+                    text-align: left;
+                }
+            }
+
+            .filter-all{
+                padding:1rem;
+
+                .location{
+                    .search-div{
+                        margin: 1rem 0;
+                        display: flex;
+                        justify-content: space-between;
+                        h5{
+                            text-align: left;
+                        }
+    
+                        .search{
+                            i{
+                                color: $blue;
+                            }
+                        }
+                    }
+
+                    .search-list{
+                        // line-height: 1.5rem;
+                        text-align: left;
+
+                        .search-item{
+                            display: flex;
+                            margin: .3rem 0;
+                            input[type=checkbox]{
+                                margin-top: 0;
+                                
+                            }
+                        }
+                        
+                        h5{
+                            color: $blue;
+                            padding: .8rem 0;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .card{
+            padding: 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            .card-all{
+                display: flex;
+                flex-direction: column;
+
+                .card-desc{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+                    
+                    .card-desc-item{
+                        text-align: left;
+                        i{
+                            margin-left: 2rem;
+                        }
+                        label{
+                            font-size: 1rem;;
+                        }
+                    }
+                }
+
+                button{
+                    margin: 1rem 2rem;
+                    width:fit-content;
+                }
+            }
+
+            .card-img{
+                height:100%;
+                
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px){
+    
     .top{
         .top-heading{
+
+            h2{
+                padding:6rem 5rem; 
+            }
             span{
                 font-family: Nexa-Bold;
                 text-decoration: underline;
             }
         }
         .bread-crumb{
-            padding: 5rem;
+            padding: 2rem 5rem;
+        }
+    }
+
+    .cards{
+        .card{
+    
+            .card-all{
+                button{
+                    width: 220px;
+                    margin: 2rem ;
+                }
+            }
+            .card-img{
+                height: 100%;
+                img{
+                    width: 80%;
+                    object-fit: cover;
+                };
+            }
         }
     }
 }
