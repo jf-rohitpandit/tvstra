@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top {
+  padding: 0;
+}
+
+.top .top-heading {
+  height: 14rem;
+  width: 100%;
+  background: url(../assets/Doctors.png);
+  background-size: cover;
+  display: none;
+}
+
+.top .top-heading h2 {
+  font-family: Nexa-Light;
+  padding: 6rem 2rem;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  background-color: rgba(173, 216, 230, 0.9);
+}
+
+.top .bread-crumb {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top .bread-crumb h5 {
+  font-family: Nexa-Light;
+}
+
+.top .bread-crumb select {
+  padding: .4rem .8rem;
+  border: none;
+}
+
+.cards .card .card-desc i {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.cards .card .card-desc i::before {
+  padding: 2rem;
+}
+
+@media (min-width: 700px) {
+  .top .top-heading {
+    display: block;
+  }
+  .top .top-heading h2 {
+    padding: 6rem 5rem;
+  }
+  .top .top-heading span {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top .top-heading span {
+    font-family: Nexa-Bold;
+    text-decoration: underline;
+  }
+  .top .bread-crumb {
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=doctor.css.map */

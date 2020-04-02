@@ -1,0 +1,449 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+h5 {
+  font-size: 1rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+h6 {
+  font-size: .8rem;
+  color: #082740;
+  font-family: Nexa-Bold;
+}
+
+ul, li, label {
+  font-family: Nexa-Light;
+  border: 1px solid black;
+}
+
+button {
+  color: white;
+  background-color: #082740;
+  border: 1px solid #082740;
+  padding: 0 1rem;
+  height: 2.5rem;
+  border-radius: 2px;
+  text-align: center;
+}
+
+input {
+  height: 2.5rem;
+  font-family: Nexa-Light;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #f2f2f2;
+}
+
+::-webkit-input-placeholder {
+  color: grey;
+  font-size: .8rem;
+}
+
+:-ms-input-placeholder {
+  color: grey;
+  font-size: .8rem;
+}
+
+::-ms-input-placeholder {
+  color: grey;
+  font-size: .8rem;
+}
+
+::placeholder {
+  color: grey;
+  font-size: .8rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: Nexa-Light;
+}
+
+a:hover {
+  font-family: Nexa-Bold;
+}
+
+p {
+  font-family: Nexa-Light;
+  font-size: 1rem;
+  line-height: 20px;
+  margin: 1rem 0;
+}
+
+section {
+  padding: 2rem;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.show {
+  display: block;
+}
+
+.active {
+  background-color: #f2f2f2;
+}
+
+.nav {
+  padding: 1rem 1rem 0 1rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+}
+
+.nav .logo-and-bars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav .logo-and-bars .logo-img {
+  height: 2rem;
+}
+
+.nav .logo-and-bars .logo-img img {
+  height: 100%;
+  width: auto;
+}
+
+.nav .logo-and-bars .bars button {
+  background-color: #fff;
+  color: #082740;
+  border: none;
+  cursor: pointer;
+}
+
+.nav .logo-and-bars .bars button:hover {
+  background-color: #f2f2f2;
+  color: #082740;
+}
+
+.nav .nav-open {
+  background-color: #f2f2f2;
+  padding: 1rem 0;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
+}
+
+.nav .nav-open .nav-expended {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav .nav-open .nav-expended a {
+  color: #082740;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav .nav-open .login-signup .nav-btn-white {
+  background-color: white;
+  font-size: .8rem;
+  color: #082740;
+  border: 1px solid #082740;
+  border-radius: 3px;
+}
+
+.nav .nav-open .login-signup .nav-btn-white:hover {
+  font-family: Nexa-Bold;
+  cursor: pointer;
+}
+
+.nav .nav-open .login-signup .nav-btn-dark {
+  background-color: #082740;
+  font-size: .8rem;
+  color: #fff;
+  border: 1px solid #082740;
+  border-radius: 3px;
+}
+
+.nav .nav-open .login-signup .nav-btn-dark:hover {
+  font-family: Nexa-Bold;
+}
+
+.need-help {
+  height: 100%;
+  background-color: #a1c1c1;
+}
+
+.need-help h2 {
+  color: #fff;
+}
+
+.need-help button {
+  background-color: #008ae6;
+  border: none;
+}
+
+footer {
+  padding: 2rem;
+  height: 100%;
+  background-color: #082740;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-img {
+  width: 40vw;
+  text-align: center;
+  margin: 1rem;
+}
+
+footer .footer-img img {
+  width: 100%;
+}
+
+footer .footer-services a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 2rem;
+}
+
+footer .footer-social {
+  margin: 1rem 0;
+}
+
+footer .footer-social i {
+  padding: 0 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .last-line {
+  margin-top: .5rem;
+}
+
+footer .last-line h5 {
+  color: #fff;
+}
+
+@media (min-width: 700px) {
+  footer {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+  }
+  footer .footer-img {
+    width: 200px;
+  }
+  footer .footer-img img {
+    width: 100%;
+  }
+  footer .footer-services {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .footer-services a {
+    padding: 0 5px;
+    color: #082740;
+  }
+  footer .footer-social i {
+    color: #082740;
+  }
+  footer .last-line h5 {
+    color: #082740;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    text-align: left;
+  }
+  h2 {
+    text-align: left;
+  }
+  h3 {
+    text-align: left;
+  }
+  h4 {
+    text-align: left;
+  }
+  h5 {
+    text-align: left;
+  }
+  h6 {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+  section {
+    padding: 5rem;
+  }
+  .nav {
+    padding: 1rem 2rem 1rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .nav .logo-and-bars {
+    width: 25%;
+    padding-left: 0rem;
+  }
+  .nav .logo-and-bars .logo-img {
+    width: 100%;
+    height: 2.5rem;
+  }
+  .nav .logo-and-bars .bars {
+    display: none;
+  }
+  .nav .nav-open {
+    background-color: #fff;
+    padding: 0;
+    line-height: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 75%;
+  }
+  .nav .nav-open .nav-expended {
+    padding-top: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 60%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav .nav-open .nav-expended a {
+    color: #082740;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .nav .nav-open .login-signup .nav-btn-white {
+    width: 130px;
+  }
+  .nav .nav-open .login-signup .nav-btn-dark {
+    width: 130px;
+  }
+  .need-help {
+    padding: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  .need-help button {
+    height: auto;
+    margin-top: .7rem;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #008ae6;
+  }
+  footer {
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=theme.css.map */

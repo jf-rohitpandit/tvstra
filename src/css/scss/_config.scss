@@ -1,0 +1,27 @@
+$lightblue : #a1c1c1;
+$darkblue: #082740;
+$lightgrey: #f2f2f2;
+$darkgrey: #a1a197;
+$blue: #008ae6;
+$grey: grey;
+$white: #fff;
+$black: #000;
+
+@font-face{
+    font-family: Nexa-Bold;
+    src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face{
+    font-family: Nexa-Light;
+    src: url(../assets/Nexa-Light.otf);
+}
+
+@mixin transition-ease{
+    transition: all .5s ease-in-out;
+}
+
+*{
+    text-align: center; 
+    box-sizing: border-box;
+}
