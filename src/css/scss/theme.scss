@@ -69,6 +69,26 @@ input[type=checkbox]{
     margin-right:10px; 
 }
 
+input[list]{
+    // appearance: none;
+        height:2.5rem;
+        font-size:.8rem;
+        color:black;
+        border: 1px solid $lightgrey;
+}::placeholder{
+    color: $grey;
+}
+
+input[type=date]{
+    border: 1px solid $lightgrey;
+}::placeholder{
+    color:$grey;
+}
+
+datalist{
+    font-size: 1rem;;
+}
+
 label{
     text-align: left;
     font-size:.9rem;

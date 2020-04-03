@@ -1,0 +1,91 @@
+@import 'config';
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: $lightblue;
+    height: 100vh;
+    justify-content: space-between;
+        
+    header{
+        flex:2;
+    }
+
+    main{
+        
+        flex:5;
+        align-self: center;
+        .login-detail{  
+            padding:0;
+            background-color: $white;
+            width: 350px;
+
+            h3{
+                text-align: center;
+                width: 100%;;
+                color: $blue;
+                padding:1.3rem;
+                border-bottom: 1px solid $grey;
+                margin-bottom:.5rem;
+            }
+            
+            .login{
+                input{
+                    margin: .5rem 0;
+                    width: 90%;
+                    height: 3.5rem;
+                }
+                button{
+                    width: 90%;
+                    margin-bottom: 1rem;
+                    height: 3.5rem;;
+                    span{
+                        float: right;
+                    }
+                }
+            }
+
+            h6{
+                text-align: center;
+                padding:1rem;
+                span{
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    footer{
+        padding: 0;
+        margin: 0;
+        flex:1;
+        height: 100%;;
+        align-self: center;
+        background-color: $lightblue;
+        .last-line{
+            
+            h5{
+                text-align: center;
+                color:black;
+            }
+        }
+    }
+}
+
+@media (min-width:700px){
+    body{
+
+
+        main{
+            .login-detail{
+                width: 400px;
+            }
+        }
+
+        footer{
+            display: block;
+            align-self: center;
+            
+        }
+    }
+}

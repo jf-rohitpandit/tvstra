@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #a1c1c1;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body main {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body main .login-detail {
+  padding: 0;
+  background-color: #fff;
+  width: 350px;
+}
+
+body main .login-detail h3 {
+  text-align: center;
+  width: 100%;
+  color: #008ae6;
+  padding: 1.3rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: .5rem;
+}
+
+body main .login-detail .login input {
+  margin: .5rem 0;
+  width: 90%;
+  height: 3.5rem;
+}
+
+body main .login-detail .login button {
+  width: 90%;
+  margin-bottom: 1rem;
+  height: 3.5rem;
+}
+
+body main .login-detail .login button span {
+  float: right;
+}
+
+body main .login-detail h6 {
+  text-align: center;
+  padding: 1rem;
+}
+
+body main .login-detail h6 span {
+  color: #008ae6;
+}
+
+body footer {
+  padding: 0;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #a1c1c1;
+}
+
+body footer .last-line h5 {
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 700px) {
+  body main .login-detail {
+    width: 400px;
+  }
+  body footer {
+    display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=login.css.map */
