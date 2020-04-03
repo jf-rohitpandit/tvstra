@@ -1,0 +1,146 @@
+@import 'config';
+
+section{
+    padding: 0;
+}
+
+hr{display: none;}
+
+.contact-heading{
+    padding: 3rem;;
+    height: 100%;
+    background: url("/css-tasks/src/assets/contactUs.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    .top{
+        margin:4rem;
+        line-height: 3rem;;
+        h1{
+            color: white;
+        }
+        h5{
+            color: white;
+        }
+    }
+}
+
+.info{
+    padding: 1rem 2rem;
+    .details{
+        display: flex;
+        flex-direction: column;
+
+        .detail-home{
+            display: flex;
+            margin:1rem 0;
+
+            i{
+                color: $blue;
+            }
+            .detail-home-written{
+                margin:0 1rem;
+                display: flex;
+                flex-direction: column;
+                line-height: 1rem;;
+                h5{
+                    text-align: left;
+                    color: $black;
+                }
+                h6{
+                    text-align: left;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.query-container{
+    background-color: $lightblue;
+    padding-bottom:1rem;
+    .query-outside{
+        
+        padding: 1rem;
+
+        input{
+            text-align: left;
+            padding-left:1rem;
+            margin-bottom: .8rem;
+        }
+
+        
+    }
+    
+    .button-div{
+        display: flex;
+        justify-content: flex-end;
+        button{
+            margin-right: 1rem;;
+            background-color: $blue;
+            border:none;
+        }
+    }
+}
+
+@media (min-width:700px){
+    .info{
+        padding-bottom: .5rem;
+        padding-left:0;
+        .details{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;  
+        }
+    }
+
+    .query-outside{
+        display: grid;
+        grid-template-columns: 1fr 1fr;;
+        grid-gap: 1rem;
+
+        .message-div{
+            height: 100%;
+            
+
+            #message{
+                height:90%;
+            }
+        }
+        button{
+            margin-left:80%;;
+        }   
+    }
+}
+
+@media (min-width:1024px){
+    .contact-heading{
+        padding:1rem;
+    }
+
+    hr{
+        display: block;
+    }
+
+    .info-query{
+        padding: 2rem 5rem;
+        display: flex;
+
+        .info{
+            flex:1;
+
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .detail-home{
+                    margin-left: 0;
+                }
+            }
+        }
+
+
+    }
+}
