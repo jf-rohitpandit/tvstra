@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/hospital.css">
+    <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script>
+    
+
+    <title>Tvastra</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo-and-bars">
+                <div class="logo-img">
+                    <img src="../assets/Logo.jpg" alt="logo">
+                </div>
+                <div class="bars">
+                    <button id="bars-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-view" class="nav-open hidden">
+                <div class="nav-expended">
+                    <a href="doctor.html">Doctors</a>
+                    
+                    <a href="hospital.html">Hospitals</a>
+                    
+                    <a href="treatment.html">Treatment</a>
+                    
+                    <a href="other-services.html">Other Services</a>
+                    
+                    <a href="about.html">about</a>
+                    
+                </div>
+                <div class="login-signup">
+                    <button class="nav-btn-white">Login/SignUp</button>
+                    <button class="nav-btn-dark">Get a Queue</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="top">
+            <div class="top-heading">
+                <h2>Hospitals in <span>Delhi</span></h2>
+            </div>
+            <div class="bread-crumb">
+                <h5>Home/Hospital List</h5>
+                <select id="sort">
+                    <option value="">Soirt</option>
+                </select>
+            </div>
+            
+        </section>
+
+        <section class="cards">
+            <div class="filters">
+                <div class="filter-heading">
+                    <h6>Filter By</h6>
+                </div>
+                <div class="filter-all">
+
+                    <div class="location">
+                        <div class="search-div">
+                            <h5>Location</h5>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="search-list">
+                            <div class="search-item">
+                                <input type="checkbox" name="DLF-ciber">
+                                <label for="DLF-ciber">DLF ciber city</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Dwarka">
+                                <label for="Dwarka">Dwarka</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Lajpat-nagar">
+                                <label for="Lajpat-nagar">Lajpat Nagar</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Palam-vihar">
+                                <label for="Palam-vihar">Palam Vihar</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Punjabi-bagh">
+                                <label for="Punjabi-bagh">Punjabi Bagh</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Pusa-road">
+                                <label for="Pusa-road">Pusa-road</label>
+                            </div> 
+    
+                            <h5>Show more+</h5>
+                            
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="location">
+                        <div class="search-div">
+                            <h5>Department</h5>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="search-list">
+                            <div class="search-item">
+                                <input type="checkbox" name="Apollo">
+                                <label for="Apollo">Apollo Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Manipal">
+                                <label for="Manipal">Manipal North side Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Northstar">
+                                <label for="Northstar">Northstar</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="AIIMS">
+                                <label for="AIIMS">AIIMS</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Fortis">
+                                <label for="Fortis">Fortis Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Eibit">
+                                <label for="Eibit">Eibit Diagnostics</label>
+                            </div>
+    
+                            <h5>Show more+</h5>
+            
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="location">
+                        <div class="search-div">
+                            <h5>Treatments</h5>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="search-list">
+                            <div class="search-item">
+                                <input type="checkbox" name="Multi-organ">
+                                <label for="Multi-organ">Multi Organ Transplant</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Orthopedic">
+                                <label for="Orthopedic">Orthopedic Sugrery</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Infertiltiy">
+                                <label for="Infertiltiy">Infertility Treatment</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Dentistry">
+                                <label for="Dentistry">Dentistry</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Cardiology">
+                                <label for="Cardiology">Cardiology</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Cancer">
+                                <label for="Cancer">Cancer</label>
+                            </div>
+    
+                            <h5>Show more+</h5>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="cards-card">
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Apollo Hospital</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                        
+
+                        <!-- </div> -->
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Deep Chandra Verma</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                    
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Deep Chandra Verma</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                            
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Deep Chandra Verma</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Deep Chandra Verma</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                            
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-all">
+                        <h4>Deep Chandra Verma</h4>
+                        <div class="card-desc">
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-sun"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-clock"></i>
+                                <label>aldjfal</label>
+                            </div>
+                        </div>
+                        <div class="card-desc-item-bullet">
+                            <span class="bullet">Multi Organ Transplant</span>
+                            <span class="bullet">Orthopedic Surgery</span>
+                            <span class="bullet">Infertility Treatement</span>
+                            <span class="bullet">Dentistry</span>
+                            <span class="bullet">Cardiology</span>
+                            <span class="bullet">Cancer</span>
+                            <span class="bullet">+40 more</span>
+                        </div>
+                            
+                        <button>Call Now</button>
+                    </div>
+                    <div class="card-img">
+                        <img src="../assets/image--002.jpg" alt="doctor image">
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="need-help">
+            <div >
+                <h2>Need Help?</h2>
+                <p>Just let us know. We will be happy to assist you</p>    
+            </div>
+            <div>
+                <button class="help">Submit Your Query</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="footer-img">
+                <img src="../assets/footer.png" alt="Logo">
+            </div>
+            <div class="footer-services">
+                <a href="doctor.html">Doctors</a>
+                <br>
+                <a href="hospital.html">Hospital</a>
+                <br>
+                <a href="treatment.html">Treatement</a>
+                <br>
+                <a href="other-services.html">Other Services</a>
+                <br>
+                <a href="faq.html">FAQs</a>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="last-line">
+                <h5>All Rights Reserved. &copy; tvastra 2018</h5>
+            </div>        
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
