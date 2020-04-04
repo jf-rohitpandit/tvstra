@@ -1,0 +1,357 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  border-bottom: 8px solid #008ae6;
+}
+
+.dentist-heading {
+  background-image: url(/css-tasks/src/assets/dentist_hero_image.jpg);
+  background-position: left;
+  background-size: cover;
+  padding: 0;
+}
+
+.dentist-heading .top {
+  padding: 5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6496ff), to(rgba(100, 150, 255, 0)));
+  background-image: linear-gradient(to right, #6496ff, rgba(100, 150, 255, 0));
+  width: 100%;
+  line-height: 3rem;
+}
+
+.dentist-heading .top h1 {
+  color: #fff;
+}
+
+.dentist-heading .top h5 {
+  color: #fff;
+}
+
+.vaccine {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.vaccine .vaccine-img {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.vaccine .vaccine-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.vaccine .about-dentist h4 {
+  text-align: left;
+}
+
+.vaccine .about-dentist p {
+  text-align: left;
+}
+
+.vaccine .about-dentist ul {
+  border: none;
+  list-style: none;
+}
+
+.vaccine .about-dentist ul li {
+  line-height: 2rem;
+  list-style-position: inside;
+  list-style-type: none;
+  text-align: left;
+  border: none;
+}
+
+.vaccine .about-dentist ul li:before {
+  content: "\25CF";
+  color: #008ae6;
+  font-weight: 900;
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+.vaccine .disease {
+  padding: 2rem 0;
+}
+
+.vaccine .disease .disease-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vaccine .disease .disease-item .disease-logo {
+  margin-bottom: 1rem;
+  background-color: #a1c1c1;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.vaccine .disease .disease-item .disease-logo i {
+  margin: 16px;
+  color: #082740;
+  width: 32px;
+}
+
+.vaccine .service-details {
+  border: 1px solid grey;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.vaccine .service-details h5 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.vaccine .service-details .service-items {
+  line-height: 2rem;
+}
+
+.vaccine .service-details .service-items .service-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: .5rem;
+}
+
+.vaccine .service-details .service-items .service-element .light {
+  color: grey;
+}
+
+.more-services {
+  background-color: #a1c1c1;
+}
+
+.more-services h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.more-services i {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.more-services .service-cards .service-card {
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.more-services .service-cards .service-card .card-img {
+  height: 14rem;
+}
+
+.more-services .service-cards .service-card .card-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.more-services .service-cards .service-card .card-heading {
+  padding: 2rem;
+}
+
+.more-services .service-cards .service-card .card-heading h3 {
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .dentist-heading {
+    background-position: top;
+  }
+  .dentist-heading .top {
+    padding: 5rem;
+  }
+  .vaccine h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .vaccine .img-and-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .vaccine .img-and-about .vaccine-img {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    margin: 0;
+  }
+  .vaccine .img-and-about .about-dentist {
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    padding-left: 1rem;
+  }
+  .vaccine .disease {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 2rem;
+  }
+  .vaccine .service-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .vaccine .service-cards #service01 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .vaccine .service-cards #service02 {
+    -webkit-box-flex: .8;
+        -ms-flex: .8;
+            flex: .8;
+    margin: 1rem;
+  }
+  .more-services .more-services-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1rem;
+  }
+  .more-services .service-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .more-services .service-cards .service-card .card-img {
+    height: 15rem;
+  }
+  .more-services .service-cards .service-card .card-heading {
+    padding: 2rem 1rem;
+  }
+  .more-services .service-cards .service-card .card-heading h3 {
+    font-size: 1.2rem;
+  }
+  .more-services .service-cards #card2 {
+    margin-left: 1rem;
+  }
+  .more-services .service-cards #card3 {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dentist-heading {
+    background-position: top;
+  }
+  .vaccine {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
+    grid-auto-rows: auto;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  .vaccine .large-screen {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .vaccine .large-screen .img-and-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .vaccine .disease {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .vaccine .service-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 2rem;
+  }
+  .vaccine .service-cards .service-details {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 100%;
+    padding-bottom: 0;
+    margin-top: 0;
+    line-height: .8rem;
+  }
+  .vaccine .service-cards #service02 {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=treatment.css.map */

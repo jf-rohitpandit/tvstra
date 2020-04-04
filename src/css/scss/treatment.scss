@@ -1,0 +1,290 @@
+@import 'config';
+
+body{
+    border-bottom: 8px solid $blue;
+}
+.dentist-heading{
+    background-image: url(/css-tasks/src/assets/dentist_hero_image.jpg);
+    background-position: left;
+    background-size: cover;
+    padding:0;
+    .top{
+        padding: 5rem;
+        background-image: linear-gradient(to right , rgba(100, 150, 255, 1), rgba(100,150, 255,0));
+        width: 100%;;
+        line-height: 3rem;
+        h1{
+            color: $white;
+        }
+        h5{
+            color:$white;
+        }
+    }
+}
+
+.vaccine{
+    padding:2rem;
+    padding-bottom:0;
+    .vaccine-img{
+        width: 100%;
+        margin: 1rem 0;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .about-dentist{
+        h4{
+            text-align: left;
+        }
+        p{
+            text-align: left;
+        }
+
+        ul{
+            border:none;
+            list-style:none;
+            li{
+                line-height: 2rem;;
+                list-style-position: inside;
+                list-style-type: none;
+                text-align: left;
+                border:none;
+            }
+            li:before{
+                content:"\25CF";
+                color: $blue;
+                font-weight: 900;
+                width:1rem;
+                margin-right:1rem;
+            }
+            
+        }
+    }
+
+    .disease{
+        padding: 2rem 0;
+        
+        .disease-item{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            .disease-logo{
+                margin-bottom:1rem;
+                background-color: $lightblue;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                i{
+                    margin: 16px;
+                    color: $darkblue;
+                    width: 32px;
+                }
+            }
+        }
+    }
+
+    .service-details{
+        border: 1px solid $grey;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        line-height: 1.5rem;;
+        margin: 1rem 0;
+        h5{
+            text-align: left;
+            margin-bottom:1rem;
+        }
+        .service-items{
+            line-height: 2rem;
+
+            .service-element{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom: 1px solid $lightgrey;
+                margin-bottom:.5rem;
+                
+                .light{
+                    color: $grey;
+                }
+
+            }
+            
+        }
+    }
+}
+
+.more-services{
+    background-color: $lightblue;
+    h2{
+        color: $white;
+        margin-bottom:1rem;
+    }
+    i{
+        color: $white;
+        margin-bottom: 1rem;;
+    }
+
+    .service-cards{
+        .service-card{
+            margin-bottom:1rem;
+            border-radius:2rem;
+            overflow:hidden;
+            background-color: $white;
+            .card-img{
+                height: 14rem;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .card-heading{
+                padding:2rem;
+                h3{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px){
+    .dentist-heading{
+        background-position: top;
+        .top{
+            padding:5rem;
+        }
+    }
+
+    .vaccine{
+        
+        h2{
+            text-align: left;
+            margin-bottom:1rem;
+        }
+
+        .img-and-about{
+            display: flex;
+            align-items: stretch;
+
+
+            .vaccine-img{
+                flex: 3;
+                margin: 0;
+            }
+            .about-dentist{
+                flex:5;
+                padding-left:1rem;
+            }
+        }
+
+        .disease{
+            display: flex;
+            flex-direction: row;
+            margin-top:2rem;
+        }
+
+        .service-cards{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            #service01{
+                flex:1;
+            }
+
+            #service02{
+                flex:.8;
+                margin:1rem;
+            }
+        }
+    }
+
+    .more-services{
+        .more-services-heading{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+        .service-cards{
+            display: flex;
+            justify-content: space-between;
+
+            .service-card{
+                .card-img{
+                    height: 15rem;;
+                }
+
+                .card-heading{
+                    padding:2rem 1rem;;
+                    h3{
+                        font-size:1.2rem;
+                    }
+                }
+            }
+
+            #card2{
+                margin-left:1rem;
+            }
+            #card3{
+                margin-left:1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .dentist-heading{
+        background-position: top;
+    }
+
+    .vaccine{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        display: grid;
+        grid-template-rows: 2;
+        grid-auto-rows: auto;
+        grid-template-columns: 2fr 1fr;
+
+        .large-screen{
+
+            grid-row:1;
+            grid-column: 1;
+            
+            .img-and-about{
+                display: grid;
+            grid-template-columns: 1fr 1fr;;
+            }
+        }
+
+        .disease{
+            grid-row:2;
+            grid-column: 1;
+        }
+
+        .service-cards{
+
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            margin-left:2rem;
+            .service-details{
+                align-self:flex-start;
+                width: 100%;  
+                padding-bottom:0;
+                margin-top: 0;
+                line-height: .8rem;;
+            }
+
+            #service02{
+                margin:0;
+            }
+            
+        }
+    }
+}
