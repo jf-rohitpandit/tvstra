@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/appointment.css">
     <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script>
     
     
@@ -45,42 +45,68 @@
         </nav>
     </header>
     <main>
-        <section class="login-detail">
+        <section class="book-detail">
             <h3>Book an Appointment</h3>
             <form action="" class="book">
-                <h5>Select Appointment Date*</h5>
-                <input type="date" >
-                <h5>Time Interval*</h5>
-                <input type="radio" >
-                <label for="">Morning</label>
-                <br>
-                <input type="radio" >
-                <label for="">Aftenoon</label>
-                <br>
-                <input type="radio" >
-                <label for="">Evening</label>
-                <br>
-                <h5>Appointment Status/ Urgency*</h5>
-                <input type="radio" >
-                <label for="">Routine Checkup</label>
-                <br>
-                <input type="radio" >
-                <label for="">Non Urgent Checkup</label>
-                <br>
-                <input type="radio" >
-                <label for="">Urgent Checkup</label>
-                <br>
-                <input type="radio" >
-                <label for="">Surgical Appointment</label>
-                <br>
+                <div class="book-info-and">
+                    <h5>Select Appointment Date*</h5>
+                    <div class="book-info">
+                        <input type="date" >
+                    </div>
+                    
+                </div>
+                <div class="book-info-and">
+                    <h5>Time Interval*</h5>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Morning</label>
+                    </div>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Aftenoon</label>                        
+                    </div>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Evening</label>
+                    </div>
+                </div>
 
-                <h5>Upload Previous Health Record</h5>
-                <input type="file">
+                <div class="book-info-and">
+                    <h5>Appointment Status/ Urgency*</h5>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Routine Checkup</label>    
+                    </div>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Non Urgent Checkup</label>    
+                    </div>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Urgent Checkup</label>    
+                    </div>
+                    <div class="book-info">
+                        <input type="radio" >
+                        <label for="">Surgical Appointment</label> 
+                    </div>                                       
+                </div>
 
-                <h5>Appointment Detail</h5>
-                <textarea name="" id=""  rows="5"></textarea>
-                
-                <button>Book Appointment<span><i class="fas fa-arrow-right"></i></span></button>
+                <div class="book-info-and">
+                    <h5>Upload Previous Health Record</h5>
+                    <div class="book-info">
+                        <input type="file">
+                    </div>
+                    
+                </div>
+                <div class="book-info-and">
+                    <h5>Appointment Detail</h5>
+                    <div class="book-info">
+                        <textarea name="" id=""  rows="4"></textarea>
+                    </div>
+                        
+                </div>            
+              
+                <button>B O O K &ensp; A P P O I N T M E N T<span><i class="fas fa-arrow-right"></i></span></button>
             </form>
         </section>
     </main>
