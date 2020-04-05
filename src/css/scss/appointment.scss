@@ -8,12 +8,12 @@ body{
     justify-content: space-between;
         
     header{
-        // flex:2;
+        flex:1.5;
     }
 
     main{
         
-        // flex:5;
+        flex:7;
         align-self: center;
         .login-detail{  
             padding:0;
@@ -31,9 +31,16 @@ body{
             
             .login{
                 input{
-                    margin: .5rem 0;
+                    margin: .2rem 0;
                     width: 90%;
-                    height: 3.5rem;
+                    height: 2rem;
+                    padding-left:1rem;
+                    text-align: left;
+                    color: $black;
+                }
+
+                #place{
+                    width:45%;
                 }
                 button{
                     width: 90%;
@@ -56,10 +63,10 @@ body{
     }
 
     footer{
-        padding-bottom: 1rem;
+        padding: 0;
         margin: 0;
-        // flex:1;
-        height: auto;;
+        flex:1;
+        height: 100%;;
         align-self: center;
         background-color: $lightblue;
         .last-line{
@@ -75,6 +82,9 @@ body{
 @media (min-width:700px){
     body{
 
+        header{
+            flex:2.5;
+        }
 
         main{
             .login-detail{
@@ -86,6 +96,31 @@ body{
             display: block;
             align-self: center;
             
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    body{
+        header{
+            flex:3;
+        }
+
+        main{
+            .login-detail{
+                width: 500px;
+                h3{
+                    font-size:1rem;
+                }
+                .login{
+                    input{
+                        height: 1.4rem;;
+                    }
+                    button{
+                        height: 1.8rem;
+                    }
+                }
+            }
         }
     }
 }

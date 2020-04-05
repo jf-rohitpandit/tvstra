@@ -170,7 +170,7 @@ section {
 }
 
 .hidden {
-  display: hidden;
+  display: none;
 }
 
 .show {

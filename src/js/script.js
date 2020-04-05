@@ -72,3 +72,5 @@ howBtn7.addEventListener('click', () =>{
     var howImg7 = document.querySelector('#Img07');
     howImg7.style.display= 'block';
 });
+
+new google.maps.places.Autocomplete(document.getElementById('autocomplete'));
