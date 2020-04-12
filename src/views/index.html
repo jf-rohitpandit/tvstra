@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script>
     <script src="../js/navbar.js" async></script>
+    
     <title>Tvastra</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                     <img src="../assets/Logo.jpg" alt="logo">
                 </div>
                 <div class="bars">
-                    <button id="bars-button">
+                    <button id="bars-button" onclick='burger()'>
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -74,10 +75,10 @@
             </p>
             <div class="works-btns-all">
                 <div class="works-btns">
-                    <button class="active-work-btn">
+                    <button id='butt01' onclick="openImg(01)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="works-img-small show">
+                    <div id="img01" class="works-img-small">
                         <img src="../assets/img1.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -85,10 +86,10 @@
                         </p>
                     </div>
                                 
-                    <button class="inactive-work-btn">
+                    <button  id='butt02' onclick="openImg(02)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img02" class="works-img-small ">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -96,10 +97,10 @@
                         </p>
                     </div>
                 
-                    <button class="inactive-work-btn">
+                    <button id="butt03" onclick="openImg(03)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img03" class="works-img-small">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -107,10 +108,10 @@
                         </p>
                     </div>
                     
-                    <button class="inactive-work-btn">
+                    <button id="butt04" onclick="openImg(04)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img04" class="works-img-small">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -118,10 +119,10 @@
                         </p>
                     </div>
                     
-                    <button class="inactive-work-btn">
+                    <button id="butt05" onclick="openImg(05)">
                         <h3><span class="blue">01</span> &emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img05" class="works-img-small">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -129,10 +130,10 @@
                         </p>
                     </div>
             
-                    <button class="inactive-work-btn">
+                    <button id="butt06" onclick="openImg(06)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img06" class="works-img-small">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -140,10 +141,10 @@
                         </p>
                     </div>
                 
-                    <button class="inactive-work-btn">
+                    <button id="butt07" onclick="openImg(07)">
                         <h3><span class="blue">01</span>&emsp; Fix Consultation</h3>
                     </button>
-                    <div class="hidden">
+                    <div id="img07" class="works-img-small">
                         <img src="../assets/img2.png" alt="image">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -154,7 +155,7 @@
                 </div>
                 
                 <div class="works-img-large-all">
-                    <div class="works-img-large hidden">
+                    <div id= 'large-img' class="works-img-large hidden">
                         <img src="../assets/img1.png" alt="doctos">
                         <h3>Fix Consultation</h3>
                         <p>This depicts that the user will have to fix appointment first when it selets 
@@ -179,7 +180,7 @@
                         <img src="../assets/image--002.jpg" alt="Doctor's photo">
                     </div>
                     <div class="doctor-card-desc">
-                        <h4>Duke Sanson</h4>
+                        <h4>Duke Sanson1</h4>
                         <h5>Neuro Sergina</h5>
                         <h5>chain department of Neurological surgery</h5>
                         <h5>Australia</h5>
@@ -190,7 +191,7 @@
                         <img src="../assets/image--002.jpg" alt="Doctor's photo">
                     </div>
                     <div class="doctor-card-desc">
-                        <h4>Duke Sanson</h4>
+                        <h4>Duke Sanson2</h4>
                         <h5>Neuro Sergina</h5>
                         <h5>chain department of Neurological surgery</h5>
                         <h5>Australia</h5>
@@ -201,7 +202,7 @@
                         <img src="../assets/image--002.jpg" alt="Doctor's photo">
                     </div>
                     <div class="doctor-card-desc">
-                        <h4>Duke Sanson</h4>
+                        <h4>Duke Sanson3</h4>
                         <h5>Neuro Sergina</h5>
                         <h5>chain department of Neurological surgery</h5>
                         <h5>Australia</h5>
@@ -212,12 +213,62 @@
                         <img src="../assets/image--002.jpg" alt="Doctor's photo">
                     </div>
                     <div class="doctor-card-desc">
-                        <h4>Duke Sanson</h4>
+                        <h4>Duke Sanson4</h4>
                         <h5>Neuro Sergina</h5>
                         <h5>chain department of Neurological surgery</h5>
                         <h5>Australia</h5>
                     </div>
                 </div>
+                <div class="doctor-card">
+                    <div class="doctor-card-img">
+                        <img src="../assets/image--002.jpg" alt="Doctor's photo">
+                    </div>
+                    <div class="doctor-card-desc">
+                        <h4>Duke Sanson5</h4>
+                        <h5>Neuro Sergina</h5>
+                        <h5>chain department of Neurological surgery</h5>
+                        <h5>Australia</h5>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card-img">
+                        <img src="../assets/image--002.jpg" alt="Doctor's photo">
+                    </div>
+                    <div class="doctor-card-desc">
+                        <h4>Duke Sanson5</h4>
+                        <h5>Neuro Sergina</h5>
+                        <h5>chain department of Neurological surgery</h5>
+                        <h5>Australia</h5>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card-img">
+                        <img src="../assets/image--002.jpg" alt="Doctor's photo">
+                    </div>
+                    <div class="doctor-card-desc">
+                        <h4>Duke Sanson6</h4>
+                        <h5>Neuro Sergina</h5>
+                        <h5>chain department of Neurological surgery</h5>
+                        <h5>Australia</h5>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card-img">
+                        <img src="../assets/image--002.jpg" alt="Doctor's photo">
+                    </div>
+                    <div class="doctor-card-desc">
+                        <h4>Duke Sanson7</h4>
+                        <h5>Neuro Sergina</h5>
+                        <h5>chain department of Neurological surgery</h5>
+                        <h5>Australia</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span id='dot0' onclick = changeDoctor(0)>&#9679;</span>
+                <span id='dot1' onclick = changeDoctor(1)>&#9679;</span>
+                <span id='dot2' onclick = changeDoctor(2)>&#9679;</span>
+                <span id='dot3' onclick = changeDoctor(3)>&#9679;</span>
             </div>
         </section>
         <section class="medical-treatment">
@@ -264,6 +315,11 @@
                         <h5>50+ Specialities</h5>
                     </div>
                 </div>
+            </div>
+            <div class="dots">
+                <span id='serv-dot0' onclick = changeService(0)>&#9679;</span>
+                <span id='serv-dot1' onclick = changeService(1)>&#9679;</span>
+                <span id='serv-dot2' onclick = changeService(2)>&#9679;</span>
             </div>
         </section>
 
@@ -349,7 +405,7 @@
                 <h5>All Rights Reserved. &copy; tvastra 2018</h5>
             </div>        
     </footer>
-    
+    <script src="../js/index.js" async></script>
     <!-- <script src="../js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgx0he08lg0fSei0yXKyrmo1_qysOdxCc&callback=initMap"
     type="text/javascript"></script> -->

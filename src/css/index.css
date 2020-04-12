@@ -85,12 +85,16 @@
   margin: .4rem;
 }
 
-.how-it-works .works-btns-all .works-btns .active-work-btn h3 {
-  color: #008ae6;
+.how-it-works .works-btns-all .works-btns button h3 {
+  color: grey;
 }
 
-.how-it-works .works-btns-all .works-btns .inactive-work-btn h3 {
-  color: grey;
+.how-it-works .works-btns-all .works-btns .active-work-btn {
+  border-color: #008ae6;
+}
+
+.how-it-works .works-btns-all .works-btns .active-work-btn h3 {
+  color: #008ae6;
 }
 
 .how-it-works .works-btns-all .works-img-small {

@@ -124,6 +124,9 @@ section{
 .active{
     background-color: $lightgrey;
 }
+.dots{
+    display: none;
+}
 
 .nav{
     padding: 1rem 1rem 0 1rem;
@@ -311,6 +314,8 @@ footer{
                 }
             }
     }
+
+    
 }
 
 
@@ -341,6 +346,20 @@ footer{
     section{
         padding: 5rem;
     }
+
+
+    .dots{
+        display: block;
+        text-align: left;
+        margin-top: 1rem;
+        .active-dot{
+            color: $blue;
+        }
+        span{
+            margin:.2rem;
+        }
+    }
+    
     .nav{
         padding: 1rem 2rem 1rem 0rem;
         flex-direction: row;  

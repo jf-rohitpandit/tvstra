@@ -181,6 +181,10 @@ section {
   background-color: #f2f2f2;
 }
 
+.dots {
+  display: none;
+}
+
 .nav {
   padding: 1rem 1rem 0 1rem;
   background-color: #fff;
@@ -413,6 +417,17 @@ footer .last-line h5 {
   }
   section {
     padding: 5rem;
+  }
+  .dots {
+    display: block;
+    text-align: left;
+    margin-top: 1rem;
+  }
+  .dots .active-dot {
+    color: #008ae6;
+  }
+  .dots span {
+    margin: .2rem;
   }
   .nav {
     padding: 1rem 2rem 1rem 0rem;

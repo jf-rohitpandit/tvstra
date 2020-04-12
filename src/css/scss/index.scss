@@ -75,18 +75,17 @@
                 padding: auto;
                 border-radius: 5px;
                 margin:.4rem;
+                h3{
+                    color: $grey;
+                }
             }
             .active-work-btn{
                 h3{
                     color: $blue;
                 }
+                border-color: $blue;
             }
 
-            .inactive-work-btn{
-                h3{
-                    color: $grey;
-                }
-            }
 
         }
 
