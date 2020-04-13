@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/hospital.css">
+    <link rel="stylesheet" href="../css/doctor.css">
     <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script>
     <script src="../js/navbar.js" async></script>
 
     <title>Tvastra</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="nav">
             <div class="logo-and-bars">
                 <a href="index.html">
@@ -46,17 +46,18 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
+    <%- include('./partials/navbar.ejs') %>
     <main>
         
         <section class="top">
             <div class="top-heading">
-                <h2>Hospitals in <span>Delhi</span></h2>
+                <h2>Cardiac Sugreon in <span>Delhi</span></h2>
             </div>
             <div class="bread-crumb">
-                <h5>Home/Hospital List</h5>
+                <h5>Home/Doctor List</h5>
                 <select id="sort">
-                    <option value="">Soirt</option>
+                    <option value="">Sort</option>
                 </select>
             </div>
             
@@ -111,45 +112,6 @@
                     <hr>
                     <div class="location">
                         <div class="search-div">
-                            <h5>Department</h5>
-                            <div class="search">
-                                <i class="fas fa-search"></i>
-                                <i class="fas fa-minus"></i>
-                            </div>
-                        </div>
-                        <div class="search-list">
-                            <div class="search-item">
-                                <input type="checkbox" name="Apollo">
-                                <label for="Apollo">Apollo Hospital</label>
-                            </div>
-                            <div class="search-item">
-                                <input type="checkbox" name="Manipal">
-                                <label for="Manipal">Manipal North side Hospital</label>
-                            </div>
-                            <div class="search-item">
-                                <input type="checkbox" name="Northstar">
-                                <label for="Northstar">Northstar</label>
-                            </div>
-                            <div class="search-item">
-                                <input type="checkbox" name="AIIMS">
-                                <label for="AIIMS">AIIMS</label>
-                            </div>
-                            <div class="search-item">
-                                <input type="checkbox" name="Fortis">
-                                <label for="Fortis">Fortis Hospital</label>
-                            </div>
-                            <div class="search-item">
-                                <input type="checkbox" name="Eibit">
-                                <label for="Eibit">Eibit Diagnostics</label>
-                            </div>
-    
-                            <h5>Show more+</h5>
-            
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="location">
-                        <div class="search-div">
                             <h5>Treatments</h5>
                             <div class="search">
                                 <i class="fas fa-search"></i>
@@ -183,16 +145,94 @@
                             </div>
     
                             <h5>Show more+</h5>
+                            <hr>
                         </div>
                     </div>
 
+                    <div class="location">
+                        <div class="search-div">
+                            <h5>Hospitals</h5>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="search-list">
+                            <div class="search-item">
+                                <input type="checkbox" name="Apollo">
+                                <label for="Apollo">Apollo Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Manipal">
+                                <label for="Manipal">Manipal North side Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Northstar">
+                                <label for="Northstar">Northstar</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="AIIMS">
+                                <label for="AIIMS">AIIMS</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Fortis">
+                                <label for="Fortis">Fortis Hospital</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="Eibit">
+                                <label for="Eibit">Eibit Diagnostics</label>
+                            </div>
+    
+                            <h5>Show more+</h5>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="location">
+                        <div class="search-div">
+                            <h5>Years of Experience</h5>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="search-list ">
+                            <div class="search-item">
+                                <input type="checkbox" name="thirty">
+                                <label for="thirty">30+</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="twenty-five">
+                                <label for="twenty-five">25+</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="twenty">
+                                <label for="twenty">20+</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="fifteen">
+                                <label for="fifteen">15+</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="ten">
+                                <label for="ten">10+</label>
+                            </div>
+                            <div class="search-item">
+                                <input type="checkbox" name="five">
+                                <label for="five">5+</label>
+                            </div>
+    
+                            <h5>Show more+</h5>
+            
+                        </div>
+                    </div>
                 </div>
                 
             </div>
             <div class="cards-card">
                 <div class="card">
                     <div class="card-all">
-                        <h4>Apollo Hospital</h4>
+                        <h4>Deep Chandra Verma</h4>
                         <div class="card-desc">
                             <div class="card-desc-item">
                                 <i class="far fa-sun"></i>
@@ -206,20 +246,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                        
-
-                        <!-- </div> -->
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -242,18 +279,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                    
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -276,18 +312,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                            
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -310,18 +345,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -344,18 +378,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                            
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -378,18 +411,17 @@
                                 <i class="far fa-clock"></i>
                                 <label>aldjfal</label>
                             </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+                            <div class="card-desc-item">
+                                <i class="far fa-building"></i>
+                                <label>aldjfal</label>
+                            </div>
+    
                         </div>
-                        <div class="card-desc-item-bullet">
-                            <span class="bullet">Multi Organ Transplant</span>
-                            <span class="bullet">Orthopedic Surgery</span>
-                            <span class="bullet">Infertility Treatement</span>
-                            <span class="bullet">Dentistry</span>
-                            <span class="bullet">Cardiology</span>
-                            <span class="bullet">Cancer</span>
-                            <span class="bullet">+40 more</span>
-                        </div>
-                            
-                        <button>Call Now</button>
+                        <button>Book an appointment</button>
                     </div>
                     <div class="card-img">
                         <img src="../assets/image--002.jpg" alt="doctor image">
@@ -409,7 +441,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <!-- <footer>
             <div class="footer-img">
                 <img src="../assets/footer.png" alt="Logo">
             </div>
@@ -434,7 +466,8 @@
             <div class="last-line">
                 <h5>All Rights Reserved. &copy; tvastra 2018</h5>
             </div>        
-    </footer>
+    </footer> -->
+    <%- include('./partials/footer.ejs') %>
     <script src="../js/script.js"></script>
 </body>
 </html>
