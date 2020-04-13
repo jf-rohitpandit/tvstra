@@ -1,4 +1,7 @@
 
+
+
+
 document.getElementById('butt01').classList.toggle('active-work-btn');
 for(var i=1;i<=7;i++){
     document.getElementById('img0' + i).style.display= 'none';
@@ -73,5 +76,6 @@ var changeService = function(num = 0){
 }
 
 changeService();
+
 
 

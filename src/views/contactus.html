@@ -15,9 +15,12 @@
     <header>
         <nav class="nav">
             <div class="logo-and-bars">
-                <div class="logo-img">
-                    <img src="../assets/Logo.jpg" alt="logo">
-                </div>
+                <a href="index.html">
+                    <div class="logo-img">
+                        <img src="../assets/Logo.jpg" alt="logo">
+                    </div>
+                </a>
+                
                 <div class="bars">
                     <button id="bars-button"  onclick='burger()'>
                         <i class="fas fa-bars"></i>
@@ -52,7 +55,7 @@
             </div>
         </section>
         <section class="map">
-            <div class="google-map">
+            <div id="google-map">
 <!-- place the google map here -->
             </div>
         </section>
@@ -138,6 +141,21 @@
             </div>        
     </footer>
     <script src="../js/script.js"></script>
+    <script>
+        function initMap(){
+            var pos= { lat:28.721090, lng:77.224083};
+            var map = new google.maps.Map(document.getElementById('google-map'),
+            {
+                zoom:12,
+                center: pos
+            });
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+            })
+
+        }
+    </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgx0he08lg0fSei0yXKyrmo1_qysOdxCc&callback=initMap"
     type="text/javascript"></script>
 </body>

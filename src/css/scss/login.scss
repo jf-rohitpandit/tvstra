@@ -48,9 +48,13 @@ body{
             h6{
                 text-align: center;
                 padding:1rem;
-                span{
-                    color: $blue;
+                a{
+                    // text-decoration: none;
+                    font-family: Nexa-Bold;
+                    color:$blue;                        
                 }
+                    
+                
             }
         }
     }

@@ -78,7 +78,8 @@ body main .login-detail h6 {
   padding: 1rem;
 }
 
-body main .login-detail h6 span {
+body main .login-detail h6 a {
+  font-family: Nexa-Bold;
   color: #008ae6;
 }
 
