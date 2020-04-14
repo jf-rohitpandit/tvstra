@@ -62,7 +62,7 @@
 
                 <div class="img-and-about">
                     <div class="vaccine-img">
-                        <img src="/css-tasks/src/assets/dentist.jpg" alt="dentist image">
+                        <img src="../assets/dentist.jpg" alt="dentist image">
                     </div>
                     <div class="about-dentist">
                         <h4>About Dentist Department</h4>
@@ -164,30 +164,54 @@
             <div class="more-services-heading">
                 <h2>More Services</h2>
                 <div class="heading-left-right">
-                    <i class="fas fa-chevron-circle-left fa-2x"></i>
-                    <i class="fas fa-chevron-circle-right fa-2x"></i>
+                    <i class="fas fa-chevron-circle-left fa-2x" onclick="leftBtn()"></i>
+                    <i class="fas fa-chevron-circle-right fa-2x" onclick="rightBtn()" ></i>
                 </div> 
             </div>
-            <div class="service-cards">
-                <div id="card1" class="service-card">
+            <div class="more-service-cards">
+                <div id="card1" class="more-service-card">
                     <div class="card-img">
-                        <img src="/css-tasks/src/assets/image--008.jpg" alt="">
+                        <img src="../assets/image--008.jpg" alt="">
                     </div>
                     <div class="card-heading">
                         <h3>Ortohopedic Surgery</h3>
                     </div>
                 </div>
-                <div id="card2" class="service-card">
+                <div id="card2" class="more-service-card">
                     <div class="card-img">
-                        <img src="/css-tasks/src/assets/image--010.jpg" alt="">
+                        <img src="../assets/image--010.jpg" alt="">
                     </div>
                     <div class="card-heading">
                         <h3>Cancer</h3>
                     </div>
                 </div>
-                <div id="card3" class="service-card">
+                <div id="card3" class="more-service-card">
                     <div class="card-img">
-                        <img src="/css-tasks/src/assets/image--011.jpg" alt="">
+                        <img src="../assets/image--011.jpg" alt="">
+                    </div>
+                    <div class="card-heading">
+                        <h3>Cardiology</h3>
+                    </div>
+                </div>
+                <div id="card4" class="more-service-card">
+                    <div class="card-img">
+                        <img src="../assets/image--008.jpg" alt="">
+                    </div>
+                    <div class="card-heading">
+                        <h3>Ortohopedic Surgery</h3>
+                    </div>
+                </div>
+                <div id="card5" class="more-service-card">
+                    <div class="card-img">
+                        <img src="../assets/image--010.jpg" alt="">
+                    </div>
+                    <div class="card-heading">
+                        <h3>Cancer</h3>
+                    </div>
+                </div>
+                <div id="card6" class="more-service-card">
+                    <div class="card-img">
+                        <img src="../assets/image--011.jpg" alt="">
                     </div>
                     <div class="card-heading">
                         <h3>Cardiology</h3>
@@ -225,8 +249,60 @@
             </div>        
     </footer> -->
     <%- include('./partials/footer.ejs') %>
-    <script src="../js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    type="text/javascript"></script>
+    <script >
+        var cardStart = 0;
+        for(var i=0;i<6;i++){
+            document.getElementsByClassName('more-service-card')[i].style.display= 'none';
+        }
+        for(var i=0;i<3;i++){
+            document.getElementsByClassName('more-service-card')[cardStart+1].style.marginLeft= '1rem'
+            document.getElementsByClassName('more-service-card')[cardStart+1].style.marginRight= '1rem'
+            document.getElementsByClassName('more-service-card')[i].style.display = 'block';
+        }
+        function rightBtn(){
+            console.log(cardStart);
+            if(cardStart===3){
+                return;
+            }
+            cardStart++;
+            for(var i=0;i<6;i++){
+                document.getElementsByClassName('more-service-card')[i].style.display = 'none';
+            }
+            for(var i=cardStart; i<cardStart+3;i++){
+                    document.getElementsByClassName('more-service-card')[cardStart].style.marginLeft= '0'
+                    document.getElementsByClassName('more-service-card')[cardStart].style.marginRight= '0'
+                    document.getElementsByClassName('more-service-card')[cardStart+1].style.marginLeft= '1rem'
+                    document.getElementsByClassName('more-service-card')[cardStart+1].style.marginRight= '1rem'
+                    document.getElementsByClassName('more-service-card')[i].style.display = 'block';
+                
+            }
+        }
+        function leftBtn(){
+            console.log(cardStart);
+            if(cardStart===0){
+                return;
+            }
+            cardStart--;
+            for(var i=0;i<6;i++){
+                document.getElementsByClassName('more-service-card')[i].style.display = 'none';
+            }
+            for(var i=cardStart; i<cardStart+3;i++){
+                    document.getElementsByClassName('more-service-card')[cardStart].style.marginLeft= '0'
+                    document.getElementsByClassName('more-service-card')[cardStart].style.marginRight= '0'
+                    document.getElementsByClassName('more-service-card')[cardStart+1].style.marginLeft= '1rem'
+                    document.getElementsByClassName('more-service-card')[cardStart+1].style.marginRight= '1rem'
+                    document.getElementsByClassName('more-service-card')[i].style.display = 'block';
+                
+            }
+        }
+
+
+
+
+
+
+    </script>
+    <!-- // <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    // type="text/javascript"></script> -->
 </body>
 </html>

@@ -4,7 +4,7 @@ body{
     border-bottom: 8px solid $blue;
 }
 .dentist-heading{
-    background-image: url(/css-tasks/src/assets/dentist_hero_image.jpg);
+    background-image: url(../../assets/dentist_hero_image.jpg);
     background-position: left;
     background-size: cover;
     padding:0;
@@ -127,8 +127,12 @@ body{
         margin-bottom: 1rem;;
     }
 
-    .service-cards{
-        .service-card{
+    .more-service-cards{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .more-service-card{
+            
             margin-bottom:1rem;
             border-radius:2rem;
             overflow:hidden;
@@ -205,17 +209,19 @@ body{
     }
 
     .more-services{
+
         .more-services-heading{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin: 1rem;
         }
-        .service-cards{
+        .more-service-cards{
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
 
-            .service-card{
+            .more-service-card{
                 .card-img{
                     height: 15rem;;
                 }
@@ -228,12 +234,12 @@ body{
                 }
             }
 
-            #card2{
-                margin-left:1rem;
-            }
-            #card3{
-                margin-left:1rem;
-            }
+            // #card2{
+            //     // margin-left:1rem;
+            // }
+            // #card3{
+            //     // margin-left:1rem;
+            // }
         }
     }
 }

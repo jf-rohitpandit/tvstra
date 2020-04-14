@@ -19,7 +19,7 @@ body {
 }
 
 .dentist-heading {
-  background-image: url(/css-tasks/src/assets/dentist_hero_image.jpg);
+  background-image: url(../../assets/dentist_hero_image.jpg);
   background-position: left;
   background-size: cover;
   padding: 0;
@@ -166,29 +166,42 @@ body {
   margin-bottom: 1rem;
 }
 
-.more-services .service-cards .service-card {
+.more-services .more-service-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.more-services .more-service-cards .more-service-card {
   margin-bottom: 1rem;
   border-radius: 2rem;
   overflow: hidden;
   background-color: #fff;
 }
 
-.more-services .service-cards .service-card .card-img {
+.more-services .more-service-cards .more-service-card .card-img {
   height: 14rem;
 }
 
-.more-services .service-cards .service-card .card-img img {
+.more-services .more-service-cards .more-service-card .card-img img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.more-services .service-cards .service-card .card-heading {
+.more-services .more-service-cards .more-service-card .card-heading {
   padding: 2rem;
 }
 
-.more-services .service-cards .service-card .card-heading h3 {
+.more-services .more-service-cards .more-service-card .card-heading h3 {
   text-align: left;
 }
 
@@ -272,28 +285,26 @@ body {
             justify-content: space-between;
     margin: 1rem;
   }
-  .more-services .service-cards {
+  .more-services .more-service-cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .more-services .service-cards .service-card .card-img {
+  .more-services .more-service-cards .more-service-card .card-img {
     height: 15rem;
   }
-  .more-services .service-cards .service-card .card-heading {
+  .more-services .more-service-cards .more-service-card .card-heading {
     padding: 2rem 1rem;
   }
-  .more-services .service-cards .service-card .card-heading h3 {
+  .more-services .more-service-cards .more-service-card .card-heading h3 {
     font-size: 1.2rem;
-  }
-  .more-services .service-cards #card2 {
-    margin-left: 1rem;
-  }
-  .more-services .service-cards #card3 {
-    margin-left: 1rem;
   }
 }
 
