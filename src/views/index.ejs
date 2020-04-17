@@ -48,6 +48,12 @@
         </nav>
     </header> -->
     <%-  include('./partials/navbar.ejs') %>
+    <% if(this.msg) { %>
+        <div class="message-div">
+            <%= msg %>
+        </div>
+    <% }%>
+
     <main>
         <section class="find-affordable-healthcare">
             <h1>Find Affordable Healthcare</h1>

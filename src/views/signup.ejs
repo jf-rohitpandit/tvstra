@@ -47,27 +47,33 @@
         </nav>
     </header> -->
     <%- include('./partials/navbar.ejs') %>
+    <% if(this.msg) { %>
+        <div class="message-div">
+            <%= msg %>
+        </div>
+    <% }%>
+
     <main>
         <section class="login-detail">
             <h3>Sign UP</h3>
-            <form action="" class="login">
-                <input type="text" placeholder="Enter Name">
-                <input type="text" placeholder="Enter Email">
-                <input type="text" placeholder="Enter Password">
-                <input list="gender" name="gender" placeholder="Select Your Gender">
+            <form action="" method="POST" class="login">
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="text" name="password" placeholder="Enter Password" required >
+                <input list="gender" name="gender" name="gender" placeholder="Select Your Gender"required>
                 <datalist name="gender" id="gender">
                     <option value="Male"></option>
                     <option value="Female"></option>
                     <option value="other"></option>
                 </datalist>
-                <input type="date" placeholder="">
-                <input type="text" placeholder="Enter Phone Number">
-                <input id="place" type="text" placeholder="Enter City">
-                <input id="place" type="text" placeholder="Enter State">
-                <input type="text" placeholder="Select Your Country ">
+                <input type="date" name='dob' placeholder="" required>
+                <input type="text" name='phone' placeholder="Enter Phone Number" required>
+                <input id="place" name='city' type="text" placeholder="Enter City" required>
+                <input id="place" name='state' type="text" placeholder="Enter State" required>
+                <input type="text" name='country' placeholder="Select Your Country " required>
                 <button>Sign Up <span><i class="fas fa-arrow-right"></i></span></button>
             </form>
-            <h6>Already Registered? <a href="login.html">Login</a>  </h6>
+            <h6>Already Registered? <a href="login">Login</a>  </h6>
         </section>
     </main>
     <footer>
@@ -77,5 +83,5 @@
     </footer>
     
 </body>
-<script src="../js/script.js"></script>
+<!-- <script src="../js/script.js"></script> -->
 </html>

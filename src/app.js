@@ -8,6 +8,7 @@ const logger = require('morgan');
 const path = require('path');
 const mainRoutes = require('./backend/routes/mainRoutes');
 
+
 app.use(cors());
 app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));

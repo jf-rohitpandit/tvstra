@@ -8,7 +8,7 @@ function hospital(req, res){
     res.render('hospital');
 }
 function aboutUs(req, res){
-    res.render('about-us');
+    res.render('aboutUs');
 }
 function appointment(req, res){
     res.render('appointment');
@@ -16,6 +16,18 @@ function appointment(req, res){
 
 function treatment(req, res){
     res.render('treatment');
+}
+
+function login(req, res){
+    res.render('login');
+}
+
+function appointment(req, res){
+    res.render('appointment');
+}
+
+function signup(req, res){
+    res.render('signup');
 }
 
 
@@ -28,5 +40,8 @@ module.exports = {
     hospital: hospital,
     aboutUs: aboutUs,
     appointment: appointment,
-    treatment: treatment
+    treatment: treatment,
+    login: login,
+    appointment: appointment,
+    signup: signup
 }
