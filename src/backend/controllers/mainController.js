@@ -46,6 +46,10 @@ function doctorProfile(req, res){
     res.render('doctorProfile');
 }
 
+function hospitalProfile(req, res){
+    res.render('hospitalProfile');
+}
+
 
 module.exports = {
     home: home,
@@ -59,5 +63,6 @@ module.exports = {
     signup: signup,
     contactus: contactus,
     doctorProfile: doctorProfile,
-    faq: faq
+    faq: faq,
+    hospitalProfile: hospitalProfile
 }

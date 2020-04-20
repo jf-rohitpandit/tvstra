@@ -18,6 +18,7 @@ router.route('/signup').post(loginController.signup);
 router.route('/contactus').get(mainController.contactus);
 router.route('/doctorProfile').get(mainController.doctorProfile);
 router.route('/faq').get(mainController.faq);
+router.route('/hospitalProfile').get(mainController.hospitalProfile);
 
 
 module.exports = router;
