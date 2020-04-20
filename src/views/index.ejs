@@ -48,7 +48,7 @@
         </nav>
     </header> -->
     <%-  include('./partials/navbar.ejs') %>
-    <% if(this.msg) { %>
+    <% if(locals.msg) { %>
         <div class="message-div">
             <%= msg %>
         </div>

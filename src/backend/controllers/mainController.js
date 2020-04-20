@@ -30,8 +30,13 @@ function signup(req, res){
     res.render('signup');
 }
 
+function contactus(req, res){
+    res.render('contactus');
+}
 
-
+function doctorProfile(req, res){
+    res.render('doctorProfile');
+}
 
 
 module.exports = {
@@ -43,5 +48,7 @@ module.exports = {
     treatment: treatment,
     login: login,
     appointment: appointment,
-    signup: signup
+    signup: signup,
+    contactus: contactus,
+    doctorProfile: doctorProfile
 }

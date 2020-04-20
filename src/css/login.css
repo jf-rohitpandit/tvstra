@@ -53,13 +53,13 @@ body main .login-detail h3 {
 body main .login-detail .login input {
   margin: .5rem 0;
   width: 90%;
-  height: 3.5rem;
+  height: 2.5rem;
 }
 
 body main .login-detail .login button {
   width: 90%;
   margin-bottom: 1rem;
-  height: 3.5rem;
+  height: 2.5rem;
 }
 
 body main .login-detail .login button span {

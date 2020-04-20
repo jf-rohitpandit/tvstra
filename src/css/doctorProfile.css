@@ -1,0 +1,162 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  border-bottom: 0.5rem solid #008ae6;
+}
+
+.contact-heading {
+  padding: 3rem;
+  height: 100%;
+  background: url("../assets/contactUs.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-heading .top {
+  margin: 4rem;
+  line-height: 3rem;
+}
+
+.contact-heading .top h1 {
+  color: white;
+}
+
+.contact-heading .top h5 {
+  color: white;
+}
+
+.info {
+  padding: 1rem;
+  margin: 1.5rem;
+  border: 1px solid grey;
+}
+
+.info .img-and-btn {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.info .img-and-btn img {
+  width: 100%;
+}
+
+.info .img-and-btn button {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.info .name-details h2 {
+  color: #008ae6;
+}
+
+.info .name-details .detail-elements .detail-element-head {
+  border-bottom: 1px dashed grey;
+  border-top: 1px dashed grey;
+  padding: .7rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info .name-details .detail-elements .detail-element-head i {
+  color: #008ae6;
+  padding: .3rem .5rem;
+}
+
+.info .name-details .detail-elements .detail-element-head .flex-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info .name-details .detail-elements .detail-element-head .flex-div h3 {
+  padding-top: .3rem;
+  padding-left: 1rem;
+  color: #008ae6;
+}
+
+.info .name-details .detail-elements .detail-element-head .flex-div div {
+  border-radius: 50%;
+  background-color: #bee2f7;
+}
+
+.info .name-details .detail-elements .detail-element-head .flex-div div i {
+  padding: .3rem .5rem;
+}
+
+.info .name-details .detail-elements .detail-para {
+  background-color: #bee2f7;
+  margin: 0;
+  padding: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .info {
+    margin: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .info .img-and-btn {
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+    margin-left: 1rem;
+  }
+  .info .name-details {
+    -webkit-box-flex: 7;
+        -ms-flex: 7;
+            flex: 7;
+  }
+  .info .name-details h2 {
+    text-align: left;
+  }
+  .info .name-details P {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info {
+    margin: 3rem 5rem;
+    padding: 3rem;
+  }
+  .info .img-and-btn {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  .info .name-details {
+    -webkit-box-flex: 8;
+        -ms-flex: 8;
+            flex: 8;
+  }
+  .info .name-details .detail-elements .detail-element-head {
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=doctorProfile.css.map */

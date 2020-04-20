@@ -5,7 +5,7 @@ const loginController = require('../controllers/loginControlller');
 const router = express.Router();
 const app = express();
 
-router.route('/').get(mainController.home);
+router.route('/').get(mainController.home,);
 router.route('/doctor').get(mainController.doctor);
 router.route('/hospital').get(mainController.hospital);
 router.route('/aboutUs').get(mainController.aboutUs);
@@ -15,6 +15,8 @@ router.route('/login').get(mainController.login);
 router.route('/signup').get(mainController.signup);
 router.route('/appointment').get(mainController.appointment);
 router.route('/signup').post(loginController.signup);
+router.route('/contactus').get(mainController.contactus);
+router.route('/doctorProfile').get(mainController.doctorProfile);
 
 
 module.exports = router;

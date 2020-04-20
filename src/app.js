@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const app = express();
 const cors = require('cors');
 const compression = require('compression');
@@ -7,7 +6,10 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const path = require('path');
 const mainRoutes = require('./backend/routes/mainRoutes');
+const session = require('express-session');
+// const MongoStore = require('connect-mongo')(session);
 
+// var connection = 'mongo'
 
 app.use(cors());
 app.use(compression());
@@ -18,6 +20,18 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname)));
 app.use(logger('dev'));
+app.use(session({
+    secret: "big",
+    // store: new MongoStore({
+    //     mongooseConnection: connection,
+    //     collection: 'sessions'
+    // }),
+    resave: false,
+    saveUninitialized: false,
+    cookie:{
+        maxAge: 1000*60*60*24
+    }
+}))
 
 app.use('/', mainRoutes);
 app.set('port',process.env.PORT|| 4000);
