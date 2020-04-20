@@ -50,6 +50,10 @@ function hospitalProfile(req, res){
     res.render('hospitalProfile');
 }
 
+function query(req, res){
+    res.render('query');
+}
+
 
 module.exports = {
     home: home,
@@ -64,5 +68,6 @@ module.exports = {
     contactus: contactus,
     doctorProfile: doctorProfile,
     faq: faq,
-    hospitalProfile: hospitalProfile
+    hospitalProfile: hospitalProfile,
+    query: query
 }

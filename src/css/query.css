@@ -1,0 +1,155 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #a1c1c1;
+  height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body main .query-detail {
+  padding: 0;
+  background-color: #fff;
+  width: 350px;
+}
+
+body main .query-detail h3 {
+  text-align: center;
+  width: 100%;
+  color: #008ae6;
+  padding: 1.3rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: .5rem;
+}
+
+body main .query-detail .query {
+  margin: 1rem 2rem;
+  padding-bottom: 2rem;
+}
+
+body main .query-detail .query input {
+  margin: .5rem 0;
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 1rem;
+  text-align: left;
+  color: #000;
+  border: 1px solid grey;
+  font-family: Nexa-Light;
+}
+
+body main .query-detail .query input::-webkit-input-placeholder {
+  color: grey;
+}
+
+body main .query-detail .query input:-ms-input-placeholder {
+  color: grey;
+}
+
+body main .query-detail .query input::-ms-input-placeholder {
+  color: grey;
+}
+
+body main .query-detail .query input::placeholder {
+  color: grey;
+}
+
+body main .query-detail .query textarea {
+  font-family: Nexa-Light;
+  margin: .5rem 0;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border: 1px solid grey;
+}
+
+body main .query-detail .query #place {
+  width: 45%;
+}
+
+body main .query-detail .query button {
+  width: 100%;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  height: 2.5rem;
+}
+
+body main .query-detail .query button span {
+  float: right;
+}
+
+body main .query-detail h6 {
+  text-align: center;
+  padding: 1rem;
+}
+
+body main .query-detail h6 a {
+  font-family: Nexa-Bold;
+  color: #008ae6;
+}
+
+body footer {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 1rem;
+  background-color: #a1c1c1;
+}
+
+body footer .last-line h5 {
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 700px) {
+  body main .query-detail {
+    width: 400px;
+  }
+  body footer {
+    display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  body main .query-detail {
+    width: 700px;
+  }
+  body main .query-detail h3 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=query.css.map */

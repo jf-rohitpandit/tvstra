@@ -19,6 +19,7 @@ router.route('/contactus').get(mainController.contactus);
 router.route('/doctorProfile').get(mainController.doctorProfile);
 router.route('/faq').get(mainController.faq);
 router.route('/hospitalProfile').get(mainController.hospitalProfile);
+router.route('/query').get(mainController.query);
 
 
 module.exports = router;
