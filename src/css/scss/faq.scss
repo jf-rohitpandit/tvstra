@@ -1,0 +1,95 @@
+@import 'config';
+body{
+    border-bottom:.5rem solid $blue;
+}
+
+.contact-heading{
+    padding: 3rem;;
+    height: 100%;
+    background: url("../assets/contactUs.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    .top{
+        margin:4rem;
+        line-height: 3rem;;
+        h1{
+            color: white;
+        }
+        h5{
+            color: white;
+        }
+    }
+}
+
+.all{
+    padding: 1.5rem;
+    .questions{
+        display: flex;
+        justify-content: space-between;
+        margin: 1.3rem 0;
+        h3{
+            margin-top:.5rem;
+            flex: 10;
+            text-align: left;
+        }
+        div{
+            background-color: $blueshade;
+            border-radius: 50%;
+            flex:1;
+            align-self: center;
+            i{
+                padding:.5rem .3rem;
+            }
+        }
+    }
+    p{
+        text-align: left;
+        line-height: 1.5rem;
+        background-color: $blueshade;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 700px){
+    .contact-heading{
+        background-size: cover;
+        background-position: right;
+        .top{
+            margin: 1rem;
+        }
+
+    }
+
+    .all{
+        padding: 1rem 2rem;
+        .questions{
+            margin: 2.5rem 0;
+            h3{
+                flex: 18;
+            }
+            div{
+                flex:1;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .contact-heading{
+        padding-left: 5rem;
+    }
+    .all{
+        padding: 2rem 5rem;
+        .questions{
+            margin: 2.5rem 0;
+            h3{
+                flex: 30;
+            }
+            div{
+                flex:1;
+            }
+        }
+    }
+}

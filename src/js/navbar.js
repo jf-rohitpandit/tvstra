@@ -1,4 +1,3 @@
-
 let navBtn = document.querySelector('#bars-button');
 let mobileView = document.querySelector('#mobile-view');
 

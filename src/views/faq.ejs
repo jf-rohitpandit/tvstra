@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
+    <!-- <script src="../js/navbar.js" async></script> -->
+    <title>Tvastra</title>
+</head>
+<body>
+    
+    <%- include('./partials/navbar.ejs') %>
+
+
+    <main>
+        <section class="contact-heading" >
+            <div class="top">
+                <h1>FAQ</h1>
+                <h5>Home / FAQ</h5>
+            </div>
+        </section>
+        <section class="all">
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(1)">
+                    <i id='down1'  class="fas fa-angle-down"></i>
+                    <i id='up1'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail1' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>There is not enough money in my Portea Wallet for making a payment.
+                    How do I make payment</h3>
+                <div onclick="downUp(2)">
+                    <i id='down2'  class="fas fa-angle-down"></i>
+                    <i id='up2'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail2' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(3)">
+                    <i id='down3'  class="fas fa-angle-down"></i>
+                    <i id='up3'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail3' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(4)">
+                    <i id='down4'  class="fas fa-angle-down"></i>
+                    <i id='up4'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail4' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(5)">
+                    <i id='down5'  class="fas fa-angle-down"></i>
+                    <i id='up5'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail5' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(6)">
+                    <i id='down6'  class="fas fa-angle-down"></i>
+                    <i id='up6'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail6' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            <div class="questions">
+                <h3>How do I make payment</h3>
+                <div onclick="downUp(7)">
+                    <i id='down7'  class="fas fa-angle-down"></i>
+                    <i id='up7'  class="fas fa-angle-up" style='display: none;'></i>
+                </div>
+            </div>
+            <p id='detail7' class='detail-para' style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione deleniti minima, expedita sed soluta doloribus 
+                et alias hic iure debitis dicta modi fugit, placeat veniam
+                    enim, repellendus laudantium sit pariatur? 
+            </p>
+            
+        </section>
+
+
+
+        <section class="need-help">
+            <div >
+                <h2>Need Help?</h2>
+                <p>Just let us know. We will be happy to assist you</p>    
+            </div>
+            <div>
+                <button class="help">Submit Your Query</button>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('./partials/footer.ejs') %>
+    
+    <script>
+        
+        function downUp(num){
+            var arrowdown = document.getElementById('down'+num);
+            var arrowup =document.getElementById('up'+num);
+            var detail = document.getElementById('detail'+num);
+            console.log(arrowdown.style);
+            if(arrowdown.style.display === 'none'){
+                arrowup.style.display = 'none';
+                arrowdown.style.display = 'block';
+                detail.style.display = 'none';
+            }else{
+                arrowup.style.display = 'block';
+                arrowdown.style.display = 'none';
+                detail.style.display = 'block';
+            }
+        }
+
+    </script>
+</body>
+</html>
