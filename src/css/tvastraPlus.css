@@ -1,0 +1,130 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.head {
+  background-image: url("../../assets/tvastraPlus_heroSection.webp");
+  background-size: cover;
+  padding: 1rem;
+}
+
+.head .plus {
+  border: 1px solid #008ae6;
+  border-radius: .3rem;
+  width: 4rem;
+  text-align: center;
+  margin: auto;
+  background-color: #008ae6;
+  color: #fff;
+  padding: .5rem .5rem .4rem .5rem;
+  font-family: Nexa-Bold;
+  margin: 1rem auto;
+}
+
+.head .white-card {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border: none;
+  border-radius: .3rem;
+  -webkit-box-shadow: .1rem;
+          box-shadow: .1rem;
+}
+
+.head .white-card hr {
+  border-top: 1px solid #dbd9d9;
+  color: #fff;
+}
+
+.head .white-card .plan {
+  padding: 1.5rem 3.5rem;
+  color: #000;
+}
+
+.head .white-card .plan h3 {
+  color: #000;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #dbd9d9;
+}
+
+.head .white-card .plan h2, .head .white-card .plan p {
+  color: #000;
+}
+
+.head .white-card .plan .price-and-buy {
+  margin-top: 5rem;
+}
+
+.head .white-card .plan .price-and-buy h2 {
+  margin: 1rem;
+}
+
+.head .white-card .plan .price-and-buy h2 span {
+  font-size: 1.3rem;
+}
+
+.head .white-card .plan .price-and-buy h4 {
+  color: #008ae6;
+  margin: 1rem;
+}
+
+.head .white-card .plan .price-and-buy button {
+  color: #fff;
+  background-color: #008ae6;
+  border: none;
+  border-radius: 5px;
+  font-family: Nexa-Bold;
+}
+
+.head .white-card .advanced {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(190, 226, 247, 0.8)), to(rgba(190, 226, 247, 0)));
+  background-image: linear-gradient(to bottom, rgba(190, 226, 247, 0.8), rgba(190, 226, 247, 0));
+}
+
+.head .white-card .popular {
+  position: relative;
+  top: .6rem;
+}
+
+.head .white-card .popular h5 {
+  border: none;
+  border-radius: 1rem;
+  width: 5.5rem;
+  margin: auto;
+  padding: .1rem 1rem;
+  background-color: #1bb812;
+  color: #fff;
+}
+
+.review {
+  padding: 3rem 1rem;
+}
+
+.review .ratings .five .row {
+  width: 100%;
+  height: 1rem;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.review .ratings .five .row .row-like {
+  width: 60%;
+  height: 1rem;
+  background-color: #008ae6;
+  border: 1px solid #008ae6;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=tvastraPlus.css.map */

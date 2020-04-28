@@ -20,6 +20,7 @@ router.route('/doctorProfile').get(mainController.doctorProfile);
 router.route('/faq').get(mainController.faq);
 router.route('/hospitalProfile').get(mainController.hospitalProfile);
 router.route('/query').get(mainController.query);
+router.route('/tvastraPlus').get(mainController.tvastraPlus);
 
 
 module.exports = router;

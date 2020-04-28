@@ -54,6 +54,10 @@ function query(req, res){
     res.render('query');
 }
 
+function tvastraPlus(req, res){
+    res.render('tvastraPlus');
+}
+
 
 module.exports = {
     home: home,
@@ -69,5 +73,6 @@ module.exports = {
     doctorProfile: doctorProfile,
     faq: faq,
     hospitalProfile: hospitalProfile,
-    query: query
+    query: query,
+    tvastraPlus: tvastraPlus
 }

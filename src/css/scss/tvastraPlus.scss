@@ -1,0 +1,111 @@
+@import 'config';
+
+
+
+.head{
+    background-image: url('../../assets/tvastraPlus_heroSection.webp');
+    background-size: cover;
+    padding: 1rem;
+
+    .plus{
+        border: 1px solid $blue;
+        border-radius: .3rem;;
+        width: 4rem;
+        text-align: center;
+        margin: auto;
+        background-color: $blue;
+        color: $white;
+        padding: .5rem .5rem .4rem .5rem;
+        font-family: Nexa-Bold;
+        margin: 1rem auto;
+    }
+    
+    .white-card{
+        background-color: $white;
+        padding:1.5rem 1rem;
+        border: none;
+        border-radius:.3rem;
+        box-shadow: .1rem;
+        hr{
+            border-top: 1px solid $lightgrey2;
+            color: $white;
+        }
+
+        .plan{
+            padding: 1.5rem 3.5rem;
+            color: $black;
+
+            h3{
+                color: $black;
+                padding-bottom:1.5rem;
+                border-bottom: 1px solid $lightgrey2;
+            }
+            h2,p{
+                color: $black;
+            }         
+
+            .price-and-buy{
+                margin-top:5rem;
+                h2{
+                    margin:1rem;
+                    span{
+                        font-size:1.3rem;
+                    }
+                }
+                h4{
+                    color: $blue;
+                    margin:1rem;
+                }
+                button{
+                    color:$white;
+                    background-color: $blue;
+                    border:none;
+                    border-radius: 5px;
+                    font-family: Nexa-Bold;
+                }
+            }
+        }
+
+        .advanced{
+            
+            
+            background-image: linear-gradient(to bottom, rgba(190,226,247,.8), rgba(190,226,247, 0));
+        }
+        .popular{
+            position: relative;
+            top: .6rem;
+            h5{
+                border:none;
+                border-radius: 1rem;
+                width: 5.5rem;
+                margin: auto;
+                padding:.1rem 1rem;
+                background-color: $green;
+                color: $white;
+            }
+        }
+    }
+}
+
+.review{
+    padding: 3rem 1rem;
+    .ratings{
+        .five{
+            .row{
+                width: 100%;
+                height: 1rem;
+                background-color: $lightgrey;
+                border:1px solid $lightgrey;
+                border-radius: 1rem;
+                overflow: hidden;
+                .row-like{
+                    width: 60%;
+                    height: 1rem;
+                    background-color: $blue;
+                    border:1px solid $blue;
+                    border-radius: 1rem;    
+                }
+            }
+        }
+    }
+}
