@@ -14,7 +14,7 @@
             height: 100%;
             width: 100%;
             text-align: left;
-            background-color: rgba(173, 216, 230, 0.9);            
+            background-color: rgba( 156, 191, 218, .9);            
         }
         display: none;
         
@@ -63,8 +63,7 @@
                 margin-right: .3rem;;
             }
             .card-desc{
-                padding:1rem 2rem;
-                // padding-left: 2rem;
+                padding:1rem 2rem 0 2rem;
                 display: flex;
                 flex-direction: column;
                 .card-desc-item{
@@ -78,6 +77,21 @@
                     }
                 }
                 
+            }
+
+            .card-desc-item-bullet{
+                display: flex;
+                flex-wrap: wrap;
+                padding:5px 2rem;
+                margin-bottom: 1rem;
+                
+
+                .bullet{
+                    margin:3px;
+                    padding: 8px;
+                    border: 1px solid $grey;
+                    border-radius: 1rem;
+                }
             }
         }
         
