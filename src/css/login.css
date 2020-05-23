@@ -33,6 +33,8 @@ body main {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #999;
+          box-shadow: 0.5rem 0.5rem 0.5rem #999;
 }
 
 body main .login-detail {
@@ -50,14 +52,48 @@ body main .login-detail h3 {
   margin-bottom: .5rem;
 }
 
+body main .login-detail .login {
+  padding-top: 1rem;
+  padding: 2rem;
+}
+
+body main .login-detail .login .email-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #dbd9d9;
+  height: 100%;
+  margin-bottom: .8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main .login-detail .login .email-div input {
+  border: none;
+  margin: 0;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+body main .login-detail .login .email-div i {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #dbd9d9;
+}
+
 body main .login-detail .login input {
-  margin: .5rem 0;
-  width: 90%;
+  text-align: left;
+  margin-bottom: .8rem;
   height: 2.5rem;
 }
 
 body main .login-detail .login button {
-  width: 90%;
+  width: 100%;
   margin-bottom: 1rem;
   height: 2.5rem;
 }
