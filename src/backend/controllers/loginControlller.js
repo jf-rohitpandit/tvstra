@@ -3,54 +3,91 @@ var User = require('../database/schema');
 var mainController = require('./mainController');
 
 module.exports ={
-    signup: signup
+    signup: signup,
+    login: login
 };
 
-// function isValidPhone(phone){
-
-// }
-
-function signup(req, res){
+async function signup(req, res){
+    var msg = '';
     const {name, email, password, gender,dob, phone, city, state, country} = req.body;
     if(!(name, email, password, gender, phone, city, state, country)){
+        console.log("enter all teh details");
         return res.render('signup', {
             msg: "enter all the required details"
         });
     }
     else{
-        var newUser = User({
-        name : name,
-        email : email,
-        password : password,
-        gender : gender,
-        dob: dob,
-        phone : phone,
-        city : city,
-        state : state,
-        country : country
-        });
+        try{
+            const userCheck = await User.findOne({
+                email: email
+            });
+            if(userCheck === null){
+                User.create({
+                    name: name,
+                    email: email,
+                    password: password,
+                    gender: gender,
+                    dob: dob,
+                    phone: phone,
+                    city: city,
+                    state: state,
+                    country: country
+                },function(err, newUser){
+                    if(err  ){
+                        msg = 'Error loading data';
+                        console.log(msg)
+                        return res.render('signup',{msg:msg});
+                    }else{
+                        return res.redirect('/');
+                    }
+                })
 
-
-
-        newUser.save((err,user)=>{
-            if(err){
-                console.log(err);
             }else{
-                console.log(user);
-                req.session.name = user.name;
-                req.session.email = user.email;
-                req.session.password = user.password;
-                req.session.gender = user.gender;
-                req.session.dob = user.dob;
-                req.session.phone = user.phone;
-                req.session.city = user.city;
-                req.session.state = user.state;
-                req.session.counery = user.counery;
-        
-                return res.redirect('/');
-                
+                msg = "Eamil already taken";
+                console.log(msg)
+                return res.render('signup',{msg:msg})
             }
-        })
+        }catch{
+            msg= 'Some error please try againg in some time';
+            console.log(msg)
+            return res.render('signup', {msg:msg});
+        }
     }
 
+}
+
+
+async function login(req, res){
+    var msg = '';
+    const {email, password} = req.body;
+    if(!email || !password){
+        msg = "Enter all the details";
+        console.log(msg);
+        return res.render('login', {msg: msg});
+    }else{
+        try{
+            const user =await User.findOne({
+                email: email
+            });
+            if(user === null){
+                msg = "Email not found";
+                console.log(msg);
+                return res.render('login', {msg: msg});
+            }else{
+                if(user.password !== password){
+                    msg = 'Password not match';
+                    console.log(msg);
+                    return res.render('login', {msg: msg});
+                }else{
+                    msg= 'welocm'
+                    console.log(msg);
+                    return res.redirect('/');
+                }
+            }
+        }catch{
+            msg= 'some error occured, please try agian in some time';
+            console.log(msg);
+            return res.render('login',{msg: msg});
+        }
+    }
 }

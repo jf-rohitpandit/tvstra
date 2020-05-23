@@ -4,7 +4,6 @@
     background-image: url(../assets/img1.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
-    // padding:2rem 1rem;
     height: 100%;
 
     .search-healthcare{
@@ -12,9 +11,9 @@
 
         .location{
             display: flex;
-            border: rem solid $black;
+            border: none;
+            background-color: $white;
             width: 100%;
-            margin: .5rem 0;
             .map-marker{
                 
                 i{
@@ -61,29 +60,33 @@
 
 
 .how-it-works{
-    // padding: 2rem 1rem;
     height: 100%;
 
     .works-btns-all{
         .works-btns{
             
-            button{
+            .butt{
                 width: 100%;
                 height:3.5rem;
                 background-color: white;
-                padding: 1rem;
-                padding: auto;
+                display: flex;
+                align-items: center;
+                border: 1px solid $darkblue;
+            
                 border-radius: 5px;
-                margin:.4rem;
-                h3{
+                margin:1rem 0;
+                h4{
                     color: $grey;
                 }
             }
             .active-work-btn{
-                h3{
-                    color: $blue;
+                h4{
+                    .blue{
+                        color: $blue;
+                    }
+                    color: $darkblue;
                 }
-                border-color: $blue;
+                border-color: $darkblue;
             }
 
 
@@ -92,6 +95,7 @@
         .works-img-small{
             width: 100%;
             height: 100%;
+            overflow: hidden;
 
             img{
                 padding: 1.5rem 0;
@@ -143,16 +147,26 @@
             }
 
             .doctor-card-desc{
-                padding-left: 3rem;
+                
 
                 h4{
                     text-align: left;
                   font-family: Nexa-Bold;
-                  padding: .5rem 0;
+                  padding: 0;
                   color: $blue;  
+                }
+                h4::before{
+                    position: relative;
+                    bottom: .3rem;
+                    content: "";
+                    display: inline-block;
+                    border: 1px solid $blue;
+                    width: 2rem;
+                    margin-right: .5rem;;
                 }
 
                 h5{
+                    padding-left: 2.5rem;
                     text-align: left;
                     font-family: Nexa-Light;
                     line-height: 1.2rem;
@@ -328,8 +342,7 @@
 
 
 .services{
-    background-color: $lightgrey;
-    // padding:2rem 1rem;
+    background-color: $lightgrey2;
     height: 100%;
 
     .service-cards{
@@ -338,8 +351,11 @@
         grid-gap:1rem;
 
         .service-card{
+            height: 9rem;
             background-color: $white;
             border-radius: 1rem;
+            display: flex;
+            flex-direction:  column;
         }
     }
 }
@@ -354,47 +370,16 @@
 
         .search-healthcare{
             display: flex;
+            align-items: center;
 
             .location{
+                flex:3;
                 display: flex;
-                width: 35%;
-                border: 1px solid $lightgrey;
-                margin: .5rem 0;
-                .map-marker{
-                    
-                    i{
-                        background-color: $white;
-                        padding: .72rem;
-                    }
-                }
-    
-                input{
-                    font-size:1rem;
-                    border:none;
-                    text-align: left;
-                    width: 100%;
-                }
-    
-                .gps{
-                    background-color: $white;
-                    padding: .76rem;
-                    
-                    .gps-img{
-                        height: .8rem;
-                    }
-                }
-    
+                height: 100%; 
+                border-right: 1px  solid $lightgrey2; 
             }
-
             .search{
-                width: 60%;
-            }
-    
-            .search-submit{
-                margin:.5rem 0;
-                font-family: .8rem;
-                border-radius: 0;
-                padding: 0 2.5rem ;
+                flex: 5;
             }
         }
     }
@@ -461,12 +446,16 @@
 
                 .doctor-card-img{
                     width: 100%;
-                    height: 60vh;
+                    height: 50vh;
                     img{
-                        width: 90%;
-                        height: 60vh;
+                        width: 100%;
+                        height: 50vh;
                         object-fit: cover;
                     }
+                }
+
+                .doctor-card-desc{
+                    margin-top:1rem;
                 }
             }
         }
@@ -505,7 +494,8 @@
             .location{
                 display: flex;
                 width: 35%;
-                border: 1px solid $lightgrey;
+                height: 100%;
+                border-right: 1px solid $lightgrey2;
                 margin: .5rem 0;
                 .map-marker{
                     i{
@@ -515,7 +505,7 @@
                 }
     
                 input{
-                    font-size:1rem;
+                    // font-size:1rem;
                     border:none;
                     text-align: left;
                     width: 100%;
@@ -529,7 +519,7 @@
                 .gps{
                     background-color: $white;
                     padding: 1rem;
-                    
+                    color: $lightgrey2;
                     .gps-img{
                         height: .8rem;
                     }
@@ -538,9 +528,9 @@
 
             .search{
                 width: 60%;
-                height: 3.1rem;
+        
                 input{
-                    height: 3.1rem;;
+                    height: 3rem;;
                 }
             }
     
@@ -567,8 +557,8 @@
             padding-top:3rem;;
             .works-btns{
                 width:80%;  
-                button{
-                    padding-left: 3rem;
+                .butt{
+                    cursor: pointer;
                     height: 6rem;
                 }  
             }            
@@ -576,7 +566,7 @@
 
         .works-img-large-all{
             .works-img-large{
-                h3{
+                h4{
                     margin-top: 2rem;;
                     text-align: center;
                 }
@@ -803,16 +793,17 @@
     }
     
     .services{
-        // padding-top:2rem;
         width: 100%;
         .service-cards{
             padding-top:2rem;
-            // width: 100%;
             grid-template-columns: repeat(6,1fr);;
             grid-gap:3px;
             .service-card{            
                 border-radius: 0;
-                padding:1rem;
+            
+                display: flex;
+                flex-direction: column;
+                height: 9rem;
                 h5{
                     text-align: center;
                 }

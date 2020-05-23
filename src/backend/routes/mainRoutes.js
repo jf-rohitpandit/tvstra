@@ -14,13 +14,17 @@ router.route('/treatment').get(mainController.treatment);
 router.route('/login').get(mainController.login);
 router.route('/signup').get(mainController.signup);
 router.route('/appointment').get(mainController.appointment);
+
 router.route('/signup').post(loginController.signup);
+router.route('/login').post(loginController.login);
+
 router.route('/contactus').get(mainController.contactus);
 router.route('/doctorProfile').get(mainController.doctorProfile);
 router.route('/faq').get(mainController.faq);
 router.route('/hospitalProfile').get(mainController.hospitalProfile);
 router.route('/query').get(mainController.query);
 router.route('/tvastraPlus').get(mainController.tvastraPlus);
+
 
 
 module.exports = router;

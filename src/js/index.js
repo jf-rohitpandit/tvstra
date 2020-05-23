@@ -1,11 +1,16 @@
 
+function closeAll(){
+    for(var i=1;i<=7;i++){
+        document.getElementById('img0' + i).style.display= 'none';
+        document.getElementById('butt0'+i).classList.remove('active-work-btn');
+    }
+}
 
+closeAll();
 
 
 document.getElementById('butt01').classList.toggle('active-work-btn');
-for(var i=1;i<=7;i++){
-    document.getElementById('img0' + i).style.display= 'none';
-}
+
 
 document.getElementById('img01').style.display = 'block';
 
@@ -18,8 +23,9 @@ var openImg = function(num){
 
     console.log(width);
     if(width <'700'){
-
+        
         if(document.getElementById('img0'+num).style.display === 'none'){
+            closeAll();
             document.getElementById('img0'+num).style.display = 'block';
             document.getElementById('butt0'+num).classList.add('active-work-btn');
         }else{

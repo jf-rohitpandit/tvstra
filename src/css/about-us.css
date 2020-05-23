@@ -15,7 +15,7 @@
 }
 
 body {
-  border-bottom: 0.5rem solid #008ae6;
+  border-bottom: 0.5rem solid #0173b2;
 }
 
 h3, h2 {
@@ -73,7 +73,7 @@ p {
 }
 
 .black-box .black-box-content button {
-  background-color: #008ae6;
+  background-color: #0173b2;
   border-radius: .5rem;
   width: 10rem;
   border: none;
@@ -91,7 +91,7 @@ p {
 }
 
 .black-box .black-box-content .cards .card {
-  border: 1px solid grey;
+  border: 1px solid #999;
   padding: 2rem;
   border-radius: .5rem;
   margin: .5rem;
@@ -102,7 +102,7 @@ p {
 }
 
 .black-box .black-box-content .cards .card h6 {
-  color: grey;
+  color: #999;
 }
 
 @media (min-width: 700px) {

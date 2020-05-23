@@ -29,9 +29,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: rem solid #000;
+  border: none;
+  background-color: #fff;
   width: 100%;
-  margin: .5rem 0;
 }
 
 .find-affordable-healthcare .search-healthcare .location .map-marker i {
@@ -75,31 +75,41 @@
   height: 100%;
 }
 
-.how-it-works .works-btns-all .works-btns button {
+.how-it-works .works-btns-all .works-btns .butt {
   width: 100%;
   height: 3.5rem;
   background-color: white;
-  padding: 1rem;
-  padding: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #2a2d3e;
   border-radius: 5px;
-  margin: .4rem;
+  margin: 1rem 0;
 }
 
-.how-it-works .works-btns-all .works-btns button h3 {
-  color: grey;
+.how-it-works .works-btns-all .works-btns .butt h4 {
+  color: #999;
 }
 
 .how-it-works .works-btns-all .works-btns .active-work-btn {
-  border-color: #008ae6;
+  border-color: #2a2d3e;
 }
 
-.how-it-works .works-btns-all .works-btns .active-work-btn h3 {
-  color: #008ae6;
+.how-it-works .works-btns-all .works-btns .active-work-btn h4 {
+  color: #2a2d3e;
+}
+
+.how-it-works .works-btns-all .works-btns .active-work-btn h4 .blue {
+  color: #0173b2;
 }
 
 .how-it-works .works-btns-all .works-img-small {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .how-it-works .works-btns-all .works-img-small img {
@@ -113,7 +123,7 @@
 
 .world-class {
   height: 100%;
-  background-color: #082740;
+  background-color: #2a2d3e;
   color: #fff;
 }
 
@@ -133,7 +143,7 @@
   margin-top: 1rem;
   background-color: #fff;
   padding-bottom: 1rem;
-  border-bottom: 4px solid #a1c1c1;
+  border-bottom: 4px solid #9cbfda;
 }
 
 .world-class .doctors-cards .doctor-card .doctor-card-img {
@@ -148,18 +158,25 @@
      object-fit: cover;
 }
 
-.world-class .doctors-cards .doctor-card .doctor-card-desc {
-  padding-left: 3rem;
-}
-
 .world-class .doctors-cards .doctor-card .doctor-card-desc h4 {
   text-align: left;
   font-family: Nexa-Bold;
-  padding: .5rem 0;
-  color: #008ae6;
+  padding: 0;
+  color: #0173b2;
+}
+
+.world-class .doctors-cards .doctor-card .doctor-card-desc h4::before {
+  position: relative;
+  bottom: .3rem;
+  content: "";
+  display: inline-block;
+  border: 1px solid #0173b2;
+  width: 2rem;
+  margin-right: .5rem;
 }
 
 .world-class .doctors-cards .doctor-card .doctor-card-desc h5 {
+  padding-left: 2.5rem;
   text-align: left;
   font-family: Nexa-Light;
   line-height: 1.2rem;
@@ -350,7 +367,7 @@
 }
 
 .services {
-  background-color: #f2f2f2;
+  background-color: #dbd9d9;
   height: 100%;
 }
 
@@ -363,8 +380,16 @@
 }
 
 .services .service-cards .service-card {
+  height: 9rem;
   background-color: #fff;
   border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 700px) {
@@ -372,40 +397,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .find-affordable-healthcare .search-healthcare .location {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 35%;
-    border: 1px solid #f2f2f2;
-    margin: .5rem 0;
-  }
-  .find-affordable-healthcare .search-healthcare .location .map-marker i {
-    background-color: #fff;
-    padding: .72rem;
-  }
-  .find-affordable-healthcare .search-healthcare .location input {
-    font-size: 1rem;
-    border: none;
-    text-align: left;
-    width: 100%;
-  }
-  .find-affordable-healthcare .search-healthcare .location .gps {
-    background-color: #fff;
-    padding: .76rem;
-  }
-  .find-affordable-healthcare .search-healthcare .location .gps .gps-img {
-    height: .8rem;
+    height: 100%;
+    border-right: 1px solid #dbd9d9;
   }
   .find-affordable-healthcare .search-healthcare .search {
-    width: 60%;
-  }
-  .find-affordable-healthcare .search-healthcare .search-submit {
-    margin: .5rem 0;
-    font-family: .8rem;
-    border-radius: 0;
-    padding: 0 2.5rem;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
   }
   .how-it-works .works-btns-all {
     display: -ms-grid;
@@ -436,7 +445,7 @@
   .world-class {
     padding: 2rem 1rem;
     height: 100%;
-    background-color: #082740;
+    background-color: #2a2d3e;
     color: #fff;
   }
   .world-class h2, .world-class h3, .world-class h4, .world-class h5, .world-class h6 {
@@ -452,17 +461,20 @@
   .world-class .doctors-cards .doctor-card {
     background-color: #fff;
     padding-bottom: 1rem;
-    border-bottom: 4px solid #a1c1c1;
+    border-bottom: 4px solid #9cbfda;
   }
   .world-class .doctors-cards .doctor-card .doctor-card-img {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
   }
   .world-class .doctors-cards .doctor-card .doctor-card-img img {
-    width: 90%;
-    height: 60vh;
+    width: 100%;
+    height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .world-class .doctors-cards .doctor-card .doctor-card-desc {
+    margin-top: 1rem;
   }
   .medical-treatment .treatment-cards {
     display: -ms-grid;
@@ -494,7 +506,8 @@
     display: -ms-flexbox;
     display: flex;
     width: 35%;
-    border: 1px solid #f2f2f2;
+    height: 100%;
+    border-right: 1px solid #dbd9d9;
     margin: .5rem 0;
   }
   .find-affordable-healthcare .search-healthcare .location .map-marker i {
@@ -502,7 +515,6 @@
     padding: 1rem;
   }
   .find-affordable-healthcare .search-healthcare .location input {
-    font-size: 1rem;
     border: none;
     text-align: left;
     width: 100%;
@@ -524,16 +536,16 @@
   .find-affordable-healthcare .search-healthcare .location .gps {
     background-color: #fff;
     padding: 1rem;
+    color: #dbd9d9;
   }
   .find-affordable-healthcare .search-healthcare .location .gps .gps-img {
     height: .8rem;
   }
   .find-affordable-healthcare .search-healthcare .search {
     width: 60%;
-    height: 3.1rem;
   }
   .find-affordable-healthcare .search-healthcare .search input {
-    height: 3.1rem;
+    height: 3rem;
   }
   .find-affordable-healthcare .search-healthcare .search-submit {
     margin: .5rem 0;
@@ -556,11 +568,11 @@
   .how-it-works .works-btns-all .works-btns {
     width: 80%;
   }
-  .how-it-works .works-btns-all .works-btns button {
-    padding-left: 3rem;
+  .how-it-works .works-btns-all .works-btns .butt {
+    cursor: pointer;
     height: 6rem;
   }
-  .how-it-works .works-img-large-all .works-img-large h3 {
+  .how-it-works .works-img-large-all .works-img-large h4 {
     margin-top: 2rem;
     text-align: center;
   }
@@ -799,7 +811,14 @@
   }
   .services .service-cards .service-card {
     border-radius: 0;
-    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 9rem;
   }
   .services .service-cards .service-card h5 {
     text-align: center;

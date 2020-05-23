@@ -76,7 +76,7 @@ hr {
 }
 
 .info .details .detail-home i {
-  color: #008ae6;
+  color: #0173b2;
 }
 
 .info .details .detail-home .detail-home-written {
@@ -102,7 +102,7 @@ hr {
 }
 
 .query-container {
-  background-color: #a1c1c1;
+  background-color: #9cbfda;
   padding-bottom: 1rem;
 }
 
@@ -127,7 +127,7 @@ hr {
 
 .query-container .button-div button {
   margin-right: 1rem;
-  background-color: #008ae6;
+  background-color: #0173b2;
   border: none;
 }
 

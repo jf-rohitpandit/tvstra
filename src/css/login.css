@@ -22,7 +22,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #a1c1c1;
+  background-color: #9cbfda;
   height: 100vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -44,9 +44,9 @@ body main .login-detail {
 body main .login-detail h3 {
   text-align: center;
   width: 100%;
-  color: #008ae6;
+  color: #0173b2;
   padding: 1.3rem;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #999;
   margin-bottom: .5rem;
 }
 
@@ -73,7 +73,7 @@ body main .login-detail h6 {
 
 body main .login-detail h6 a {
   font-family: Nexa-Bold;
-  color: #008ae6;
+  color: #0173b2;
 }
 
 body footer {
@@ -83,7 +83,7 @@ body footer {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: #a1c1c1;
+  background-color: #9cbfda;
 }
 
 body footer .last-line h5 {
