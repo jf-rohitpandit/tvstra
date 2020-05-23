@@ -45,7 +45,7 @@
           justify-content: space-between;
 }
 
-.top .bread-crumb h5 {
+.top .bread-crumb h4 {
   font-family: Nexa-Light;
 }
 
@@ -64,18 +64,27 @@
 
 .cards .card {
   margin-bottom: 1rem;
-  border: 1px solid grey;
+  border: 1px solid #999;
   padding-top: 1rem;
 }
 
-.cards .card h4 {
+.cards .card .card-all h4 {
   text-align: left;
-  padding: 1rem;
-  padding-left: 2rem;
-  color: #008ae6;
+  color: #0173b2;
+}
+
+.cards .card .card-all h4::before {
+  position: relative;
+  bottom: .3rem;
+  content: '';
+  display: inline-block;
+  border: 1px solid #0173b2;
+  padding: 0 1rem;
+  margin-right: .3rem;
 }
 
 .cards .card .card-all .card-desc {
+  padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +99,7 @@
 }
 
 .cards .card .card-all .card-desc .card-desc-item i {
-  color: #008ae6;
+  color: #0173b2;
   padding: .5rem 0.5rem .5rem 0.3rem;
 }
 
@@ -109,6 +118,9 @@
 }
 
 @media (min-width: 700px) {
+  body {
+    border-bottom: 5px solid #0173b2;
+  }
   .top .top-heading {
     display: block;
   }
@@ -130,7 +142,7 @@
   }
   .cards .filters .filter-heading {
     height: 3rem;
-    background-color: #f2f2f2;
+    background-color: #dbd9d9;
     padding: 1rem;
   }
   .cards .filters .filter-heading h6 {
@@ -152,7 +164,7 @@
     text-align: left;
   }
   .cards .filters .filter-all .location .search-div .search i {
-    color: #008ae6;
+    color: #0173b2;
   }
   .cards .filters .filter-all .location .search-list {
     text-align: left;
@@ -167,11 +179,11 @@
     margin-top: 0;
   }
   .cards .filters .filter-all .location .search-list h5 {
-    color: #008ae6;
+    color: #0173b2;
     padding: .8rem 0;
   }
   .cards .card {
-    padding: 0;
+    padding-top: 1rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 2fr 1fr;
@@ -195,9 +207,6 @@
   }
   .cards .card .card-all .card-desc .card-desc-item {
     text-align: left;
-  }
-  .cards .card .card-all .card-desc .card-desc-item i {
-    margin-left: 2rem;
   }
   .cards .card .card-all .card-desc .card-desc-item label {
     font-size: 1rem;

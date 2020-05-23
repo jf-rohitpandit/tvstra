@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
 
-        h5{
+        h4{
             font-family: Nexa-Light;
         }
 
@@ -46,15 +46,25 @@
         margin-bottom: 1rem ;
         border: 1px solid $grey;
         padding-top: 1rem;
-        h4{
-            text-align: left;
-            padding:1rem; 
-            padding-left:2rem;;
-            color: $blue;
-        }
+        
 
         .card-all{
+            h4{
+                text-align: left;
+                color: $blue;
+            }
+            h4::before{
+                position: relative;
+                bottom: .3rem;
+                content: '';
+                display: inline-block;
+                border: 1px solid $blue;
+                padding: 0 1rem;
+                margin-right: .3rem;;
+            }
             .card-desc{
+                padding:1rem 2rem;
+                // padding-left: 2rem;
                 display: flex;
                 flex-direction: column;
                 .card-desc-item{
@@ -84,6 +94,9 @@
 
 
 @media (min-width: 700px){
+    body{
+        border-bottom: 5px solid $blue;
+    }
     .top{
 
         .top-heading{
@@ -110,7 +123,7 @@
             
             .filter-heading{
                 height: 3rem;
-                background-color: $lightgrey;
+                background-color: $lightgrey2;
                 padding: 1rem;
             
                 h6{
@@ -161,7 +174,7 @@
         }
 
         .card{
-            padding: 0;
+            padding-top: 1rem;
             display: grid;
             grid-template-columns: 2fr 1fr;
             .card-all{
@@ -175,9 +188,7 @@
                     
                     .card-desc-item{
                         text-align: left;
-                        i{
-                            margin-left: 2rem;
-                        }
+                        
                         label{
                             font-size: 1rem;;
                         }
