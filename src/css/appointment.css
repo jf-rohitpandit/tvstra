@@ -23,7 +23,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #9cbfda;
-  height: 100vh;
+  height: 140vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -66,12 +66,16 @@ body main .book-detail .book .book-info-and {
 
 body main .book-detail .book .book-info-and .book-info {
   text-align: left;
+  height: 100%;
 }
 
-body main .book-detail .book input[type=date] {
-  padding: .3rem;
-  border: 1px solid #999;
-  width: 100%;
+body main .book-detail .book .book-info-and .book-info input {
+  padding-left: 1rem;
+}
+
+body main .book-detail .book .book-info-and .book-info input[type=file] {
+  padding-left: 0;
+  border: none;
 }
 
 body main .book-detail .book input[type=radio] {
@@ -88,10 +92,6 @@ body main .book-detail .book textarea {
   border: none;
   border: 1px solid #999;
   width: 100%;
-}
-
-body main .book-detail .book #place {
-  width: 45%;
 }
 
 body main .book-detail .book button {

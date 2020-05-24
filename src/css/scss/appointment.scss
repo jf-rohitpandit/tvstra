@@ -4,7 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: $lightblue;
-    height: 100vh;
+    height: 140vh;
     justify-content: space-between;
         
     
@@ -38,13 +38,15 @@ body{
                     margin: 1rem 0;
                     .book-info{
                         text-align: left;
+                        height: 100%;
+                        input{
+                            padding-left: 1rem;
+                        }
+                        input[type = file]{
+                            padding-left: 0;
+                            border:none;
+                        }
                     }
-                }
-                input[type=date]{
-                    padding: .3rem;
-                    border:1px solid $grey;
-                    width: 100%;
-
                 }
                 
                 input[type=radio]{
@@ -56,6 +58,8 @@ body{
                     text-align: left;
                     color: $black;
                 }
+
+                
                 
                 textarea{
                     border:none;
@@ -63,9 +67,6 @@ body{
                     width: 100%;
                 }
 
-                #place{
-                    width:45%;
-                }
                 button{
                     width: 100%;
                     margin-bottom: 1rem;
@@ -143,3 +144,4 @@ body{
         }
     }
 }
+
