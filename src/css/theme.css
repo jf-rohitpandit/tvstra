@@ -56,43 +56,52 @@ ul, li {
 }
 
 button {
+  font-family: Nexa-Bold;
   color: white;
   background-color: #2a2d3e;
   border: 1px solid #2a2d3e;
   padding: 0 1rem;
+  margin: .2rem 0;
   height: 2.5rem;
   border-radius: 2px;
   text-align: center;
 }
 
 input {
-  padding: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+  margin: .2rem 0;
   height: 2.5rem;
   font-family: Nexa-Light;
   font-size: 1rem;
   width: 100%;
   border: 1px solid #dbd9d9;
+  color: #000;
 }
 
 ::-webkit-input-placeholder {
+  font-family: Nexa-Light;
   color: #999;
   font-size: .8rem;
   text-align: left;
 }
 
 :-ms-input-placeholder {
+  font-family: Nexa-Light;
   color: #999;
   font-size: .8rem;
   text-align: left;
 }
 
 ::-ms-input-placeholder {
+  font-family: Nexa-Light;
   color: #999;
   font-size: .8rem;
   text-align: left;
 }
 
 ::placeholder {
+  font-family: Nexa-Light;
   color: #999;
   font-size: .8rem;
   text-align: left;
@@ -100,13 +109,19 @@ input {
 
 input[type=checkbox] {
   margin-right: 10px;
+  height: 1rem;
+  width: 1rem;
+}
+
+label {
+  text-align: left;
 }
 
 input[list] {
   height: 2.5rem;
   font-size: .8rem;
   color: black;
-  border: 1px solid #999;
+  border: 1px solid #dbd9d9;
 }
 
 ::-webkit-input-placeholder {
@@ -126,32 +141,37 @@ input[list] {
 }
 
 input[type=date] {
-  border: 1px solid #999;
-}
-
-::-webkit-input-placeholder {
-  color: #999;
-}
-
-:-ms-input-placeholder {
-  color: #999;
-}
-
-::-ms-input-placeholder {
-  color: #999;
-}
-
-::placeholder {
-  color: #999;
-}
-
-datalist {
-  font-size: 1rem;
-}
-
-label {
+  font-size: .8rem;
   text-align: left;
-  font-size: .9rem;
+  border: 1px solid #dbd9d9;
+}
+
+input[type=date]::-webkit-input-placeholder {
+  color: #dbd9d9;
+}
+
+input[type=date]:-ms-input-placeholder {
+  color: #dbd9d9;
+}
+
+input[type=date]::-ms-input-placeholder {
+  color: #dbd9d9;
+}
+
+input[type=date]::placeholder {
+  color: #dbd9d9;
+}
+
+select {
+  font-family: Nexa-Light;
+  font-size: .8rem;
+  height: 2.5rem;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 1rem;
+  margin: .2rem 0;
+  border-color: #dbd9d9;
+  color: #000;
 }
 
 a {

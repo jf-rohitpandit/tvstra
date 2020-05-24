@@ -40,6 +40,8 @@
 }
 
 .find-affordable-healthcare .search-healthcare .location input {
+  height: 2rem;
+  margin: 0;
   font-size: 1rem;
   border: none;
   text-align: left;
@@ -56,11 +58,9 @@
 
 .find-affordable-healthcare .search-healthcare .search {
   width: 100%;
-  margin: .5rem 0;
 }
 
 .find-affordable-healthcare .search-healthcare .search input {
-  height: 41px;
   border: none;
 }
 

@@ -48,7 +48,6 @@ body{
                 input{
                     text-align: left;
                     margin-bottom: .8rem;
-                    
                     height: 2.5rem;
                 }
                 button{
@@ -65,7 +64,6 @@ body{
                 text-align: center;
                 padding:1rem;
                 a{
-                    // text-decoration: none;
                     font-family: Nexa-Bold;
                     color:$blue;                        
                 }
@@ -78,7 +76,6 @@ body{
     footer{
         padding-bottom: 1rem;
         margin: 0;
-        // flex:1;
         height: auto;;
         align-self: center;
         background-color: $lightblue;

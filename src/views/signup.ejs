@@ -28,11 +28,12 @@
                 <input type="text" name="name" placeholder="Enter Name" required>
                 <input type="email" name="email" placeholder="Enter Email" required>
                 <input type="text" name="password" placeholder="Enter Password" required >
-                <input list="gender" name="gender" name="gender" placeholder="Select Your Gender"required>
-                <datalist name="gender" id="gender">
-                    <option value="Male"></option>
-                    <option value="Female"></option>
-                    <option value="other"></option>
+                <!-- <input list="gender" name="gender" name="gender" placeholder="Select Your Gender"required> -->
+                <select name="gender" id="gender">
+                    <option selected hidden>Select Your Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="other">Other</option>
                 </datalist>
                 <input type="date" name='dob' placeholder="" required>
                 <input type="text" name='phone' placeholder="Enter Phone Number" required>
