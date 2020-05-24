@@ -1,5 +1,6 @@
 @import 'config';
 
+
 body{
     border-bottom: 8px solid $blue;
 }
@@ -10,7 +11,7 @@ body{
     padding:0;
     .top{
         padding: 5rem;
-        background-image: linear-gradient(to right , rgba(100, 150, 255, 1), rgba(100,150, 255,0));
+        background-image: linear-gradient(to right , rgba(156,191,218, 1), rgba(100,150, 255,0));
         width: 100%;;
         line-height: 3rem;
         h1{
@@ -71,16 +72,18 @@ body{
             display:flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             .disease-logo{
                 margin-bottom:1rem;
                 background-color: $lightblue;
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 i{
-                    margin: 16px;
                     color: $darkblue;
-                    width: 32px;
                 }
             }
         }
@@ -103,7 +106,7 @@ body{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                border-bottom: 1px solid $lightgrey;
+                border-bottom: 1px solid $lightgrey2;
                 margin-bottom:.5rem;
                 
                 .light{
@@ -134,7 +137,7 @@ body{
         .more-service-card{
             
             margin-bottom:1rem;
-            border-radius:2rem;
+            border-radius:1rem;
             overflow:hidden;
             background-color: $white;
             .card-img{
@@ -147,9 +150,19 @@ body{
             }
 
             .card-heading{
-                padding:2rem;
+                padding: 1rem 0;
                 h3{
                     text-align: left;
+                }
+                h3::before{
+                    position: relative;
+                    bottom: .2rem;
+                    content: '';
+                    display: inline-block;
+                    border:1px solid $blue;
+                    padding: 0 .5rem;
+                    margin-right: .4rem;
+
                 }
             }
         }
@@ -182,7 +195,7 @@ body{
             }
             .about-dentist{
                 flex:5;
-                padding-left:1rem;
+                padding-left:3rem;
             }
         }
 
@@ -223,23 +236,17 @@ body{
 
             .more-service-card{
                 .card-img{
-                    height: 15rem;;
+                    height: 10rem;;
                 }
 
                 .card-heading{
-                    padding:2rem 1rem;;
+                    padding:2rem 0rem;;
                     h3{
                         font-size:1.2rem;
                     }
                 }
             }
 
-            // #card2{
-            //     // margin-left:1rem;
-            // }
-            // #card3{
-            //     // margin-left:1rem;
-            // }
         }
     }
 }
@@ -264,7 +271,7 @@ body{
             
             .img-and-about{
                 display: grid;
-            grid-template-columns: 1fr 1fr;;
+                grid-template-columns: 1fr 1fr;;
             }
         }
 
@@ -291,6 +298,17 @@ body{
                 margin:0;
             }
             
+        }
+    }
+    .more-services{
+
+        .more-service-cards{
+            .more-service-card{
+                .card-img{
+                    height: 17rem;;
+                }
+            }
+
         }
     }
 }

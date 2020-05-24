@@ -15,7 +15,7 @@
 }
 
 body {
-  border-bottom: 8px solid #008ae6;
+  border-bottom: 8px solid #0173b2;
 }
 
 .dentist-heading {
@@ -27,8 +27,8 @@ body {
 
 .dentist-heading .top {
   padding: 5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#6496ff), to(rgba(100, 150, 255, 0)));
-  background-image: linear-gradient(to right, #6496ff, rgba(100, 150, 255, 0));
+  background-image: -webkit-gradient(linear, left top, right top, from(#9cbfda), to(rgba(100, 150, 255, 0)));
+  background-image: linear-gradient(to right, #9cbfda, rgba(100, 150, 255, 0));
   width: 100%;
   line-height: 3rem;
 }
@@ -79,7 +79,7 @@ body {
 
 .vaccine .about-dentist ul li:before {
   content: "\25CF";
-  color: #008ae6;
+  color: #0173b2;
   font-weight: 900;
   width: 1rem;
   margin-right: 1rem;
@@ -100,24 +100,34 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .vaccine .disease .disease-item .disease-logo {
   margin-bottom: 1rem;
-  background-color: #a1c1c1;
+  background-color: #9cbfda;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .vaccine .disease .disease-item .disease-logo i {
-  margin: 16px;
-  color: #082740;
-  width: 32px;
+  color: #2a2d3e;
 }
 
 .vaccine .service-details {
-  border: 1px solid grey;
+  border: 1px solid #999;
   border-radius: 1rem;
   padding: 1.5rem;
   line-height: 1.5rem;
@@ -144,16 +154,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #dbd9d9;
   margin-bottom: .5rem;
 }
 
 .vaccine .service-details .service-items .service-element .light {
-  color: grey;
+  color: #999;
 }
 
 .more-services {
-  background-color: #a1c1c1;
+  background-color: #9cbfda;
 }
 
 .more-services h2 {
@@ -181,7 +191,7 @@ body {
 
 .more-services .more-service-cards .more-service-card {
   margin-bottom: 1rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
   background-color: #fff;
 }
@@ -198,11 +208,21 @@ body {
 }
 
 .more-services .more-service-cards .more-service-card .card-heading {
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .more-services .more-service-cards .more-service-card .card-heading h3 {
   text-align: left;
+}
+
+.more-services .more-service-cards .more-service-card .card-heading h3::before {
+  position: relative;
+  bottom: .2rem;
+  content: '';
+  display: inline-block;
+  border: 1px solid #0173b2;
+  padding: 0 .5rem;
+  margin-right: .4rem;
 }
 
 @media (min-width: 700px) {
@@ -234,7 +254,7 @@ body {
     -webkit-box-flex: 5;
         -ms-flex: 5;
             flex: 5;
-    padding-left: 1rem;
+    padding-left: 3rem;
   }
   .vaccine .disease {
     display: -webkit-box;
@@ -298,10 +318,10 @@ body {
             flex-direction: row;
   }
   .more-services .more-service-cards .more-service-card .card-img {
-    height: 15rem;
+    height: 10rem;
   }
   .more-services .more-service-cards .more-service-card .card-heading {
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
   }
   .more-services .more-service-cards .more-service-card .card-heading h3 {
     font-size: 1.2rem;
@@ -363,6 +383,9 @@ body {
   }
   .vaccine .service-cards #service02 {
     margin: 0;
+  }
+  .more-services .more-service-cards .more-service-card .card-img {
+    height: 17rem;
   }
 }
 /*# sourceMappingURL=treatment.css.map */
