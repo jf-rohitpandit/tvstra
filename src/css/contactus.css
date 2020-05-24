@@ -116,6 +116,14 @@ hr {
   margin-bottom: .8rem;
 }
 
+.query-container textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: left;
+  padding: .7rem 1rem  1rem;
+}
+
 .query-container .button-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,11 +171,29 @@ hr {
         grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
   }
+  .query-outside .query-outside-detail {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .query-outside .query-outside-detail input {
+    margin: 0;
+  }
   .query-outside .message-div {
     height: 100%;
   }
-  .query-outside .message-div #message {
-    height: 90%;
+  .query-outside .message-div textarea {
+    margin-bottom: 1rem;
   }
   .query-outside button {
     margin-left: 80%;
@@ -207,6 +233,11 @@ hr {
   }
   .info-query .info .details .detail-home {
     margin-left: 0;
+  }
+  .info-query .query-container {
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
   }
   .map {
     padding: 5rem;

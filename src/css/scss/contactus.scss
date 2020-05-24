@@ -72,15 +72,21 @@ hr{display: none;}
     .query-outside{
         
         padding: 1rem;
-
+        
         input{
             text-align: left;
             padding-left:1rem;
             margin-bottom: .8rem;
         }
-
-        
     }
+
+        textarea{
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: left;
+            padding: .7rem 1rem  1rem;
+        }
     
     .button-div{
         display: flex;
@@ -119,13 +125,27 @@ hr{display: none;}
         grid-template-columns: 1fr 1fr;;
         grid-gap: 1rem;
 
+        .query-outside-detail{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            height: 10rem;;
+            flex-direction: column;
+            justify-content: space-between;
+            input{
+                margin: 0;
+            }
+        }
+
         .message-div{
             height: 100%;
             
-
-            #message{
-                height:90%;
+            textarea{
+                margin-bottom: 1rem;
             }
+            // #message{
+            //     height:90%;
+            // }
         }
         button{
             margin-left:80%;;
@@ -159,6 +179,9 @@ hr{display: none;}
                     margin-left: 0;
                 }
             }
+        }
+        .query-container{
+            flex: 4;
         }
     }
 
