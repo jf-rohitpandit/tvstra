@@ -506,9 +506,10 @@
     text-align: center;
   }
   .head .white-card .plans {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
   .head .white-card .plans .plan {
     padding: 0;
@@ -593,6 +594,18 @@
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .head .white-card .plans .plan .plan-info h3 {
+    text-align: center;
+  }
+  .head .white-card .plans .plan .price-and-buy {
+    margin: auto;
+  }
+  .review h2, .review p {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=tvastraPlus.css.map */

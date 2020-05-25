@@ -1,3 +1,4 @@
+
 function home(req, res){
     res.render('index');
 }
@@ -58,6 +59,14 @@ function tvastraPlus(req, res){
     res.render('tvastraPlus');
 }
 
+function otpVerify(req,res){
+    res.render('otpVerify');
+}
+
+function phoneLogin(req, res){
+    res.render('phoneLogin');
+}
+
 
 module.exports = {
     home: home,
@@ -74,5 +83,7 @@ module.exports = {
     faq: faq,
     hospitalProfile: hospitalProfile,
     query: query,
-    tvastraPlus: tvastraPlus
+    tvastraPlus: tvastraPlus,
+    otpVerify: otpVerify,
+    phoneLogin: phoneLogin
 }

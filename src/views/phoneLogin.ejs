@@ -18,16 +18,11 @@
     <main>
         <section class="login-detail">
             <h3>Login</h3>
-            <form action="/login" method="POST" class="login">
-                <div class="email-div">
-                    <input type="email" name='email' placeholder="Email">
-                    <i class="fas fa-question-circle"></i>    
-                </div>
-                <input type="password" name="password" id="" placeholder="Enter OTP">
+            <p>We have sent one time password to your registered phone number</p>
+            <form action="/otp" method="POST" class="login">
+                <input type="text" name="number">
                 <button>Login <span><i class="fas fa-arrow-right"></i></span></button>
             </form>
-            <a href="phoneLogin">Login via OTP</a>
-            <h6>Not Registered? <span><a href="signup" >Sign Up</a></span></h6>
         </section>
     </main>
     <footer>

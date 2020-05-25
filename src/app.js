@@ -7,9 +7,16 @@ const logger = require('morgan');
 const path = require('path');
 const mainRoutes = require('./backend/routes/mainRoutes');
 const session = require('express-session');
+const Nexmo = require('nexmo');
 // const MongoStore = require('connect-mongo')(session);
 
 // var connection = 'mongo'
+
+const nexmo = new Nexmo({
+    apiKey:'ca344c09',
+    apiSecret: 'DaCTpIzPZPfuj3GF',
+    applicaionId: '851bfcc3-cb45-4fcb-9b6d-21ae37d5792b'
+})
 
 
 app.use(cors());

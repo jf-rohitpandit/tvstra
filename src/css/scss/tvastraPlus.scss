@@ -395,7 +395,8 @@
             }
 
             .plans{
-                display: flex;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
                 .plan{
                     padding:0;
                     display: flex;
@@ -404,7 +405,6 @@
                 }
             }
         }
-
     }
     .review{
         padding-bottom:0;
@@ -471,5 +471,30 @@
 
 
 @media (min-width: 1024px){
-    
+    .head{
+        .white-card{
+            .plans{
+                .plan{
+                    .plan-info{
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                    .price-and-buy{
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .review{
+        h2,p{
+            text-align: center;
+        }
+
+        .rating-div{
+            
+        }
+    }
 }
