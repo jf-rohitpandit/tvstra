@@ -11,6 +11,7 @@ body{
     background-position: left;
     background-repeat: no-repeat;
     
+
     .top{
         margin:4rem 1rem;
         line-height: 3rem;;
@@ -97,14 +98,14 @@ body{
                     
                     div{
                         border-radius: 50%;
-                        background-color: $blueshade;
+                        background-color: $lightblue;
                         i{padding:.3rem .5rem}
                     }
                     
                 }
             }
             .detail-para{
-                background-color: $blueshade;
+                background-color: $lightblue;
                 margin: 0;
                 padding:1rem;
                 text-align: left;
@@ -114,6 +115,10 @@ body{
 }
 
 @media (min-width: 700px){
+
+    .contact-heading{
+        background-position: center;
+    }
     .info{
         margin:3rem;
         display: flex;
@@ -134,14 +139,23 @@ body{
 
             .info-div{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 3fr 2fr;
                 grid-gap: 1rem;
+
+                .small-flex{
+                    display: flex;
+                    align-items: center;;
+                }
             }
         }
     }
 }
 
 @media (min-width: 1024px){
+    .contact-heading{
+        background-position: right;
+        padding:3rem 5rem;
+    }
     .info{
         margin:3rem 5rem;
         padding: 3rem;

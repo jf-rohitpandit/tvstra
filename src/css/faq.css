@@ -15,7 +15,7 @@
 }
 
 body {
-  border-bottom: 0.5rem solid #008ae6;
+  border-bottom: 0.5rem solid #0173b2;
 }
 
 .contact-heading {
@@ -63,7 +63,7 @@ body {
 }
 
 .all .questions div {
-  background-color: #bee2f7;
+  background-color: #9cbfda;
   border-radius: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -80,7 +80,7 @@ body {
 .all p {
   text-align: left;
   line-height: 1.5rem;
-  background-color: #bee2f7;
+  background-color: #9cbfda;
   padding: 1rem;
 }
 

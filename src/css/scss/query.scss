@@ -4,13 +4,14 @@ body{
     display: flex;
     flex-direction: column;
     background-color: $lightblue;
-    height: 100vh;
+    height: 130vh;
     justify-content: space-between;
         
     
     main{
-        
+        // box-shadow: .5rem .5rem .5rem $grey;;
         align-self: center;
+        padding-bottom: 0;
         .query-detail{  
             padding:0;
             background-color: $white;
@@ -41,6 +42,7 @@ body{
                 input::placeholder{
                     color: $grey;
                 }
+                
 
                 textarea{
                     font-family: Nexa-Light;
@@ -136,3 +138,4 @@ body{
         }
     }
 }
+

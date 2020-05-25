@@ -44,47 +44,53 @@ p{
     padding: 0;
     .video{
         background-color: $white;
-        display: none;
-    }
-    .black-box-content{
-        padding: 1rem;
-        background-color: black;
-        h2,h3,h4,h5,h6,p{
-            color:$white;
-        }
-        button{
-            background-color: $blue;
-            border-radius: .5rem;
-            width: 10rem;
-            border:none;
-            margin:.5rem 0;
-        }
-    
-        .cards{
-            display: flex;
-            flex-direction: column;
-    
-            .card{
-                border:1px solid $grey;
-                padding:2rem;
-                border-radius:.5rem;
-                margin:.5rem;
-                h2{
-                    padding-bottom:.7rem;
-                }
-    
-                h6{
-                    color:$grey;
-                }
-    
+        position: relative;
+        overflow: hidden;
+        
+        .black-box-content{
+            padding: 1rem;
+            background-color: $black;
+            h2,h3,h4,h5,h6,p{
+                color:$white;
             }
-        }        
+            button{
+                background-color: $blue;
+                border-radius: .5rem;
+                width: 10rem;
+                border:none;
+                margin:.5rem 0;
+            }
+        
+            .cards{
+                display: flex;
+                flex-direction: column;
+        
+                .card{
+                    border:1px solid $grey;
+                    padding:2rem;
+                    border-radius:.5rem;
+                    margin:.5rem;
+                    h2{
+                        padding-bottom:.7rem;
+                    }
+        
+                    h6{
+                        color:$grey;
+                    }
+        
+                }
+            }        
+        }
+        .play{
+            visibility: hidden;
+            position:absolute;
+            top:0;
+            left:0;
+        }
     }
+    
 }
 
-// .need-help{
-//     padding: auto;
-// }
 
 @media (min-width: 700px){
     .details{
@@ -112,29 +118,33 @@ p{
 
     .black-box{
         .video{
-            display: none;
-        }
-        .black-box-content{
-            padding: 3rem;
-            h3,p{
-                text-align: left;
-            }
-    
-            button{
-                display: flex;
-                justify-content: flex-start;
-                margin:3rem 0;
-            }
-    
-            .cards{
-                display:grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-gap:.8rem;
-                .card{
-                    margin: 0;
+            
+            .black-box-content{
+                padding: 3rem;
+                h3,p{
+                    text-align: left;
+                }
+        
+                .black-button{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin:3rem 0;
+                }
+        
+                .cards{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap:.8rem;
+                    .card{
+                        margin: 0;
+                    }
                 }
             }
+            .play{
+                visibility: hidden;
+            }
         }
+        
     }
 }
 
@@ -170,39 +180,46 @@ p{
     }
 
     .black-box{
+
         padding:0;
         padding-top:0;
         background-image: none;
         .video{
-            display: block;
             overflow: hidden;
-            padding:0px;
-            video{
-                height: 50rem;
-                width: 100%;                
-            }
-        }
-        .black-box-content{
-
-            display: grid;
-            background-color: none;
-            grid-template-columns: 1fr 1fr;
-            // position: relative;
-            // bottom:30rem;
-    
-            .cards{
-                grid-row-start:1;
-                grid-row-end:3;
-                grid-column: 2;
-                .card{
-                    padding: 3rem;
+            position: relative;
+            
+            .black-box-content{
+                padding: 3rem 5rem;
+                display: grid;
+                background-color: rgba(0,0,0,0);
+                grid-template-columns: 1fr 1fr;
+                overflow: hidden;
+        
+                .cards{
+                    grid-row-start:1;
+                    grid-row-end:3;
+                    grid-column: 2;
+                    .card{
+                        padding: 3rem;
+                    }
+                }
+        
+                .black-button{
+                    align-self: center;
                 }
             }
-    
-            .black-button{
-                align-self: center;
+
+            .play{
+                visibility: visible;
+                // position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
             }
+            
         }
+        
     }
     .need-help{
         padding-top:2rem;

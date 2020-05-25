@@ -23,7 +23,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #9cbfda;
-  height: 100vh;
+  height: 130vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -33,6 +33,7 @@ body main {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-bottom: 0;
 }
 
 body main .query-detail {
