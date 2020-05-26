@@ -25,6 +25,26 @@
                 <a href="aboutUs">about</a>
                 
             </div>
+             
+             
+        <% if(locals.user){%> 
+            <div class="login-signup">
+                <a href="tvastraPlus">
+                    <button class="nav-btn-white">tvastraPlus</button>
+                </a>
+                <a href="appointment">
+                    <button class="nav-btn-dark">Get a Queue</button>
+
+                </a><% console.log(locals.user.name) %> 
+                <div class="drop-down">
+                    <span><%= locals.user.name %> </span>
+                    <div class="drop-items">
+                        <a href="logout">logout</a>
+                    </div>
+                </div>
+            </div>
+        <% } else{%>
+            
             <div class="login-signup">
                 <a href="login">
                     <button class="nav-btn-white">Login/SignUp</button>
@@ -34,6 +54,7 @@
 
                 </a>
             </div>
+        <%} %>  
         </div>
     </nav>
     <script src="../../js/navbar.js"></script>

@@ -4,7 +4,8 @@ var mainController = require('./mainController');
 
 module.exports ={
     signup: signup,
-    login: login
+    login: login,
+    logout: logout
 };
 
 async function signup(req, res){
@@ -35,7 +36,8 @@ async function signup(req, res){
                 },function(err, newUser){
                     if(err  ){
                         msg = 'Error loading data';
-                        console.log(msg)
+                        console.log(msg); 
+                        req.session.user = newUser;
                         return res.render('signup',{msg:msg});
                     }else{
                         return res.redirect('/');
@@ -81,6 +83,8 @@ async function login(req, res){
                 }else{
                     msg= 'welocm'
                     console.log(msg);
+                    req.session.user = user;
+                    console.log(req.session.user);
                     return res.redirect('/');
                 }
             }
@@ -90,4 +94,11 @@ async function login(req, res){
             return res.render('login',{msg: msg});
         }
     }
+}
+
+function logout(req, res){
+    req.session.destroy(err=>{
+        console.log(err);
+    })
+    return res.redirect('login');
 }

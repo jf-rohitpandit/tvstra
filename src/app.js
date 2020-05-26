@@ -41,6 +41,13 @@ app.use(session({
     }
 }))
 
+// app.use(function(req, res,next){
+//     if(req.session.user){
+//         app.locals.user = req.session.user;
+//     }
+//     next();
+// })
+
 app.use('/', mainRoutes);
 app.set('port',process.env.PORT|| 4000);
 
