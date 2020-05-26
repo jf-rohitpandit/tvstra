@@ -8,9 +8,6 @@ const path = require('path');
 const mainRoutes = require('./backend/routes/mainRoutes');
 const session = require('express-session');
 const Nexmo = require('nexmo');
-// const MongoStore = require('connect-mongo')(session);
-
-// var connection = 'mongo'
 
 const nexmo = new Nexmo({
     apiKey:'ca344c09',

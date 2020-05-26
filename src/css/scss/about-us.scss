@@ -187,6 +187,7 @@ p{
         .video{
             overflow: hidden;
             position: relative;
+            height: 30rem;
             
             .black-box-content{
                 padding: 3rem 5rem;
@@ -211,11 +212,12 @@ p{
 
             .play{
                 visibility: visible;
-                // position: absolute;
+                position: absolute;
                 top:50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
+                height: 30rem;
             }
             
         }

@@ -213,6 +213,7 @@ p {
   .black-box .video {
     overflow: hidden;
     position: relative;
+    height: 30rem;
   }
   .black-box .video .black-box-content {
     padding: 3rem 5rem;
@@ -240,11 +241,13 @@ p {
   }
   .black-box .video .play {
     visibility: visible;
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: -1;
+    height: 30rem;
   }
   .need-help {
     padding-top: 2rem;

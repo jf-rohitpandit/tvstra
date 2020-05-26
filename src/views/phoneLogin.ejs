@@ -18,9 +18,9 @@
     <main>
         <section class="login-detail">
             <h3>Login</h3>
-            <p>We have sent one time password to your registered phone number</p>
-            <form action="/otp" method="POST" class="login">
-                <input type="text" name="number">
+            
+            <form action="/otpVerify" method="POST" class="login">
+                <input type="text" name="number" placeholder="Enter your registered phone number">
                 <button>Login <span><i class="fas fa-arrow-right"></i></span></button>
             </form>
         </section>

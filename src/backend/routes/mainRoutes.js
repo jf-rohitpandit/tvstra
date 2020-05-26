@@ -16,7 +16,7 @@ router.route('/aboutUs').get(middle.redirectLogin, mainController.aboutUs);
 router.route('/appointment').get(middle.redirectLogin, mainController.appointment);
 router.route('/treatment').get(middle.redirectLogin, mainController.treatment);
 router.route('/login').get( mainController.login);
-router.route('/signup').get(middle.redirectLogin, mainController.signup);
+router.route('/signup').get( mainController.signup);
 router.route('/appointment').get(middle.redirectLogin, mainController.appointment);
 
 router.route('/signup').post(loginController.signup);

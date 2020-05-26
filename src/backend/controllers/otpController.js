@@ -35,7 +35,7 @@ async function otp(req, res){
                 },(err, result)=>{
                     if(err){
                         console.log(err);
-                        return res.redirect('login');
+                        return res.redirect('/login');
                     }else{
                         verifyRequestId = result.request_id;
                         console.log('request id', verifyRequestId);
@@ -52,39 +52,39 @@ async function otp(req, res){
     }
 }
 
-async function otp(req, res){
-    nexmo.verify.request({
-        number:req.body.number,
-        brand: 'tvastra',
-        workflow_id: 6
-    },(err, result)=>{
-        if(err){
-            console.log(err);
-            return res.redirect('login');
-        }else{
-            try{
-                const user =await User.findOne({
-                    where: {
-                        phone:req.body.number
-                    }
-                })
-                if(user !== null){
-                    verifyRequestId = result.request_id;
-                    console.log('request id', verifyRequestId);
-                    return res.redirect('/otpVerify');
-                }else{
-                    console.log('phone number not found');
-                    return res.redirect('login');
-                }
+// async function otp(req, res){
+//     nexmo.verify.request({
+//         number:req.body.number,
+//         brand: 'tvastra',
+//         workflow_id: 6
+//     },(err, result)=>{
+//         if(err){
+//             console.log(err);
+//             return res.redirect('login');
+//         }else{
+//             try{
+//                 const user = User.findOne({
+//                     where: {
+//                         phone:req.body.number
+//                     }
+//                 })
+//                 if(user !== null){
+//                     verifyRequestId = result.request_id;
+//                     console.log('request id', verifyRequestId);
+//                     return res.redirect('/otpVerify');
+//                 }else{
+//                     console.log('phone number not found');
+//                     return res.redirect('login');
+//                 }
                 
-            }
-            catch{
-                console.log('some error occured in getting the user details')
-            }
+//             }
+//             catch{
+//                 console.log('some error occured in getting the user details')
+//             }
             
-        }
-    })
-}
+//         }
+//     })
+// }
 
 function otpVerify(req,res){
     nexmo.verify.check({
