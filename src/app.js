@@ -38,12 +38,37 @@ app.use(session({
     }
 }))
 
-// app.use(function(req, res,next){
-//     if(req.session.user){
-//         app.locals.user = req.session.user;
-//     }
-//     next();
-// })
+app.use(function(req, res,next){
+    if(req.session.user){
+        app.locals.user = req.session.user;
+    }
+    next();
+})
+
+
+
+app.use(function(req,res, next){
+    if(req.session.error){
+        app.locals.error = req.session.error;
+    }
+    next();
+})
+
+app.use(function(req,res, next){
+    if(req.session.success){
+        app.locals.success = req.session.success;
+    }
+    next();
+})
+
+app.use(function(req, res, next){
+    if(req.session.info){
+        app.locals.info = req.session.info;
+    }
+    next();
+})
+
+
 
 app.use('/', mainRoutes);
 app.set('port',process.env.PORT|| 4000);

@@ -42,6 +42,7 @@ async function otp(req, res){
                     }else{
                         verifyRequestId = result.request_id;
                         console.log('request id', verifyRequestId);
+                        req.session.info = 'OTP expires in 60s'
                         return res.redirect('/otpVerify');   
                         }  
                     }

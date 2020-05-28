@@ -9,6 +9,7 @@ module.exports ={
 };
 
 async function signup(req, res){
+    req.session.error = null;
     var msg = '';
     const {name, email, password, gender,dob, phone, city, state, country} = req.body;
     if(!(name, email, password, gender, phone, city, state, country)){
@@ -60,12 +61,14 @@ async function signup(req, res){
 
 
 async function login(req, res){
+    req.session.error = null;
     var msg = '';
     const {email, password} = req.body;
     if(!email || !password){
         msg = "Enter all the details";
         console.log(msg);
-        return res.render('login', {msg: msg});
+        req.session.error = msg;
+        return res.redirect('/login');
     }else{
         try{
             const user =await User.findOne({
@@ -74,17 +77,20 @@ async function login(req, res){
             if(user === null){
                 msg = "Email not found";
                 console.log(msg);
-                return res.render('login', {msg: msg});
+                req.session.error = msg;
+                return res.redirect('/login');
             }else{
                 if(user.password !== password){
                     msg = 'Password not match';
                     console.log(msg);
-                    return res.render('login', {msg: msg});
+                    req.session.error = msg;
+                    return res.redirect('/login');
                 }else{
                     msg= 'welocm'
                     console.log(msg);
                     req.session.user = user;
                     console.log(req.session.user);
+                    req.session.success = msg;
                     return res.redirect('/');
                 }
             }

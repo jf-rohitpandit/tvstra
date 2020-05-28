@@ -548,5 +548,68 @@ footer .last-line h5 {
   footer {
     padding: 2rem 5rem;
   }
+  .message {
+    position: absolute;
+    right: 1rem;
+    top: 6rem;
+    height: 3rem;
+    width: 20rem;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .5rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
+            box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
+  }
+  .message .information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .message .information i {
+    margin-right: 1rem;
+  }
+  .message .information .data {
+    -ms-flex-item-align: left;
+        -ms-grid-row-align: left;
+        align-self: left;
+  }
+  .message .close {
+    margin-right: .5rem;
+    color: #2a2d3e;
+    cursor: pointer;
+  }
+  .error {
+    border-left: 0.3rem solid #cc0000;
+  }
+  .error i, .error h3, .error h4 {
+    color: #cc0000;
+  }
+  .success {
+    border-left: 0.3rem solid #1bb812;
+  }
+  .success i, .success h3, .success h4 {
+    color: #1bb812;
+  }
+  .info {
+    border-left: 0.3rem solid #BD6DF2;
+  }
+  .info i, .info h3, .info h4 {
+    color: #BD6DF2;
+  }
 }
 /*# sourceMappingURL=theme.css.map */

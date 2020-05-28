@@ -7,13 +7,26 @@
     <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
-    <!-- <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="../js/navbar.js" async></script> -->
     <title>Tvastra</title>
 </head>
 <body>
     
     <%- include('./partials/navbar.ejs') %>
+    
+    <% if(locals.info){ %> 
+        <div class="info message">
+            <div class="information">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <div class="data">
+                    <h3>Success</h3>
+                    <h4><%= locals.info %> </h4>
+                </div>
+            </div>
+            <i id='close' class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none';"></i>
+        </div>
+    <% } %> 
+
+
 
     <main>
         <section class="login-detail">
@@ -30,6 +43,5 @@
                 <h5>All Rights Reserved. &copy; tvastra 2018</h5>
             </div>        
     </footer>
-    
 </body>
 </html>

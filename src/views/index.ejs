@@ -17,6 +17,20 @@
     
     <%-  include('./partials/navbar.ejs') %>
 
+    <% if(locals.success){ %> 
+        <div class="success message">
+            <div class="information">
+                <i class="fas fa-check-circle fa-2x"></i>
+                <div class="data">
+                    <h3>Success</h3>
+                    <h4><%= locals.success %> </h4>
+                </div>
+            </div>
+            <i class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none';"></i>
+        </div>
+    <% } %> 
+    
+
     <% if(locals.msg) { %>
         <div class="message-div">
             <%= msg %>
