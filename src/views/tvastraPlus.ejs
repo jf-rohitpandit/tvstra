@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
     <title>Tvastra</title>
 </head>
+
 <body>
     
     <%- include('./partials/navbar.ejs') %>
@@ -36,23 +37,26 @@
                     </div>
                 </div>
                 
-                <div class="advanced plan">
+                <div class="advanced-div">
                     <div class="popular">
                         <h5>popular</h5>
                     </div>
-                    <div class="plan-info">
-                        <h3>Advanced Plan</h3>
-                        <p>Ultimate consultation with any speciality</p>
-                        <p>20% off on prescription medicines</p>
-                        <p>20% off on tests $checkups</p>
-                        <p>10 Free In-Clinic consultations</p>    
-                    </div>
-                    <div class="price-and-buy">
-                        <h2><i class="fas fa-rupee-sign"></i>3,999<span>/year</span></h2>
-                        <h4>View plan details</h4>
-                        <button>Buy Plan</button>
+                    <div class="advanced plan">
+                        <div class="plan-info">
+                            <h3>Advanced Plan</h3>
+                            <p>Ultimate consultation with any speciality</p>
+                            <p>20% off on prescription medicines</p>
+                            <p>20% off on tests $checkups</p>
+                            <p>10 Free In-Clinic consultations</p>    
+                        </div>
+                        <div class="price-and-buy">
+                            <h2><i class="fas fa-rupee-sign"></i>3,999<span>/year</span></h2>
+                            <h4>View plan details</h4>
+                            <button>Buy Plan</button>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="comprehensive plan">
                     <div class="plan-info">
                         <h3>Comprehensive Plan</h3>
@@ -172,24 +176,24 @@
                     <h4>Top Hospitals onboard</h4>
                     <table class="hospital-imgs">
                         <tr>
-                            <td>
+                            <td style="border-left: 0; border-top:0">
                                 <div class="hospital">
                                     <img src="../assets/sakra.svg" alt="">
                                 </div>
                             </td>
-                            <td>
+                            <td style="border-right: 0; border-top:0">
                                 <div class="hospital">
                                     <img src="../assets/psri.svg" alt="">
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td style="border-left: 0; border-top:0">
                                 <div class="hospital">
                                     <img src="../assets/artemis.svg" alt="">
                                 </div>
                             </td>
-                            <td>
+                            <td  style="border-right: 0; border-top:0">
                                 <div class="hospital">
                                     <img src="../assets/people-tree.svg" alt="">
                                 </div>
@@ -197,12 +201,12 @@
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td style="border-left: 0; border-top:0 ;border-bottom: 0">
                                 <div class="hospital">
                                     <img src="../assets/birla.svg" alt="">
                                 </div>
                             </td>
-                            <td>
+                            <td  style="border-right: 0; border-top:0; border-bottom: 0;">
                                 <div class="hospital">
                                     <img src="../assets/pratiksha.svg" alt="">
                                 </div>
@@ -237,7 +241,7 @@
             </div>
             
 
-            <div class="unlimited-and-video-2">
+            <div class="unlimited-and-video reverse">
                 <div class="unlimited">
                     <h3>Flat 20% off on prescription medicine, lab tests & checkups</h3>
                     <div class="para-div">
@@ -314,8 +318,9 @@
                     </div>
                 </div>
                 <div class="test-btns">
-                    <span class='blue'>&#9679;</span>
-                    <span>&#9679;</span>
+                
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle grey"></i>
                 </div>
             </div>
 

@@ -15,30 +15,41 @@
     margin: 1rem auto;
 }
 
-.head{
-    background-image: url('../../assets/tvastraPlus_heroSection.webp');
-    background-size: cover;
-    padding: 1rem;
 
+
+.head{
+    background-image: url('../../assets/tvastraPlus_heroSection.webp'),   linear-gradient(to bottom , rgba(156, 191,218, 1), rgba(156, 191,218, 0 ));;
+    ;
+    background-size: 60rem auto;
+    background-repeat: no-repeat;
+    padding: 1rem;
     
     .white-card{
         background-color: $white;
         padding:1.5rem 1rem;
         border: none;
         border-radius:.3rem;
-        box-shadow: .1rem;
+        box-shadow: .1rem .1rem .5rem .1rem $lightgrey2;
         hr{
             border-top: 1px solid $lightgrey2;
             color: $white;
+            margin:0;   
         }
 
         .plan{
             padding: 1.5rem 3.5rem;
             color: $black;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 35rem;
 
             h3{
+                display: flex;
+                height: 4rem;
+                justify-content: center;
                 color: $black;
-                padding-bottom:1.5rem;
                 border-bottom: 1px solid $lightgrey2;
             }
             h2,p{
@@ -46,9 +57,7 @@
             }         
 
             .price-and-buy{
-                margin-top:5rem;
                 h2{
-                    margin:1rem;
                     span{
                         font-size:1.3rem;
                     }
@@ -67,22 +76,32 @@
             }
         }
 
-        .advanced{
-            background-image: linear-gradient(to bottom, rgba(190,226,247,.8), rgba(190,226,247, 0));
-        }
-        .popular{
-            position: relative;
-            top: .6rem;
-            h5{
-                border:none;
-                border-radius: 1rem;
-                width: 5.5rem;
-                margin: auto;
-                padding:.1rem 1rem;
-                background-color: $green;
-                color: $white;
+        .advanced-div{
+            .popular{
+                position: relative;
+                top: 1.2rem;
+                h5{
+                    display:  flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 2rem;
+                    border:none;
+                    border-radius: 1rem;
+                    width: 5.5rem;
+                    margin: auto;
+                    background-color: $green;
+                    color: $white;
+                }
+            }
+            .advanced{
+
+                background-image: linear-gradient(to bottom, rgba(190,226,247,.8), rgba(190,226,247, 0));
+                
             }
         }
+
+        
+        
     }
 }
 
@@ -93,6 +112,7 @@
     }
     
     .rating-div{
+        padding: 1rem;
         .ratings{
             text-align: center;
             margin-bottom:3rem;
@@ -184,6 +204,7 @@
                 width: 15rem;
                 margin: 1rem auto;
                 display: flex;
+                margin-bottom: 0;
                 .row{
                     margin-left: 1rem;
                     width: 100%;
@@ -207,79 +228,111 @@
     
 
     .countings{
+        padding:0 2rem;
         margin-bottom: 3rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        i{
-            margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2rem;
+        .each-counting{
+            height: 7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            h4,p{
+                color: $blue;
+                margin:0;
+            }
         }
     }
 
     .benifits{
+        padding: 0 1rem;
         .heading-benifit{
             margin: auto;
-            width: 13rem;
+            width: 18rem;
             padding-bottom:1rem;
             border-bottom: 5px solid $lightblue;
             margin-bottom: 1rem;
         }
 
-        .para-div{
-            display: flex;
-            margin: 1rem 0;
-            .tick{
-                margin-right: 1rem;;
+        .zero-and-top{
+            .zero-fees{
+                .para-div{
+                    display: flex;
+                    margin: 1rem 0;
+                    .tick{
+                        margin-right: 1rem;;
+                    }
+                    p{
+                        text-align: left;
+                        margin:0;
+                    }
+                }        
             }
-            p{
-                text-align: left;
-                margin:0;
+            .top-hospitals{
+                h4{
+                    margin:1rem 0;
+                }
+                
+                .hospital-imgs{
+                    width: 100%;
+                    
+                    td{
+                        padding: .5rem;
+                        width: 50%;
+                        border: 1px solid $red;
+                    }
+                    border: 0;;
+                }
             }
         }
-
-        h4{
-            margin:1rem 0;
-        }
-        .hospital-imgs{
-            border: none;
-            width: 100%;
-            // margin:auto;
-            td{
-                border: 1px solid black;
-            }
-        }
-
-        .unlimited{
-            padding:0 1rem;
-            h3{
-                margin: 2rem;
+        
+        .unlimited-and-video{
+            .unlimited{
+                .para-div{
+                    display: flex;
+                    margin: 1rem 0;
+                    .tick{
+                        margin-right: 1rem;;
+                    }
+                    p{
+                        text-align: left;
+                        margin:0;
+                    }
+                }
             }
             .video-call{
                 border-radius: 1rem;
                 overflow: hidden;
-                box-shadow: .3rem .3rem .3rem $grey;
+                box-shadow: .1rem .1rem .5rem .1rem $grey;
                 margin: 2rem 0 3rem 0;
+                img{
+                    width: 100%;
+                }
             }
+
         }
         
         .tests{
             h5{
-                border: none;
+                margin-bottom:2rem;
             }
             .test-cards{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: .5rem;
                 .test-card{
-                    margin: 1rem 0;
+                    // margin: .4rem 0;
+
+                    padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-evenly;
                     background-color: $white;
-                    box-shadow: .5rem .5rem .5rem $grey;
-                    width: 48%;
+                    box-shadow: .1rem .1rem .3rem .1rem $grey;
+                    width: 100%;
                     height: 15rem;
                     h5,p{
                         margin: 0;
@@ -292,9 +345,10 @@
             }
             .test-btns{
                 margin: 1rem 0 2rem 0;
-                .blue{
-                    color:$blue;
+                .grey{
+                    color:$grey;
                 }
+                
             }
         }
         .love-tvastra{
@@ -307,11 +361,10 @@
                     margin-bottom: 1rem;;
                     height: 13rem;
                     padding: 1rem;
-                    // width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    box-shadow: .5rem .5rem .5rem $grey;
+                    box-shadow: .1rem .1rem .3rem .1rem $grey;
                     h5,h4{
                         margin:0;
                         text-align: left;
@@ -346,7 +399,6 @@
             }
         }
         .faq{
-
             .questions{
                 display: flex;
                 justify-content: space-between;
@@ -398,15 +450,31 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 .plan{
-                    padding:0;
+                    padding:0 1rem;
+                    padding-top: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    .plan-info{
+                        margin-top: 0;
+                    }
+                }
+                .advanced-div{
+                    position: relative;
+                    padding: 0;
+                    .popular{
+                        position: absolute;
+                        bottom:0;
+                        right: 1.5rem;
+                        margin: auto;
+                    }
                 }
             }
+
         }
     }
     .review{
+        padding: 3rem;
         padding-bottom:0;
         .rating-div{
             display: flex;
@@ -414,9 +482,15 @@
             justify-content: space-evenly;
         }
 
+        .countings{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
         .benifits{
+            
             .heading-benifit{
                 width: 20rem;
+                margin-bottom: 3rem;
             }
 
             .zero-and-top{
@@ -426,28 +500,48 @@
             }
 
             .unlimited-and-video{
-                display: flex;
-                flex-direction: row-reverse;
-            }
-            .unlimited-and-video-2{
+                margin-bottom:1rem;
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 18rem;
+                .unlimited{
+                    flex: 3;
+                    // height: ;
+                }
+                .video-call{
+                    flex:2.5;
+                    height: 15rem;
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+            .reverse{
+                flex-direction: row-reverse;
+                .video-call{
+                    margin-right: 1rem;
+                }
             }
 
             .tests{
                 h5{
                     text-align: left;
                 }
+                
             }
             .love-tvastra{
                 h3{
                     text-align: left;
                 }
                 .love-cards{
-                    display: flex;
-                    flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: .8rem;
                     .love-card{
-                        width: 50%;
+                        width: 100%;
+                        margin:0;
                     }
                 }
             }
@@ -456,7 +550,6 @@
                     text-align: left;
                 }
                 .questions{
-                    // margin: 2.5rem 0;
                     h4{
                         flex: 18;
                     }
@@ -471,17 +564,27 @@
 
 
 @media (min-width: 1024px){
+    
     .head{
+        background-size: 100% ;
         .white-card{
+            h2{
+                text-align: center  ;
+            }
             .plans{
                 .plan{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     .plan-info{
                         h3{
                             text-align: center;
                         }
                     }
                     .price-and-buy{
-                        margin: auto;
+                        h4{
+                            text-align:center;
+                        }
                     }
                 }
             }
@@ -494,7 +597,61 @@
         }
 
         .rating-div{
+            margin: 0 19rem;
+        }
+        .countings{
+            margin: 0 10rem 3rem 10rem;
+
             
+        }
+
+        .benifits{
+            .zero-and-top{
+                margin-top: 3rem; 
+                grid-template-columns: 3fr 2fr;
+                gap: 3rem;
+                .top-hospitals{
+
+                    h4{
+                        text-align: center;
+                    }
+                }
+            }
+            .unlimited-and-video{
+                margin-top: 3rem;
+                justify-content: space-between;
+                width: 100%;
+                .unlimited{
+                    flex:2;
+                }
+                .video-call{
+                    flex:1;
+                }
+            }
+            .reverse{
+                .video-call{
+                    margin-right: 6rem;;
+                }
+            }
+
+            .tests{
+                .test-cards{
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+            }
+            .love-tvastra{
+                .love-cards{
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+            .faq{
+                .questions{
+                    h4{
+                        flex: 28;
+                    }
+                }
+            }
+
         }
     }
 }

@@ -29,6 +29,7 @@ router.route('/hospitalProfile').get(middle.redirectLogin, mainController.hospit
 router.route('/query').get(middle.redirectLogin, mainController.query);
 router.route('/tvastraPlus').get(middle.redirectLogin, mainController.tvastraPlus);
 router.route('/otp').post(otpController.otp);
+// router.route('/otp').get(mainController.otp);
 router.route('/otpVerify').post(otpController.otpVerify);
 router.route('/otpVerify').get( mainController.otpVerify);
 router.route('/phoneLogin').get( mainController.phoneLogin);

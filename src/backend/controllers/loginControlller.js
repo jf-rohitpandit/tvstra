@@ -37,9 +37,10 @@ async function signup(req, res){
                     if(err  ){
                         msg = 'Error loading data';
                         console.log(msg); 
-                        req.session.user = newUser;
+                        
                         return res.render('signup',{msg:msg});
                     }else{
+                        req.session.user = newUser;
                         return res.redirect('/');
                     }
                 })
@@ -55,7 +56,6 @@ async function signup(req, res){
             return res.render('signup', {msg:msg});
         }
     }
-
 }
 
 

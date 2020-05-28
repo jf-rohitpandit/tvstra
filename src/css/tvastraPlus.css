@@ -28,8 +28,10 @@
 }
 
 .head {
-  background-image: url("../../assets/tvastraPlus_heroSection.webp");
-  background-size: cover;
+  background-image: url("../../assets/tvastraPlus_heroSection.webp"), -webkit-gradient(linear, left top, left bottom, from(#9cbfda), to(rgba(156, 191, 218, 0)));
+  background-image: url("../../assets/tvastraPlus_heroSection.webp"), linear-gradient(to bottom, #9cbfda, rgba(156, 191, 218, 0));
+  background-size: 60rem auto;
+  background-repeat: no-repeat;
   padding: 1rem;
 }
 
@@ -38,36 +40,47 @@
   padding: 1.5rem 1rem;
   border: none;
   border-radius: .3rem;
-  -webkit-box-shadow: .1rem;
-          box-shadow: .1rem;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #dbd9d9;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #dbd9d9;
 }
 
 .head .white-card hr {
   border-top: 1px solid #dbd9d9;
   color: #fff;
+  margin: 0;
 }
 
 .head .white-card .plan {
   padding: 1.5rem 3.5rem;
   color: #000;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 35rem;
 }
 
 .head .white-card .plan h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #000;
-  padding-bottom: 1.5rem;
   border-bottom: 1px solid #dbd9d9;
 }
 
 .head .white-card .plan h2, .head .white-card .plan p {
   color: #000;
-}
-
-.head .white-card .plan .price-and-buy {
-  margin-top: 5rem;
-}
-
-.head .white-card .plan .price-and-buy h2 {
-  margin: 1rem;
 }
 
 .head .white-card .plan .price-and-buy h2 span {
@@ -87,24 +100,33 @@
   font-family: Nexa-Bold;
 }
 
-.head .white-card .advanced {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(190, 226, 247, 0.8)), to(rgba(190, 226, 247, 0)));
-  background-image: linear-gradient(to bottom, rgba(190, 226, 247, 0.8), rgba(190, 226, 247, 0));
-}
-
-.head .white-card .popular {
+.head .white-card .advanced-div .popular {
   position: relative;
-  top: .6rem;
+  top: 1.2rem;
 }
 
-.head .white-card .popular h5 {
+.head .white-card .advanced-div .popular h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
   border: none;
   border-radius: 1rem;
   width: 5.5rem;
   margin: auto;
-  padding: .1rem 1rem;
   background-color: #1bb812;
   color: #fff;
+}
+
+.head .white-card .advanced-div .advanced {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(190, 226, 247, 0.8)), to(rgba(190, 226, 247, 0)));
+  background-image: linear-gradient(to bottom, rgba(190, 226, 247, 0.8), rgba(190, 226, 247, 0));
 }
 
 .review {
@@ -113,6 +135,10 @@
 
 .review h1, .review i {
   color: #0173b2;
+}
+
+.review .rating-div {
+  padding: 1rem;
 }
 
 .review .rating-div .ratings {
@@ -230,6 +256,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 0;
 }
 
 .review .rating-div .ratings .one .row {
@@ -251,94 +278,122 @@
 }
 
 .review .countings {
+  padding: 0 2rem;
   margin-bottom: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2rem;
+}
+
+.review .countings .each-counting {
+  height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.review .countings i {
-  margin-bottom: 1rem;
+.review .countings .each-counting h4, .review .countings .each-counting p {
+  color: #0173b2;
+  margin: 0;
+}
+
+.review .benifits {
+  padding: 0 1rem;
 }
 
 .review .benifits .heading-benifit {
   margin: auto;
-  width: 13rem;
+  width: 18rem;
   padding-bottom: 1rem;
   border-bottom: 5px solid #9cbfda;
   margin-bottom: 1rem;
 }
 
-.review .benifits .para-div {
+.review .benifits .zero-and-top .zero-fees .para-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0;
 }
 
-.review .benifits .para-div .tick {
+.review .benifits .zero-and-top .zero-fees .para-div .tick {
   margin-right: 1rem;
 }
 
-.review .benifits .para-div p {
+.review .benifits .zero-and-top .zero-fees .para-div p {
   text-align: left;
   margin: 0;
 }
 
-.review .benifits h4 {
+.review .benifits .zero-and-top .top-hospitals h4 {
   margin: 1rem 0;
 }
 
-.review .benifits .hospital-imgs {
-  border: none;
+.review .benifits .zero-and-top .top-hospitals .hospital-imgs {
   width: 100%;
+  border: 0;
 }
 
-.review .benifits .hospital-imgs td {
-  border: 1px solid black;
+.review .benifits .zero-and-top .top-hospitals .hospital-imgs td {
+  padding: .5rem;
+  width: 50%;
+  border: 1px solid #cc0000;
 }
 
-.review .benifits .unlimited {
-  padding: 0 1rem;
-}
-
-.review .benifits .unlimited h3 {
-  margin: 2rem;
-}
-
-.review .benifits .unlimited .video-call {
-  border-radius: 1rem;
-  overflow: hidden;
-  -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #999;
-          box-shadow: 0.3rem 0.3rem 0.3rem #999;
-  margin: 2rem 0 3rem 0;
-}
-
-.review .benifits .tests h5 {
-  border: none;
-}
-
-.review .benifits .tests .test-cards {
+.review .benifits .unlimited-and-video .unlimited .para-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.review .benifits .unlimited-and-video .unlimited .para-div .tick {
+  margin-right: 1rem;
+}
+
+.review .benifits .unlimited-and-video .unlimited .para-div p {
+  text-align: left;
+  margin: 0;
+}
+
+.review .benifits .unlimited-and-video .video-call {
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #999;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #999;
+  margin: 2rem 0 3rem 0;
+}
+
+.review .benifits .unlimited-and-video .video-call img {
+  width: 100%;
+}
+
+.review .benifits .tests h5 {
+  margin-bottom: 2rem;
+}
+
+.review .benifits .tests .test-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
 }
 
 .review .benifits .tests .test-cards .test-card {
-  margin: 1rem 0;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,9 +408,9 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #fff;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #999;
-          box-shadow: 0.5rem 0.5rem 0.5rem #999;
-  width: 48%;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
+          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
+  width: 100%;
   height: 15rem;
 }
 
@@ -372,8 +427,8 @@
   margin: 1rem 0 2rem 0;
 }
 
-.review .benifits .tests .test-btns .blue {
-  color: #0173b2;
+.review .benifits .tests .test-btns .grey {
+  color: #999;
 }
 
 .review .benifits .love-tvastra {
@@ -398,8 +453,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #999;
-          box-shadow: 0.5rem 0.5rem 0.5rem #999;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
+          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #999;
 }
 
 .review .benifits .love-tvastra .love-cards .love-card h5, .review .benifits .love-tvastra .love-cards .love-card h4 {
@@ -512,7 +567,8 @@
         grid-template-columns: 1fr 1fr 1fr;
   }
   .head .white-card .plans .plan {
-    padding: 0;
+    padding: 0 1rem;
+    padding-top: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -524,7 +580,21 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .head .white-card .plans .plan .plan-info {
+    margin-top: 0;
+  }
+  .head .white-card .plans .advanced-div {
+    position: relative;
+    padding: 0;
+  }
+  .head .white-card .plans .advanced-div .popular {
+    position: absolute;
+    bottom: 0;
+    right: 1.5rem;
+    margin: auto;
+  }
   .review {
+    padding: 3rem;
     padding-bottom: 0;
   }
   .review .rating-div {
@@ -538,8 +608,13 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .review .countings {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .review .benifits .heading-benifit {
     width: 20rem;
+    margin-bottom: 3rem;
   }
   .review .benifits .zero-and-top {
     display: -ms-grid;
@@ -549,15 +624,7 @@
     grid-gap: 1rem;
   }
   .review .benifits .unlimited-and-video {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .review .benifits .unlimited-and-video-2 {
+    margin-bottom: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -565,6 +632,37 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 18rem;
+  }
+  .review .benifits .unlimited-and-video .unlimited {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  .review .benifits .unlimited-and-video .video-call {
+    -webkit-box-flex: 2.5;
+        -ms-flex: 2.5;
+            flex: 2.5;
+    height: 15rem;
+  }
+  .review .benifits .unlimited-and-video .video-call img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .review .benifits .reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .review .benifits .reverse .video-call {
+    margin-right: 1rem;
   }
   .review .benifits .tests h5 {
     text-align: left;
@@ -573,14 +671,15 @@
     text-align: left;
   }
   .review .benifits .love-tvastra .love-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: .8rem;
   }
   .review .benifits .love-tvastra .love-cards .love-card {
-    width: 50%;
+    width: 100%;
+    margin: 0;
   }
   .review .benifits .faq h3 {
     text-align: left;
@@ -598,14 +697,80 @@
 }
 
 @media (min-width: 1024px) {
+  .head {
+    background-size: 100%;
+  }
+  .head .white-card h2 {
+    text-align: center;
+  }
+  .head .white-card .plans .plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .head .white-card .plans .plan .plan-info h3 {
     text-align: center;
   }
-  .head .white-card .plans .plan .price-and-buy {
-    margin: auto;
+  .head .white-card .plans .plan .price-and-buy h4 {
+    text-align: center;
   }
   .review h2, .review p {
     text-align: center;
+  }
+  .review .rating-div {
+    margin: 0 19rem;
+  }
+  .review .countings {
+    margin: 0 10rem 3rem 10rem;
+  }
+  .review .benifits .zero-and-top {
+    margin-top: 3rem;
+    -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+  }
+  .review .benifits .zero-and-top .top-hospitals h4 {
+    text-align: center;
+  }
+  .review .benifits .unlimited-and-video {
+    margin-top: 3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .review .benifits .unlimited-and-video .unlimited {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  .review .benifits .unlimited-and-video .video-call {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .review .benifits .reverse .video-call {
+    margin-right: 6rem;
+  }
+  .review .benifits .tests .test-cards {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .review .benifits .love-tvastra .love-cards {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .review .benifits .faq .questions h4 {
+    -webkit-box-flex: 28;
+        -ms-flex: 28;
+            flex: 28;
   }
 }
 /*# sourceMappingURL=tvastraPlus.css.map */
