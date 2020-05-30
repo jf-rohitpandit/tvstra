@@ -79,11 +79,22 @@ body main .login-detail .login .email-div input {
           flex: 6;
 }
 
-body main .login-detail .login .email-div i {
+body main .login-detail .login .email-div .i-div {
+  padding: 0 1rem;
+}
+
+body main .login-detail .login .email-div .i-div i {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   color: #dbd9d9;
+  cursor: pointer;
+}
+
+body main .login-detail .login .email-div .i-div .active {
+  color: #2a2d3e;
+  display: none;
+  background-color: #fff;
 }
 
 body main .login-detail .login input {

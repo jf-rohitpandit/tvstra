@@ -40,6 +40,14 @@ var User = new Schema({
     country:{
         type:String,
         required:true
+    },
+    avtar:{
+        data:Buffer,
+        contentType: String
+    },
+    role:{
+        type: String,
+        default: 'user'
     }
 
 })

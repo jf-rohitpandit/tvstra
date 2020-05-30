@@ -1,0 +1,57 @@
+@import 'config';
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightblue;
+}
+
+.main{
+    background-color: $white;
+    box-shadow: .1rem .1rem .5rem .1rem $grey;;
+    padding: 2rem ;
+    width: 50rem;
+    margin: 2rem;;
+    .heading{
+        margin: 1rem;
+        h1{
+            text-align: center;
+            color: $blue;
+            margin:1rem;
+        }
+        h5{
+            text-align: center;
+        }
+    }
+    
+    .photo{
+        padding: 1rem;
+        width: 9rem;
+        margin: auto;
+        background-color: $lightgrey2;;
+        margin-bottom: 1rem;
+        i{
+            color: $blue;
+        }
+    }
+    .form{
+        textarea{
+            text-align: left;
+            padding: 1rem;
+            height: 8rem;
+            width: 100%;
+        }
+        .input-div{
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        button{
+            margin:1rem;
+            width: 25rem;
+        }
+    }
+
+}

@@ -67,6 +67,18 @@ function phoneLogin(req, res){
     res.render('phoneLogin');
 }
 
+function profile(req, res){
+    res.render('profile');
+}
+
+function addDoctorDetails(req, res){
+    res.render('addDoctorDetails');
+}
+
+function resetPassword(req, res){
+    res.render('resetPassword');
+}
+
 
 module.exports = {
     home: home,
@@ -85,5 +97,8 @@ module.exports = {
     query: query,
     tvastraPlus: tvastraPlus,
     otpVerify: otpVerify,
-    phoneLogin: phoneLogin
+    phoneLogin: phoneLogin,
+    profile: profile,
+    addDoctorDetails: addDoctorDetails,
+    resetPassword: resetPassword
 }

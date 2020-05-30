@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/addDoctorDetails.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
+    <!-- <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script> -->
+    
+    <title>Tvastra</title>
+</head>
+<body>
+    <section class="main">
+        <div class="heading">
+            <h1>Conguratulation <%= locals.user.name %> </h1>
+            <h5>You are one step away from being a past of one of the best medical portal</h5>      
+        </div>
+        <div class="photo">
+            <i class="fas fa-user-md fa-7x" ></i>
+        </div> 
+        <form class="form" action="/addDoctorDetails" method="POST" enctype="multipart/form-data">
+            <textarea name="about" id="" placeholder="Write about yourself" ></textarea>
+            <div class="input-div">
+                <input type="text" name="speciality" placeholder="Speciality" required>
+                <input type="text" name="qualification" placeholder="Qualification" required>
+                <input type="text" name="treatment-lsit" placeholder="Treatment List" required>
+                <input type="text" name="location" placeholder="Locaion" required>
+                <input type="text" name="hospital-list" placeholder="Hospital List" required>
+                <input type="text" name="achievement" placeholder="Achievement"required>
+                <input type="text" name="awards" placeholder="Awards if any">
+                <input type="text" name="experience" placeholder="Years of Experience"required>
+                <input type="text" name="avg-fees" placeholder="Average Fees">
+                <input type="file" name="resume">
+            </div>
+            <button>Submit</button>
+        </form> 
+        
+    </section>
+    
+</body>
+</html>

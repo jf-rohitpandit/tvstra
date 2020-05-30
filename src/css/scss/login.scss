@@ -29,6 +29,7 @@ body{
                 // width: 90%;
                 padding:2rem;
                 .email-div{
+                    
                     display: flex;
                     border: 1px solid $lightgrey2;
                     height: 100%;
@@ -40,9 +41,18 @@ body{
                         margin:0;
                         flex:6;
                     }
-                    i{
-                        flex:1;
-                        color:$lightgrey2;
+                    .i-div{
+                        padding:  0 1rem;
+                        i{
+                            flex:1;
+                            color:$lightgrey2;
+                            cursor: pointer;
+                        }
+                        .active{
+                            color: $darkblue;
+                            display: none;
+                            background-color: $white;
+                        }
                     }
                 }
                 input{
