@@ -14,13 +14,11 @@
         </div>
         <div id="mobile-view" class="nav-open hidden">
             <div class="nav-expended">
-                <a href="doctor">Doctors</a>
+                <a href="doctor" >Doctors</a>
                 
                 <a href="hospital">Hospitals</a>
                 
                 <a href="treatment">Treatment</a>
-                
-                <a href="other-services">Other Services</a>
                 
                 <a href="aboutUs">about</a>
                 
@@ -37,11 +35,10 @@
 
                 </a><% console.log(locals.user.name) %> 
                 <div class="drop-down">
-                    <span><%= locals.user.name %> </span>
+                    <a href="profile"><%= locals.user.name %> </a>
                     <div class="drop-items">
-                        <a href="profile">Profile</a>
+                        <!-- <a href="profile">Profile</a> -->
                         <a href="logout">logout</a>
-
                     </div>
                 </div>
             </div>

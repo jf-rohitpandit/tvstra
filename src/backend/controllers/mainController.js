@@ -1,6 +1,6 @@
 
 function home(req, res){
-    res.render('index');
+    res.render('index', {success: req.flash('success')});
 }
 function doctor(req, res){
     res.render('doctor');
@@ -20,7 +20,7 @@ function treatment(req, res){
 }
 
 function login(req, res){
-    res.render('login');
+    res.render('login', {error: req.flash('error')});
 }
 
 function appointment(req, res){
@@ -28,7 +28,7 @@ function appointment(req, res){
 }
 
 function signup(req, res){
-    res.render('signup');
+    res.render('signup', {error: req.flash('error')});
 }
 
 function contactus(req, res){
@@ -60,7 +60,7 @@ function tvastraPlus(req, res){
 }
 
 function otpVerify(req,res){
-    res.render('otpVerify');
+    res.render('otpVerify', {error: req.flash('error'),info: req.flash('info')});
 }
 
 function phoneLogin(req, res){

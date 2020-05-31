@@ -425,10 +425,11 @@ footer{
     
                     
             .nav-expended{
+                // flex: 1.5;
                 padding-top: .5rem;
                 display: flex;
                 flex-direction: row;
-                width: 60%;
+                width: 50%;
                 justify-content: space-around;
                 
                 a{
@@ -439,14 +440,18 @@ footer{
             }
     
             .login-signup{
-                
+                // flex: 1;
+                 display: flex;
+                justify-content: space-around;;
                 .nav-btn-white{
                     width: 130px;
-                    
+                    margin-right: .5rem;
                 }
         
                 .nav-btn-dark{
                     width: 130px;
+                    margin-right: .5rem;
+
                 }
             }
         }    
@@ -508,20 +513,20 @@ footer{
 
     .error{
         border-left: .3rem solid $red;
-        i,h3, h4{
+        i,h3,h6{
             color: $red;
         }
     }
     
     .success{
         border-left: .3rem solid $green;
-        i,h3, h4{
+        i,h3,h6{
             color: $green;
         }
     }
     .info{
         border-left: .3rem solid $voilet;
-        i,h3, h4{
+        i,h3,h6{
             color: $voilet;
         }
     }

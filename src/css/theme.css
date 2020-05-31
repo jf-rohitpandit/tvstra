@@ -517,7 +517,7 @@ footer .last-line h5 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 60%;
+    width: 50%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -526,11 +526,20 @@ footer .last-line h5 {
     text-decoration: none;
     cursor: pointer;
   }
+  .nav .nav-open .login-signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .nav .nav-open .login-signup .nav-btn-white {
     width: 130px;
+    margin-right: .5rem;
   }
   .nav .nav-open .login-signup .nav-btn-dark {
     width: 130px;
+    margin-right: .5rem;
   }
   .need-help {
     padding: 5rem;
@@ -603,19 +612,19 @@ footer .last-line h5 {
   .error {
     border-left: 0.3rem solid #cc0000;
   }
-  .error i, .error h3, .error h4 {
+  .error i, .error h3, .error h6 {
     color: #cc0000;
   }
   .success {
     border-left: 0.3rem solid #1bb812;
   }
-  .success i, .success h3, .success h4 {
+  .success i, .success h3, .success h6 {
     color: #1bb812;
   }
   .info {
     border-left: 0.3rem solid #BD6DF2;
   }
-  .info i, .info h3, .info h4 {
+  .info i, .info h3, .info h6 {
     color: #BD6DF2;
   }
 }

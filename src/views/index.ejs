@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="../css/theme.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
-    <!-- <script src="https://kit.fontawesome.com/edfda1e8cf.js" crossorigin="anonymous"></script> -->
-    <!-- <script src="../js/navbar.js" async></script> -->
     
 
     <title>Tvastra</title>
@@ -17,26 +15,22 @@
     
     <%-  include('./partials/navbar.ejs') %>
 
-    <% if(locals.success){ %> 
+    
+
+    <% if(success.length>0){ %> 
         <div class="success message">
             <div class="information">
                 <i class="fas fa-check-circle fa-2x"></i>
                 <div class="data">
                     <h3>Success</h3>
-                    <h4><%= locals.success %> </h4>
+                    <h6><%= success %> </h6>
                 </div>
             </div>
             <i class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none'; locals.success = null;"></i>
         </div>
     <% } %> 
-    
 
-    <% if(locals.msg) { %>
-        <div class="message-div">
-            <%= msg %>
-        </div>
-    <% }%>
-    <% console.log %> 
+
 
     <main>
         <section class="find-affordable-healthcare">

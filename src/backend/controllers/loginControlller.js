@@ -1,7 +1,6 @@
 var dbConn = require('../database/mongoose');
 var User = require('../database/schema');
 var mainController = require('./mainController');
-// var otpController = require('otpController');
 
 
 module.exports ={
@@ -10,7 +9,6 @@ module.exports ={
     logout: logout,
     profile: profile,
     registerDoctor: registerDoctor,
-    // phoneLogin: phoneLogin
     beforeResetPassword: beforeResetPassword,
     resetPassword: resetPassword
 };
@@ -20,10 +18,9 @@ async function signup(req, res){
     var msg = '';
     const {name, email, password, gender,dob, phone, city, state, country} = req.body;
     if(!(name, email, password, gender, phone, city, state, country)){
-        console.log("enter all teh details");
-        return res.render('signup', {
-            msg: "enter all the required details"
-        });
+        // console.log("enter all teh details");
+        req.flash('error', "Enter all the details")
+        return res.redirect('/signup');
     }
     else{
         try{
@@ -43,25 +40,28 @@ async function signup(req, res){
                     country: country
                 },function(err, newUser){
                     if(err  ){
-                        msg = 'Error loading data';
-                        console.log(msg); 
-                        
-                        return res.render('signup',{msg:msg});
+                        // msg = 'Error loading data';
+                        // console.log(msg); 
+                        req.flash('error', 'Error loading data')
+                        return res.redirect('/signup');
                     }else{
                         req.session.user = newUser;
+                        req.flash('success',"singup successful")
                         return res.redirect('/');
                     }
                 })
 
             }else{
-                msg = "Eamil already taken";
-                console.log(msg)
-                return res.render('signup',{msg:msg})
+                // msg = "Eamil already taken";
+                // console.log(msg)
+                req.flash('error',"Email already taken");
+                return res.redirect('/signup')
             }
         }catch{
-            msg= 'Some error please try againg in some time';
-            console.log(msg)
-            return res.render('signup', {msg:msg});
+            // msg= 'Some error please try againg in some time';
+            // console.log(msg)
+            req.flash('error', 'Some error occured, Retury');
+            return res.redirect('/signup');
         }
     }
 }
@@ -72,9 +72,10 @@ async function login(req, res){
     var msg = '';
     const {email, password} = req.body;
     if(!email || !password){
-        msg = "Enter all the details";
-        console.log(msg);
-        req.session.error = msg;
+        // msg = "Enter all the details";
+        // console.log(msg);
+        // req.session.error = msg;
+        req.flash('error', 'Enter all the details')
         return res.redirect('/login');
     }else{
         try{
@@ -82,29 +83,33 @@ async function login(req, res){
                 email: email
             });
             if(user === null){
-                msg = "Email not found";
-                console.log(msg);
-                req.session.error = msg;
+                // msg = "Email not found";
+                // console.log(msg);
+                // req.session.error = msg;
+                req.flash('error', 'Email not found')
                 return res.redirect('/login');
             }else{
                 if(user.password !== password){
-                    msg = 'Password not match';
-                    console.log(msg);
-                    req.session.error = msg;
+                    // msg = 'Password not match';
+                    // console.log(msg);
+                    // req.session.error = msg;
+                    req.flash('error', 'Password not mathc');
                     return res.redirect('/login');
                 }else{
-                    msg= 'welocm'
-                    console.log(msg);
+                    // msg= 'welocm'
+                    // console.log(msg);
+                    req.flash('success', 'Successfully login');
                     req.session.user = user;
-                    console.log(req.session.user);
-                    req.session.success = msg;
+                    // console.log(req.session.user);
+                    // req.session.success = msg;
                     return res.redirect('/');
                 }
             }
         }catch{
-            msg= 'some error occured, please try agian in some time';
-            console.log(msg);
-            return res.render('login',{msg: msg});
+            // msg= 'some error occured, please try agian in some time';
+            // console.log(msg);
+            req.flash('error', 'some error occured, retry')
+            return res.redirect('/login');
         }
     }
 }
@@ -132,10 +137,9 @@ async function registerDoctor(req, res){
     var msg = '';
     const {name, email, password, gender,dob, phone, city, state, country} = req.body;
     if(!(name, email, password, gender, phone, city, state, country)){
-        console.log("enter all teh details");
-        return res.render('signup', {
-            msg: "enter all the required details"
-        });
+        // console.log("enter all teh details");
+        req.flash('error', 'Enter all the details');
+        return res.redirect('/signup');
     }
     else{
         try{
@@ -155,10 +159,10 @@ async function registerDoctor(req, res){
                     country: country
                 },function(err, newUser){
                     if(err  ){
-                        msg = 'Error loading data';
-                        console.log(msg); 
-                        
-                        return res.render('signup',{msg:msg});
+                        // msg = 'Error loading data';
+                        // console.log(msg); 
+                        req.flash('error', 'Error loading data');
+                        return res.redirect('/signup');
                     }else{
                         req.session.user = newUser;
                         return res.redirect('/addDoctorDetails');
@@ -166,14 +170,16 @@ async function registerDoctor(req, res){
                 })
 
             }else{
-                msg = "Eamil already taken";
-                console.log(msg)
-                return res.render('signup',{msg:msg})
+                // msg = "Eamil already taken";
+                // console.log(msg)
+                req.flash('error', 'Email already taken');
+                return res.redirect('/signup')
             }
         }catch{
-            msg= 'Some error please try againg in some time';
-            console.log(msg)
-            return res.render('signup', {msg:msg});
+            // msg= 'Some error please try againg in some time';
+            // console.log(msg)
+            req.flash('error', 'Some error occured, retry');
+            return res.redirect('/signup');
         }
     }
 }
@@ -183,9 +189,10 @@ async function beforeResetPassword(req, res){
     var msg = '';
     const email = req.body.email;
     if(!email){
-        msg = "Enter all the details";
-        console.log(msg);
-        req.session.error = msg;
+        // msg = "Enter all the details";
+        // console.log(msg);
+        // req.session.error = msg;
+        req.flash('error', 'Enter all the details');
         return res.redirect('/login');
     }else{
         try{
@@ -193,19 +200,21 @@ async function beforeResetPassword(req, res){
                 email: email
             });
             if(user === null){
-                msg = "Email not found";
-                console.log(msg);
-                req.session.error = msg;
+                // msg = "Email not found";
+                // console.log(msg);
+                // req.session.error = msg;
+                req.flash('error', 'Email not found');
                 return res.redirect('/login');
             }else{
                 req.session.user = user;
-                console.log(user);
-                console.log('hello i am a s');
+                // console.log(user);
+                // console.log('hello i am a s');
                 return res.redirect('/resetPassword');
             }
         }catch{
-            msg= 'some error occured, please try agian in some time';
-            console.log(msg);
+            // msg= 'some error occured, please try agian in some time';
+            // console.log(msg);
+            req.flash('error', 'Some error occured, retry');
             return res.redirect('/login');
         }
     }
@@ -215,14 +224,16 @@ async function resetPassword(req, res){
     const password = req.body.password;
     const confirm = req.body.checkPassword;
     if(!password || !confirm){
-        msg = 'enter all details';
-        req.session.error = msg;
+        // msg = 'enter all details';
+        // req.session.error = msg;
+        req.flash('error', 'Enter all the detials')
         return res.redirect('/resetPassword');
     }else{
         // console.log(req.session.user.email);
         if(password !== confirm){
-            msg = 'password must match the confirm';
-            req.session.error = msg;
+            // msg = 'password must match the confirm';
+            // req.session.error = msg;
+            req.flash('error', 'Password must match');
             return res.redirect('/resetPassword');
         }else{
             try{
@@ -232,9 +243,11 @@ async function resetPassword(req, res){
                 if(user !== null){
                     user.password = password;
                     (await user).save();
+                    req.flash('success','password changed successfully');
                     res.redirect('/');
                 }
             }catch{
+                req.flash('error', 'some error occured, retry');
                 res.redirect("/login");
             }
         }

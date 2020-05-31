@@ -11,15 +11,75 @@
 </head>
 <body>
     
-    <%- include('./partials/navbar.ejs') %>
     
-    <% if(locals.info){ %> 
+    <header>
+        <nav class="nav">
+            <div class="logo-and-bars">
+                <div class="logo-img">
+                    <a href="/">
+                        <img src="../assets/Logo.jpg" alt="logo">
+                    </a>
+                </div>
+                <div class="bars" onclick="burger()">
+                    <button id="bars-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-view" class="nav-open hidden">
+                <div class="nav-expended">
+                    <a href="doctor" >Doctors</a>
+                    
+                    <a href="hospital">Hospitals</a>
+                    
+                    <a href="treatment">Treatment</a>
+                    
+                    <a href="aboutUs">about</a>
+                    
+                </div>
+                 
+                 
+            <% if(locals.user){%> 
+                <div class="login-signup">
+                    
+                    <a href="appointment">
+                        <button class="nav-btn-dark">Get a Queue</button>
+                    </a>
+                </div>
+            <% } else{%>
+                
+                <div class="login-signup">
+                    
+                    <a href="appointment">
+                        <button class="nav-btn-dark">Get a Queue</button>
+                    </a>
+                </div>
+            <%} %>  
+            </div>
+        </nav>
+        <script src="../../js/navbar.js"></script>
+    </header>
+    
+    <% if(info.length>0){ %> 
         <div class="info message">
             <div class="information">
                 <i class="fas fa-info-circle fa-2x"></i>
                 <div class="data">
                     <h3>Success</h3>
-                    <h4><%= locals.info %> </h4>
+                    <h4><%= info %> </h4>
+                </div>
+            </div>
+            <i id='close' class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none';"></i>
+        </div>
+    <% } %> 
+    
+    <% if(error.length>0){ %> 
+        <div class="error message">
+            <div class="information">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <div class="data">
+                    <h3>Success</h3>
+                    <h4><%= error %> </h4>
                 </div>
             </div>
             <i id='close' class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none';"></i>

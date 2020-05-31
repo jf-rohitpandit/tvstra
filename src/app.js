@@ -8,6 +8,7 @@ const path = require('path');
 const mainRoutes = require('./backend/routes/mainRoutes');
 const session = require('express-session');
 const Nexmo = require('nexmo');
+const flash = require('connect-flash');
 
 const nexmo = new Nexmo({
     apiKey:'ca344c09',
@@ -15,7 +16,7 @@ const nexmo = new Nexmo({
     applicaionId: '851bfcc3-cb45-4fcb-9b6d-21ae37d5792b'
 })
 
-
+app.use(flash());
 app.use(cors());
 app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));

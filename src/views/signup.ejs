@@ -13,11 +13,58 @@
 </head>
 <body>
     
-    <%- include('./partials/navbar.ejs') %>
+    
+    <header>
+        <nav class="nav">
+            <div class="logo-and-bars">
+                <div class="logo-img">
+                    <a href="/">
+                        <img src="../assets/Logo.jpg" alt="logo">
+                    </a>
+                </div>
+                <div class="bars" onclick="burger()">
+                    <button id="bars-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-view" class="nav-open hidden">
+                <div class="nav-expended">
+                    <a href="doctor" >Doctors</a>
+                    
+                    <a href="hospital">Hospitals</a>
+                    
+                    <a href="treatment">Treatment</a>
+                    
+                    <a href="aboutUs">about</a>
+                    
+                </div>
+                 
+                 
+            <% if(locals.user){%> 
+                <div class="login-signup">
+                    
+                    <a href="appointment">
+                        <button class="nav-btn-dark">Get a Queue</button>
+                    </a>
+                </div>
+            <% } else{%>
+                
+                <div class="login-signup">
+                    
+                    <a href="appointment">
+                        <button class="nav-btn-dark">Get a Queue</button>
+                    </a>
+                </div>
+            <%} %>  
+            </div>
+        </nav>
+        <script src="../../js/navbar.js"></script>
+    </header>   
 
-    <% if(this.msg) { %>
+    <% if(error.length>0) { %>
         <div class="message-div">
-            <%= msg %>
+            <%= error %>
         </div>
     <% }%>
 
