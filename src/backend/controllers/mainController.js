@@ -72,7 +72,7 @@ function profile(req, res){
 }
 
 function addDoctorDetails(req, res){
-    res.render('addDoctorDetails');
+    res.render('addDoctorDetails', {error: req.flash('error')});
 }
 
 function resetPassword(req, res){

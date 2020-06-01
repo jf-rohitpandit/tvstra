@@ -12,6 +12,20 @@
     <title>Tvastra</title>
 </head>
 <body>
+
+    <% if(error.length>0){ %> 
+        <div class="error message">
+            <div class="information">
+                <i class="fas fa-times-circle fa-2x"></i>
+                <div class="data">
+                    <h3>Error</h3>
+                    <h6><%= error %> </h6>
+                </div>
+            </div>
+            <i class="fas fa-times close" onclick="document.getElementsByClassName('message')[0].style.display = 'none'; locals.success = null;"></i>
+        </div>
+    <% } %> 
+
     <section class="main">
         <div class="heading">
             <h1>Conguratulation <%= locals.user.name %> </h1>
@@ -25,16 +39,16 @@
             <div class="input-div">
                 <input type="text" name="speciality" placeholder="Speciality" required>
                 <input type="text" name="qualification" placeholder="Qualification" required>
-                <input type="text" name="treatment-lsit" placeholder="Treatment List" required>
+                <input type="text" name="treatmentList" placeholder="Treatment List" required>
                 <input type="text" name="location" placeholder="Locaion" required>
-                <input type="text" name="hospital-list" placeholder="Hospital List" required>
-                <input type="text" name="achievement" placeholder="Achievement"required>
+                <input type="text" name="hospitalList" placeholder="Hospital List" required>
+                <input type="text" name="achievement" placeholder="Achievement">
                 <input type="text" name="awards" placeholder="Awards if any">
                 <input type="text" name="experience" placeholder="Years of Experience"required>
-                <input type="text" name="avg-fees" placeholder="Average Fees">
+                <input type="text" name="avgFees" placeholder="Average Fees">
                 <input type="file" name="resume">
             </div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form> 
         
     </section>

@@ -1,7 +1,7 @@
 const express = require('express');
 const mainController = require('../controllers/mainController');
 const path = require('path')
-const fileDestination = path.join('public','uploads')
+// const fileDestination = path.join('public','uploads')
 const middle = require('../controllers/middle');
 
 const loginController = require('../controllers/loginControlller');
@@ -10,9 +10,7 @@ const router = express.Router();
 const app = express();
 
 const multer = require('multer');
-const upload = multer({
-    dest: fileDestination
-})
+const upload = multer();
 
 
 router.route('/').get(middle.redirectLogin,middle.localsAccess, mainController.home,);
@@ -43,6 +41,7 @@ router.route('/logout').get(loginController.logout);
 router.route('/profile').get(middle.redirectLogin, mainController.profile);
 router.route('/profile').post(middle.redirectLogin, upload.single('avtar'),loginController.profile);
 router.route('/addDoctorDetails').get(middle.redirectLogin, mainController.addDoctorDetails);
+router.route('/addDoctorDetails').post(middle.redirectLogin, upload.single('resume'), loginController.addDoctorDetails);
 router.route('/registerDoctor').post(loginController.registerDoctor);
 router.route('/resetPassword').post(loginController.resetPassword);
 router.route('/resetPassword').get(mainController.resetPassword);

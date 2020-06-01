@@ -48,7 +48,11 @@
                             <p>PROFILE PHOTO</p>
                             <div class="photo-item">
                                 <div class="image">
-                                    <img src="../assets/femaleDoctor.png" alt="">
+                                    <% if(locals.user.avtar !== null){ %> 
+                                    <img src='<%= locals.user.avtar %> ' alt="">
+                                    <%}else{ %>
+                                    <img src="../assets/fem.png" alt="doctor avtar"> 
+                                    <%} %> 
                                 </div>
                                 <p>Pick a photo from yoru computer</p>
                                 <input type="file" name="avtar">
@@ -57,7 +61,7 @@
                         </div>
                         <div class="item">
                             <p>Name</p>
-                            <input type="text" value="<%= locals.user.name %> ">
+                            <input type="text" name="name" value="<%= locals.user.name %> " disabled>
                         </div>
                     </div>
                     <div class="second">
@@ -66,81 +70,81 @@
                                 <p>Phone NUmber</p>
                                 <p>Edit</p>
                             </div>
-                            <input type="text" value="<%= locals.user.phone %> ">
+                            <input type="text" name="phone" value="<%= locals.user.phone %> " disabled>
                         </div>
         
                         <div class="item">
                             <p>Emain</p>
-                            <input type="text" value="<%= locals.user.email%> ">
+                            <input type="text" name="email" value="<%= locals.user.email%> " disabled>
                         </div>
                         <div class="item">
                             <p>Gender</p>
-                            <input type="text" value="<%= locals.user.gender %> ">
+                            <input type="text" name="gender" value="<%= locals.user.gender %> " disabled>
                         </div>
                         <div class="item">
                             <p>Date of Birth</p>
-                            <input type="text" value="<%= locals.user.dob %> ">
+                            <input type="text" name="dob" value="<%= locals.user.dob %> " disabled>
                         </div>
                         <div class="item">
                             <p>TimeZone</p>
-                            <input type="text">
+                            <input type="text" name="timezone">
                         </div>
                     </div>
                     <div class="second">
                         <div class="item">
                             <p>House no/Street Number/Area</p>
-                            <input type="text" >
+                            <input type="text" name="house" >
                         </div>
                         <div class="item">
                             <p>Colony/Street/Locality</p>
-                            <input type="text" >
+                            <input type="text"  name="colony">
                         </div>
                         <div class="item">
                             <p>City</p>
-                            <input type="text" >
+                            <input type="text" name="city"  value= '<%= locals.user.city %>'>
                         </div>
                         <div class="item">
                             <p>State</p>
-                            <input type="text" >
+                            <input type="text" name="state" value= '<%= locals.user.state %>' >
                         </div>
                         <div class="item">
                             <p>Country</p>
-                            <input type="text" >
+                            <input type="text" name="country"  value= '<%= locals.user.country %>'>
                         </div>
                     </div>
         
                     <div class="second">
                         <div class="item">
                             <p>Speciality</p>
-                            <input type="text" >
+                            <input type="text"  name="speciality" value="<%= locals.user.speciality %> ">
                         </div>
                         <div class="item">
                             <p>Qualification</p>
-                            <input type="text" >
+                            <input type="text" name="qualification"  value="<%= locals.user.speciality %>">
                         </div>
                         <div class="item">
                             <p>Treatments</p>
-                            <input type="text" >
+                            <input type="text" name="treatmentList" value="<%= locals.user.treatmentList %>" >
                         </div>
                         <div class="item">
                             <p>Hospitals</p>
-                            <input type="text" >
+                            <input type="text" name="hospitalList" value="<%= locals.user.hospitalList %>" >
                         </div>
                         <div class="item">
                             <p>Awards</p>
-                            <input type="text" >
+                            <input type="text" name="awards" value="<%= locals.user.awards %>">
                         </div>
                         <div class="item">
                             <p>Year of Experience</p>
-                            <input type="text" >
+                            <input type="text" name="experience"  value=" <%= locals.user.experience %>  ">
                         </div>
                         <div class="item">
                             <p>Average Fees</p>
-                            <input type="text" >
+                            <input type="text" name="avgFees" value=" <%= locals.user.avgFees %>  " >
                         </div>
                         <div class="item">
                             <p>Location</p>
-                            <input type="text" >
+                            <input type="text" name='location' value=" <%= locals.user.location %>  " >
                         </div>
                     </div>
                     

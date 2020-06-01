@@ -3,6 +3,7 @@ var User = require('../database/schema');
 var mainController = require('./mainController');
 
 
+
 module.exports ={
     signup: signup,
     login: login,
@@ -10,7 +11,8 @@ module.exports ={
     profile: profile,
     registerDoctor: registerDoctor,
     beforeResetPassword: beforeResetPassword,
-    resetPassword: resetPassword
+    resetPassword: resetPassword,
+    addDoctorDetails: addDoctorDetails
 };
 
 async function signup(req, res){
@@ -122,14 +124,44 @@ function logout(req, res){
 }
 
 async function profile(req, res){
-    if(req.file !== null){
-        console.log('hello')
-        User.avtar = req.file;
-        // User.save();
+    const avtar = req.file;
+    const  { timezone, house, colony, city, state, country, speciality, qualification, treatmentList, hospitalList, 
+    awards, experience, avgFees, location} = req.body;
+    await User.findOne({
+        email: req.session.user.email
+    })
+    .then(user =>{
+        // user.role = 'doctor';
+        user.timezone = timezone;
+        user.house = house;
+        user.colony = colony;
+        user.location = location;
+        user.city = city;
+        user.state = state;
+        user.awards = awards;
+        user.experience = experience;
+        user.avgFees = avgFees;
+        user.country = country;
+        user.speciality = speciality;
+        user.qualification = qualification;
+        user.treatmentList = treatmentList;
+        user.hospitalList = hospitalList;
+        user.save(function(err,user){
+            if(err){
+                console.log(err);
+            }else{
+                console.log(user);
+                req.session.user = user;
+                res.locals.user = user;
+                req.flash('success','Successfully changed');
+                return res.redirect('/'); 
+            }
+        });          
 
-    }
-    return res.redirect('/profile')
-
+    }).catch(error =>{
+        req.flash('error', 'Some error occured, retry');
+        return res.redirect('/profile');            
+    })
 }
 
 async function registerDoctor(req, res){
@@ -251,6 +283,50 @@ async function resetPassword(req, res){
                 res.redirect("/login");
             }
         }
+    }
+}
+
+
+async function addDoctorDetails(req, res){
+    const {speciality,qualification,treatmentList,location, hospitalList,achievement,awards,experience,
+        avgFees}= req.body;
+        // console.log(speciality)
+    const resume = req.file;
+    if(! speciality || !qualification || !treatmentList || !location || !hospitalList
+        || !experience || !avgFees ){
+            req.flash('error', 'Enter all the details');
+            return res.redirect('addDoctorDetails');
+    }
+    else{
+
+        await User.findOne({
+            email: req.session.user.email
+        })
+        .then(user =>{
+            user.role = 'doctor';
+            user.speciality = speciality;
+            user.qualification = qualification;
+            user.treatmentList = treatmentList;
+            user.location = location;
+            user.hospitalList = hospitalList;
+            user.achievement = achievement;
+            user.awards = awards;
+            user.experience = experience;
+            user.avgFees = avgFees;
+            user.resume = resume;
+            user.save(function(err,user){
+                if(err){
+                    console.log(err);
+                }else{
+                    console.log(user);
+                }
+            });
+            req.flash('success','Successfully registered as a doctor');
+            return res.redirect('/');            
+        }).catch(error =>{
+            req.flash('error', 'Some error occured, retry');
+            return res.redirect('/addDoctorDetails');            
+        })
     }
 }
 

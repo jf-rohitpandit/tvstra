@@ -43,11 +43,52 @@ var User = new Schema({
     },
     avtar:{
         data:Buffer,
-        contentType: String
+        contentType: String,
     },
+
     role:{
         type: String,
         default: 'user'
+    },
+    speciality:{
+        type: String,
+        // default: ''
+    },
+    qualification:{
+        type: String,
+        // default: ''
+    },
+    treatmentList:{
+        type: String,
+        default: ''
+    },
+    location:{
+        type: String,
+        // default: ''
+    },
+    hospitalList:{
+        type: String,
+        // default: ''
+    },
+    achievement:{
+        type: String,
+        default: ''
+    },
+    awards:{
+        type: String,
+        // default: ''
+    },
+    experience:{
+        type: String,
+        // default: ''
+    },
+    avgFees:{
+        type: String,
+        // default: ''
+    },
+    resume:{
+        data: Buffer,
+        contentType: String
     }
 
 })
