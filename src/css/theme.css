@@ -72,6 +72,8 @@ button {
   background-color: #fff;
   color: #0173b2;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 input {

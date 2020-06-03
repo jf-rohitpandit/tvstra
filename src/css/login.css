@@ -142,6 +142,14 @@ body footer .last-line h5 {
   body main .login-detail {
     width: 400px;
   }
+  body main .login-detail .other-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   body footer {
     display: block;
     -ms-flex-item-align: center;

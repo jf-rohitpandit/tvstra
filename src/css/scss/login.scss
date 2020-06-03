@@ -106,7 +106,12 @@ body{
         main{
             .login-detail{
                 width: 400px;
+                .other-btns{
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
+            
         }
 
         footer{

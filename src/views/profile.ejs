@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css//tagify.css">
+
     <link rel="stylesheet" href="../css/theme.css">
+
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
-    
+    <script src="../js/tagify.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,20 +22,22 @@
             <h1>DashBorad</h1>
             <div class="dashboard-items">
                 <div class="dashboard-item">
-                    <i class="fas fa-user-edit"></i>
-                    <h4>Profile</h4>
+                    <a href="/profile">
+                        <i class="fas fa-user-edit active"></i>
+                        <h4 class="active">Profile</h4>
+                    </a>
                 </div>
                 <div class="dashboard-item">
-                    <i class="fas fa-building"></i>
-                    <h4>Appointment</h4>
+                    <a href="/appiontment">
+                        <i class="fas fa-building"></i>
+                        <h4>Appointment</h4>
+                    </a>  
                 </div>
                 <div class="dashboard-item">
-                    <i class="fas fa-pen-alt"></i>
-                    <h4>create/Edit Schedule</h4>
-                </div>
-                <div class="dashboard-item">
-                    <i class="fas fa-user-edit"></i>
-                    <h4>Profile</h4>
+                    <a href="/editSchedule">
+                        <i class="fas fa-pen-alt"></i>
+                        <h4>create/Edit Schedule</h4>                    
+                    </a>
                 </div>
             </div>
         </div>
@@ -61,29 +66,29 @@
                         </div>
                         <div class="item">
                             <p>Name</p>
-                            <input type="text" name="name" value="<%= locals.user.name %> " disabled>
+                            <input type="text" name="name" value="<%= locals.user.name %>" disabled>
                         </div>
                     </div>
                     <div class="second">
                         <div class="item">
                             <div class="phone">
-                                <p>Phone NUmber</p>
-                                <p>Edit</p>
+                                <p>Phone Number</p>
+                                <button type='button' class="ButtonLink" onclick="showEdit()">Edit</button>
                             </div>
-                            <input type="text" name="phone" value="<%= locals.user.phone %> " disabled>
+                            <input type="text" name="phone" value="<%= locals.user.phone %>" disabled>
                         </div>
         
                         <div class="item">
                             <p>Emain</p>
-                            <input type="text" name="email" value="<%= locals.user.email%> " disabled>
+                            <input type="text" name="email" value="<%= locals.user.email%>" disabled>
                         </div>
                         <div class="item">
                             <p>Gender</p>
-                            <input type="text" name="gender" value="<%= locals.user.gender %> " disabled>
+                            <input type="text" name="gender" value="<%= locals.user.gender %>" disabled>
                         </div>
                         <div class="item">
                             <p>Date of Birth</p>
-                            <input type="text" name="dob" value="<%= locals.user.dob %> " disabled>
+                            <input type="text" name="dob" value="<%= locals.user.dob %>" disabled>
                         </div>
                         <div class="item">
                             <p>TimeZone</p>
@@ -93,11 +98,11 @@
                     <div class="second">
                         <div class="item">
                             <p>House no/Street Number/Area</p>
-                            <input type="text" name="house" >
+                            <input type="text" name="house"   value= '<%= locals.user.house %>'>
                         </div>
                         <div class="item">
                             <p>Colony/Street/Locality</p>
-                            <input type="text"  name="colony">
+                            <input type="text"  name="colony"  value= '<%= locals.user.colony %>'>
                         </div>
                         <div class="item">
                             <p>City</p>
@@ -116,11 +121,11 @@
                     <div class="second">
                         <div class="item">
                             <p>Speciality</p>
-                            <input type="text"  name="speciality" value="<%= locals.user.speciality %> ">
+                            <input type="text"  name="speciality" value="<%= locals.user.speciality %>">
                         </div>
                         <div class="item">
                             <p>Qualification</p>
-                            <input type="text" name="qualification"  value="<%= locals.user.speciality %>">
+                            <input type="text" name="qualification"  value="<%= locals.user.qualification %>">
                         </div>
                         <div class="item">
                             <p>Treatments</p>
@@ -136,24 +141,67 @@
                         </div>
                         <div class="item">
                             <p>Year of Experience</p>
-                            <input type="text" name="experience"  value=" <%= locals.user.experience %>  ">
+                            <input type="text" name="experience"  value="<%= locals.user.experience %>">
                         </div>
                         <div class="item">
                             <p>Average Fees</p>
-                            <input type="text" name="avgFees" value=" <%= locals.user.avgFees %>  " >
+                            <input type="text" name="avgFees" value="<%= locals.user.avgFees %>" >
                         </div>
                         <div class="item">
                             <p>Location</p>
-                            <input type="text" name='location' value=" <%= locals.user.location %>  " >
+                            <input type="text" name='location' value="<%= locals.user.location %>" >
                         </div>
                     </div>
                     
                 </div>
                 
             </form>
-            
         </div>
     </section>
+    <section class="edit-number">
+        <i class="fas fa-times-circle fa-2x close" onclick="closeEdit()" ></i>
+        <div class="form-div">
+            <h3>Edit Phone number</h3>
+        
+            <form action="/changePhoneOtp" method="POST" class="login">
+                <input type="text" name="number" placeholder="Enter your new phone number"  required>
+                <button type="submit" onclick="changeview()">send OTP <span><i class="fas fa-arrow-right"></i></span></button>
+            </form>
+        </div>
+        
+    </section>
 
+    
+
+    <script>
+
+        var speciality = document.querySelector('input[name = speciality]'),
+            tagify = new Tagify(speciality);
+        var qualification = document.querySelector('input[name = qualification]'),
+            tagify = new Tagify(qualification);
+        var treatmentList = document.querySelector('input[name = treatmentList]'),
+            tagify = new Tagify(treatmentList);
+        var hospitalList = document.querySelector('input[name = hospitalList]'),
+            tagify = new Tagify(hospitalList);
+
+        function showEdit(){
+            var elem = document.getElementsByClassName('edit-number')[0];
+            elem.style.display = 'flex';
+        }
+        function closeEdit(){
+            var elem = document.getElementsByClassName('edit-number')[0];
+            elem.style.display = 'none';
+        }
+        function closeVerify(){
+            var elem = document.getElementsByClassName('verify-otp')[0];
+            elem.style.display = 'none';
+        }
+        function changeview(){
+            var elem = document.getElementsByClassName('edit-number')[0];
+            elem.style.display = 'none';
+            var diff = document.getElementsByClassName('verify-otp')[0];
+            diff.style.display = 'flex';
+        }
+    </script>
 </body>
 </html>

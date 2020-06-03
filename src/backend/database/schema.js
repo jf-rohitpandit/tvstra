@@ -45,39 +45,44 @@ var User = new Schema({
         data:Buffer,
         contentType: String,
     },
-
     role:{
         type: String,
         default: 'user'
     },
-    speciality:{
+    colony:{
+        type: String
+    },
+    house:{
+        type: String
+    },
+    speciality:[{
         type: String,
         // default: ''
-    },
-    qualification:{
+    }],
+    qualification:[{
         type: String,
         // default: ''
-    },
-    treatmentList:{
+    }],
+    treatmentList:[{
         type: String,
         default: ''
-    },
+    }],
     location:{
         type: String,
         // default: ''
     },
-    hospitalList:{
+    hospitalList:[{
         type: String,
         // default: ''
-    },
-    achievement:{
+    }],
+    achievement:[{
         type: String,
         default: ''
-    },
-    awards:{
+    }],
+    awards:[{
         type: String,
         // default: ''
-    },
+    }],
     experience:{
         type: String,
         // default: ''

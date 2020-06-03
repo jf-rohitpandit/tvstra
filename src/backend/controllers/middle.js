@@ -6,7 +6,7 @@ var dbConn = require('../database/mongoose');
 function redirectLogin(req, res, next){
     if(!req.session.user){
         // console.log('in the middleware')
-        req.flash('msg', "Access denied")
+        req.flash('error', "Access denied")
         res.redirect('/login');
     }
     next();

@@ -63,12 +63,9 @@ function otpVerify(req,res){
     res.render('otpVerify', {error: req.flash('error'),info: req.flash('info')});
 }
 
-function phoneLogin(req, res){
-    res.render('phoneLogin');
-}
 
 function profile(req, res){
-    res.render('profile');
+    res.render('profile',{error: req.flash('error')});
 }
 
 function addDoctorDetails(req, res){
@@ -77,6 +74,10 @@ function addDoctorDetails(req, res){
 
 function resetPassword(req, res){
     res.render('resetPassword');
+}
+
+function otpVerifyPhone(req, res){
+    res.render('otpVerifyPhone');
 }
 
 
@@ -97,8 +98,8 @@ module.exports = {
     query: query,
     tvastraPlus: tvastraPlus,
     otpVerify: otpVerify,
-    phoneLogin: phoneLogin,
     profile: profile,
     addDoctorDetails: addDoctorDetails,
-    resetPassword: resetPassword
+    resetPassword: resetPassword,
+    otpVerifyPhone: otpVerifyPhone
 }

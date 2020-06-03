@@ -36,7 +36,7 @@ router.route('/tvastraPlus').get(middle.redirectLogin, mainController.tvastraPlu
 // router.route('/otp').get(mainController.otp);
 router.route('/otpVerify').post(otpController.otpVerify);
 router.route('/otpVerify').get( mainController.otpVerify);
-router.route('/phoneLogin').get( mainController.phoneLogin);
+// router.route('/phoneLogin').get( mainController.phoneLogin);
 router.route('/logout').get(loginController.logout);
 router.route('/profile').get(middle.redirectLogin, mainController.profile);
 router.route('/profile').post(middle.redirectLogin, upload.single('avtar'),loginController.profile);
@@ -46,7 +46,10 @@ router.route('/registerDoctor').post(loginController.registerDoctor);
 router.route('/resetPassword').post(loginController.resetPassword);
 router.route('/resetPassword').get(mainController.resetPassword);
 router.route('/beforeResetPassword').post(loginController.beforeResetPassword);
-router.route('/phoneLogin').post(otpController.otp);
+router.route('/otp').post(otpController.otp);
+router.route('/changephoneOtp').post(otpController.changephoneOtp);
+router.route('/otpVerifyPhone').post(otpController.otpVerifyPhone);
+router.route('/otpVerifyPhone').get(mainController.otpVerifyPhone);
 
 
 

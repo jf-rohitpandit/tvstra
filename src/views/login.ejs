@@ -90,9 +90,11 @@
                         <i id='visible' class="fas fa-eye active"></i>
                     </div>
                 </div>
-                <button formaction="/phoneLogin" class="ButtonLink">Login via OTP</button>
-                <button formaction="/beforeResetPassword" class="ButtonLink">reset Password</button>
-                <button>Login <span><i class="fas fa-arrow-right"></i></span></button>
+                <div class="other-btns">
+                    <button formaction="/otp" class="ButtonLink">Login via OTP</button>
+                    <button formaction="/beforeResetPassword" class="ButtonLink">reset Password</button>    
+                </div>
+                <button type="submit">Login <span><i class="fas fa-arrow-right"></i></span></button>
 
             </form>
             <h6>Not Registered? <span><a href="signup" >Sign Up</a></span></h6>

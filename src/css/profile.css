@@ -14,6 +14,11 @@
           box-sizing: border-box;
 }
 
+.active {
+  color: #0173b2;
+  background-color: #fff;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,12 +48,16 @@
 
 .main .left .dashboard-items .dashboard-item {
   margin: .5rem 0;
+}
+
+.main .left .dashboard-items .dashboard-item a {
+  color: #2a2d3e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.main .left .dashboard-items .dashboard-item i {
+.main .left .dashboard-items .dashboard-item a i {
   margin-right: 1rem;
 }
 
@@ -162,5 +171,58 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.edit-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: none;
+  background-color: rgba(219, 217, 217, 0.7);
+}
+
+.edit-number .close {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  color: #2a2d3e;
+}
+
+.edit-number .form-div {
+  background-color: #fff;
+  padding: 2rem;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #999;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #999;
+}
+
+.edit-number .form-div h3 {
+  text-align: center;
+  width: 100%;
+  color: #0173b2;
+  padding: 1.3rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: .5rem;
+}
+
+.edit-number .form-div input {
+  margin: 1rem 0;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.edit-number .form-div button {
+  margin: 1rem;
 }
 /*# sourceMappingURL=profile.css.map */

@@ -1,6 +1,9 @@
 @import 'config';
 
-
+.active{
+    color:$blue;
+    background-color: $white;
+}
 
 
 .main{
@@ -14,10 +17,14 @@
             flex-direction: column;
             .dashboard-item{
                 margin:.5rem 0;
-                display: flex;
-                i{
-                    margin-right: 1rem;
+                a{     
+                    color: $darkblue;
+                    display: flex;
+                    i{
+                        margin-right: 1rem;
+                    }
                 }
+                
             }
             
         }
@@ -93,6 +100,47 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.edit-number{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: none;
+    
+    background-color: rgba(219, 217, 217,.7 );
+    .close{
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        color: $darkblue;
+    }
+    .form-div{
+        background-color: $white;
+        padding: 2rem;
+        box-shadow: .1rem .1rem .5rem .1rem $grey;
+        h3{
+            text-align: center;
+            width: 100%;;
+            color: $blue;
+            padding:1.3rem;
+            border-bottom: 1px solid $grey;
+            margin-bottom:.5rem;
+        }
+        input{
+            margin:1rem 0;
+            flex:6;
+        }
+        button{
+            margin:1rem;
         }
     }
 }

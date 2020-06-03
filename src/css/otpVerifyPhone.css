@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url(../assets/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../assets/Nexa-Light.otf);
+}
+
+* {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #9cbfda;
+}
+
+.verify-otp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.verify-otp .form-div {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.verify-otp .form-div h3 {
+  text-align: center;
+  width: 100%;
+  color: #0173b2;
+  padding: 1.3rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: .5rem;
+}
+
+.verify-otp .form-div input {
+  margin: 1rem 0;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.verify-otp .form-div button {
+  margin: 1rem;
+}
+/*# sourceMappingURL=otpVerifyPhone.css.map */

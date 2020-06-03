@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACmCA,UAAU;EACN,WAAW,EAAE,SAAS;EACtB,GAAG,EAAE,4BAA4B;;;AAGrC,UAAU;EACN,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,6BAA6B;;;AAOtC,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,UAAU;CACzB;;ADnDD,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,wBAAuB;CAC5C;;AACD,AAAA,IAAI,CAAA;EACA,KAAK,EAAG,KAAK;EACb,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "scss/phoneLogin.scss",
+        "scss/_config.scss"
+    ],
+    "names": [],
+    "file": "phoneLogin.css"
+}

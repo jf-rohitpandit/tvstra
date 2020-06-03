@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/otpVerifyPhone.css">
+
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.13.0-web/css/all.css">
+    <title>Tvastra</title>
+</head>
+<body>
+    <section class='verify-otp' >
+        <div class="form-div">
+            <h3>Enter the OTP</h3>
+            <form action="/otpVerifyPhone" method="POST" class="login">
+                <input type="text" name="code" placeholder="Enter the 4 digit OTP sent to your new number"  required>
+                <button type="submit" onclick="changeview()">verify OTP <span><i class="fas fa-arrow-right"></i></span></button>
+            </form>
+        </div>
+        
+    </section>
+</body>
+</html> 
+

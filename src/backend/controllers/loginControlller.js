@@ -124,6 +124,7 @@ function logout(req, res){
 }
 
 async function profile(req, res){
+    
     const avtar = req.file;
     const  { timezone, house, colony, city, state, country, speciality, qualification, treatmentList, hospitalList, 
     awards, experience, avgFees, location} = req.body;
@@ -146,6 +147,7 @@ async function profile(req, res){
         user.qualification = qualification;
         user.treatmentList = treatmentList;
         user.hospitalList = hospitalList;
+        user.avtar = avtar;
         user.save(function(err,user){
             if(err){
                 console.log(err);
